@@ -17,19 +17,19 @@ Details on each are found below.
 
 ### Guides
 
-[Game Jam Guide](./guides/game-jam-guide.md)
-[Kanban Workflow Process](./guides/kanban-workflow-guide.md)
-[Kanban Board Setup](./guide/kanban-board-guide.md)
-[Unity Programming Guidelines](./guides/unity-design-guidelines.md)
+- [Game Jam Guide](./guides/game-jam-guide.md)
+- [Kanban Workflow Process](./guides/kanban-workflow-guide.md)
+- [Kanban Board Setup](./guide/kanban-board-guide.md)
+- [Unity Programming Guidelines](./guides/unity-design-guidelines.md)
 
 ----
 
 ### Kanban Board
 
-[Project Kanban Board](https://zube.io/enigmadragons/ldjam50/w/jam/kanban)
+- [Project Kanban Board](https://zube.io/enigmadragons/ldjam50/w/jam/kanban)
 
-[Kanban Workflow Process](./guides/kanban-workflow-guide.md)
-[Kanban Board Setup](./guide/kanban-board-guide.md)
+- [Kanban Workflow Process](./guides/kanban-workflow-guide.md)
+- [Kanban Board Setup](./guide/kanban-board-guide.md)
 
 ----
 
