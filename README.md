@@ -19,7 +19,7 @@ Details on each are found below.
 
 - [Game Jam Guide](./guides/game-jam-guide.md)
 - [Kanban Workflow Process](./guides/kanban-workflow-guide.md)
-- [Kanban Board Setup](./guide/kanban-board-guide.md)
+- [Kanban Board Setup](./guides/kanban-board-guide.md)
 - [Unity Programming Guidelines](./guides/unity-design-guidelines.md)
 
 ----
@@ -29,7 +29,7 @@ Details on each are found below.
 - [Project Kanban Board](https://zube.io/enigmadragons/ldjam50/w/jam/kanban)
 
 - [Kanban Workflow Process](./guides/kanban-workflow-guide.md)
-- [Kanban Board Setup](./guide/kanban-board-guide.md)
+- [Kanban Board Setup](./guides/kanban-board-guide.md)
 
 ----
 
