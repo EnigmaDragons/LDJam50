@@ -43,7 +43,7 @@
 ## Unity-isms
 
 - Every PreFab and ScriptableObject should have sensible defaults wired in
-- Don't include constructors in any `MonoBehavior` or `ScriptbleObject`
+- Don't include constructors in any `MonoBehavior` or `ScriptableObject`
 - If an object should be configurable from code, use a method `public void Init(...)` instead
 - There should never be any unused methods in code (such as Start/Update)
 - There should never be any Unity-generated comments in code
