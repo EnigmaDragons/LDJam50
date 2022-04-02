@@ -1,23 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Codice.CM.Common;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerTools))]
 public class PlayerWater : MonoBehaviour
 {
     [SerializeField] private float maxDistanceFromPump;
-    [SerializeField] private WaterPump pump;
+    [SerializeField] private Transform pump;
     [SerializeField] private float pumpingDelay;
     private float lastPumpTime;
-    //TODO get all water holders from inventory
-    private List<IWaterHolder> waterHolders = new List<IWaterHolder>();
-    
-    public void TakeWater(WaterPump pump)
+    private PlayerTools playerTools;
+    private void Awake()
     {
-        foreach (IWaterHolder holder in waterHolders)
-        {
-            holder.Fill();
-        }
+        playerTools = GetComponent<PlayerTools>();        
+    }
+
+    public void TakeWater()
+    {
+        playerTools.FillTolls();
     }
 
     
@@ -29,7 +31,7 @@ public class PlayerWater : MonoBehaviour
         if (!(Time.time - lastPumpTime > pumpingDelay)) return;
         
         lastPumpTime = Time.time;
-        TakeWater(pump);
+        TakeWater();
     }
     
     
