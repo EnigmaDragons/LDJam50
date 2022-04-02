@@ -16,7 +16,7 @@ public class PlayerWater : MonoBehaviour
     {
         foreach (IWaterHolder holder in waterHolders)
         {
-            holder.WaterAmount += pump.TakeWater();
+            holder.Fill();
         }
     }
 
@@ -37,7 +37,9 @@ public class PlayerWater : MonoBehaviour
 
 public interface IWaterHolder
 {
-    public float WaterAmount {get; set; }
+    public float WaterAmount {get;}
+    public float MaxWaterAmount {get;}
+    public void Fill();
 }
 
 

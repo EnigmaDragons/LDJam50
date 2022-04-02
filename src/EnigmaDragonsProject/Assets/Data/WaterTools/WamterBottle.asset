@@ -18,5 +18,6 @@ MonoBehaviour:
   isRanged: 0
   range: 1
   maxCapacity: 15
+  maxCharges: 0
   upgradable: 0
   upgradesInto: {fileID: 0}
