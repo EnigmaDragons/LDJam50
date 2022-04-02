@@ -11,9 +11,14 @@ public class PauseManager : MonoBehaviour
         Reset();
     }
 
+    private void OnEnable() {
+        Time.timeScale = 0;
+    }
+
     private void OnDisable() 
     {
         Reset();
+        Time.timeScale = 1;
     }
 
     public void ResumeGame()
