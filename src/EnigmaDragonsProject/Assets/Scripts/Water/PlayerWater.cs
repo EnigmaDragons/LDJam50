@@ -11,6 +11,7 @@ public class PlayerWater : MonoBehaviour
     [SerializeField] private float pumpingDelay;
     [SerializeField] private float meleeToolRange;
     [SerializeField] private PlayerTools playerTools;
+    [SerializeField] private GameObject waterParticle;
 
     private float lastPumpTime;
     private bool isPissing = false;
@@ -36,6 +37,10 @@ public class PlayerWater : MonoBehaviour
     {
         var value = context.ReadValue<float>();
         isPissing = value > 0.5f;
+        if (!isPissing)
+        {
+            waterParticle.GetComponent<ParticleSystem>().Stop();
+        }
     }
 
     private void FixedUpdate()
@@ -82,6 +87,7 @@ public class PlayerWater : MonoBehaviour
         amount = Math.Max(tool.WaterAmount, amount);
         amount = cachedPlant.AddWater(amount);
         tool.UseWater(amount);
+        waterParticle.GetComponent<ParticleSystem>().Play();
     }
 
     private void OnDrawGizmosSelected()
