@@ -570,5 +570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6f68974ee46284795da158045765ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceFromPump: 2
+  maxDistanceFromPump: 20
   pump: {fileID: 238669296}
+  pumpingDelay: 0
