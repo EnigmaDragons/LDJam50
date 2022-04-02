@@ -9,33 +9,25 @@ using UnityEngine.InputSystem;
 public class PlayerWater : MonoBehaviour
 {
     [SerializeField] private float maxDistanceFromPump;
-    [SerializeField] private Transform pump;
     [SerializeField] private float pumpingDelay;
     [SerializeField] private float meleeToolRange;
     
     private float lastPumpTime;
     private PlayerTools playerTools;
     private bool isPissing = false;
+    private Collider nearestPlant;
+    private Collider nearestPump;
     private void Awake()
     {
         playerTools = GetComponent<PlayerTools>();        
     }
-
-    private void TakeWater()
-    {
-        playerTools.FillTolls();
-    }
-
     
     public void TryTakeWater()
     {
-        if (!(Vector3.SqrMagnitude(pump.transform.position - transform.position) <
-              maxDistanceFromPump * maxDistanceFromPump)) return;
-
+        if (!nearestPump) return;
         if (!(Time.time - lastPumpTime > pumpingDelay)) return;
-        
         lastPumpTime = Time.time;
-        TakeWater();
+        playerTools.FillTolls();
     }
 
     public void TogglePiss(InputAction.CallbackContext context)
@@ -46,34 +38,47 @@ public class PlayerWater : MonoBehaviour
 
     private void FixedUpdate()
     {
+        CheckForPlants();
+        CheckForPumps();
+        
         if (isPissing) TryPiss();
     }
 
-    public void TryPiss()
+    private void CheckForPumps()
+    {
+        var range = maxDistanceFromPump;
+        var results = new Collider[1];
+        var size = Physics.OverlapSphereNonAlloc(transform.position, range, results, layerMask: LayerMask.GetMask("Pumps"));
+        if (size == 0) {nearestPump = null; return;}
+
+        nearestPump = results[0];
+    }
+    
+    private void CheckForPlants()
     {
         var range = meleeToolRange;
-        var tool = playerTools.GetMeleeTool();
         var results = new Collider[1];
         var size = Physics.OverlapSphereNonAlloc(transform.position, range, results, layerMask: LayerMask.GetMask("Plants"));
-        if (size == 0) return;
-        
-        Collider nearest = null;
-        var dis = 10000f;
-        foreach (var result in results)
-        {
-            var newDis = Vector3.SqrMagnitude(result.transform.position - transform.position);
-            if (newDis < dis)
-            {
-                dis = newDis;
-                nearest = result;
-            }
-        }
+        if (size == 0) {nearestPlant = null; return;}
 
-        var plant = nearest.gameObject.GetComponent<PlantController>();
+        nearestPlant = results[0];
+    }
+
+    private Collider lastPlant;
+    private PlantController cachedPlant;
+    public void TryPiss()
+    {
+        if (!nearestPlant) return;
+        if (cachedPlant is null || lastPlant is null || lastPlant != nearestPlant)
+        {
+            lastPlant = nearestPlant;
+            cachedPlant = lastPlant.GetComponent<PlantController>();
+        }
         
+        var tool = playerTools.GetMeleeTool();
         var amount = tool.waterTransferRate * Time.deltaTime;
         amount = tool.UseWater(amount);
-        plant.AddWater(amount);
+        cachedPlant.AddWater(amount);
     }
 
     private void OnDrawGizmosSelected()

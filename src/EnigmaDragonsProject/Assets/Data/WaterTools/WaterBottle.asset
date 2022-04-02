@@ -20,5 +20,5 @@ MonoBehaviour:
   maxCharges: 10
   maxCapacity: 15
   waterTransferRate: 10
-  upgradable: 0
-  upgradesInto: {fileID: 0}
+  upgradable: 1
+  upgradesInto: {fileID: 11400000, guid: 09201435db7a0b14b84bb1f5eb70e9de, type: 2}

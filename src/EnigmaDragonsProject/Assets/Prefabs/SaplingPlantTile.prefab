@@ -120,6 +120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sapling
       objectReference: {fileID: 0}
+    - target: {fileID: 6762292073168883916, guid: c837aa907dd27d24383023aeb79fe57c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9132722500957888799, guid: c837aa907dd27d24383023aeb79fe57c,
         type: 3}
       propertyPath: m_RootOrder

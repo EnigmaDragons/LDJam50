@@ -13,7 +13,6 @@ public class PlayerTools : MonoBehaviour
 
     public void FillTolls()
     {
-        print("fill");
         if(melee) melee.Fill();
         if(ranged) ranged.Fill();
     }
