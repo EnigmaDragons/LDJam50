@@ -9,12 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadaad39c4d7b694ba8e09c1c5060b51, type: 3}
-  m_Name: Sapling
+  m_Script: {fileID: 11500000, guid: 7316f824c3924a629e51437f42653b23, type: 3}
+  m_Name: WaterBottle
   m_EditorClassIdentifier: 
-  waterCapacity: 60
-  startingWater: 30
-  waterConsumptions:
-  - threshold: 0
-    waterConsumptionPerSecond: 1
-  wiltingSeconds: 30
+  name: Wamter bottle
+  sprite: {fileID: 0}
+  description: 
+  isRanged: 0
+  range: 1
+  maxCapacity: 15
+  maxCharges: 0
+  upgradable: 0
+  upgradesInto: {fileID: 0}
