@@ -11,7 +11,8 @@ public class PauseManager : MonoBehaviour
         Reset();
     }
 
-    private void OnEnable() {
+    private void OnEnable() 
+    {
         Time.timeScale = 0;
     }
 
