@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Codice.CM.Common;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerWater : MonoBehaviour
@@ -76,8 +77,9 @@ public class PlayerWater : MonoBehaviour
         
         var tool = playerTools.GetMeleeTool();
         var amount = tool.waterTransferRate * Time.deltaTime;
-        amount = tool.UseWater(amount);
-        cachedPlant.AddWater(amount);
+        amount = Math.Max(tool.WaterAmount, amount);
+        amount = cachedPlant.AddWater(amount);
+        tool.UseWater(amount);
     }
 
     private void OnDrawGizmosSelected()

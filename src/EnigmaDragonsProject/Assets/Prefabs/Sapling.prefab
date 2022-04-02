@@ -112,5 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plant: {fileID: 11400000, guid: 6c0c70af6b89da54dae2c374b869117d, type: 2}
-  currentWater: 0
   navigator: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
+  gameState: {fileID: 11400000, guid: 1a21b9dca07b3fb49ad8dac7cd4eb0ed, type: 2}

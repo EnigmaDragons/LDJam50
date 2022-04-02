@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class GameTimingController : MonoBehaviour
 {
     [SerializeField] private GameTimingEvent[] events;
-
+    [SerializeField] private CurrentGameState gameState;
+    
     private int _eventIndex;
     private float _t;
 

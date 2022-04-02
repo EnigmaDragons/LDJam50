@@ -1,13 +1,25 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 [Serializable]
 public sealed class GameState
 {
-    // Should consist of only serializable primitives.
-    // Any logic or non-trivial data should be enriched in CurrentGameState.
-    // Except for Save/Load Systems, everything should use CurrentGameState,
-    // instead of this pure data structure.
+    private List<PlantState> _plantStates;
+    private int _currentId;
+
+    public GameState()
+    {
+        _plantStates = new List<PlantState>();
+    }
     
-    // All enums used in this class should have specified integer values.
-    // This is necessary to preserve backwards save compatibility.
+    public int InitPlant(Transform transform, float startingWater, float wiltingSeconds)
+    {
+        _currentId++;
+        _plantStates.Add(new PlantState { Id = _currentId, Transform = transform, Water = startingWater, WiltingRemainingSeconds = wiltingSeconds });
+        return _currentId;
+    }
+
+    public PlantState PlantById(int id) => _plantStates.First(x => x.Id == id);
 }

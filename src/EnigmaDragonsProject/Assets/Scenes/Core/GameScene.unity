@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -409,6 +409,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 300020887, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 300020887, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 300020887, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 300020887, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1179964795, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -423,6 +439,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1353586972, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985261579, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985261579, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985261579, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985261579, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269367842774938, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
@@ -903,6 +935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455724302}
   - component: {fileID: 1455724301}
+  - component: {fileID: 1455724303}
   m_Layer: 0
   m_Name: GameSystems
   m_TagString: Untagged
@@ -925,6 +958,7 @@ MonoBehaviour:
   events:
   - tile: {fileID: 1768228778}
     secondsToAppear: 120
+  gameState: {fileID: 0}
 --- !u!4 &1455724302
 Transform:
   m_ObjectHideFlags: 0
@@ -940,6 +974,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455724303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455724300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d2df190033f40eb8b28f4493b852b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
 --- !u!1 &1768228778
 GameObject:
   m_ObjectHideFlags: 0

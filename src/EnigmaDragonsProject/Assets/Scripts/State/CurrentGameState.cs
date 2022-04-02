@@ -10,6 +10,8 @@ public sealed class CurrentGameState : ScriptableObject
     public void Init(GameState initialState) => gameState = initialState;
     public void Subscribe(Action<GameStateChanged> onChange, object owner) => Message.Subscribe(onChange, owner);
     public void Unsubscribe(object owner) => Message.Unsubscribe(owner);
+    //only to be used with reading
+    public GameState State => gameState;
     
     public void UpdateState(Action<GameState> apply)
     {
