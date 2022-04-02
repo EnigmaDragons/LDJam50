@@ -1,19 +1,35 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlantController : MonoBehaviour
 {
     [SerializeField] private Plant plant;
-    [SerializeField] private float currentWater;
+    [SerializeField] private Navigator navigator;
 
-    private float _t;
+    private float _currentWater;
+    private float _wiltingSeconds;
+    
+    private void Awake()
+    {
+        _currentWater = plant.WaterCapacity;
+        _wiltingSeconds = plant.WiltingSeconds;
+    }
     
     private void Update()
     {
-        _t += Time.deltaTime;
-        if (_t > 1)
+        if (_currentWater > 0)
         {
-            _t -= 1;
-            currentWater -= plant.WaterConsumption;
+            _currentWater -= Time.deltaTime * plant.WaterConsumption;
+            if (_currentWater < 0)
+            {
+                _wiltingSeconds += _currentWater / plant.WaterConsumption;
+                _currentWater = 0;
+            }
         }
+        else 
+            _wiltingSeconds -= Time.deltaTime;
+
+        if (_wiltingSeconds <= 0)
+            navigator.NavigateToGameOverScene();
     }
 }

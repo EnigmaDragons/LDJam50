@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "TakeWater",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "4a726b90-8b6a-4d76-9630-106d62fe4054",
-                    "expectedControlType": "Analog",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
