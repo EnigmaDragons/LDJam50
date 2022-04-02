@@ -27,6 +27,8 @@ public class PlayerWater : MonoBehaviour
         if (!(Time.time - lastPumpTime > pumpingDelay)) return;
         lastPumpTime = Time.time;
         playerTools.FillTolls();
+        
+        Message.Publish(new PlaySoundRequested(GameSounds.FillWater, nearestPump.transform.position));
     }
 
     public void TogglePiss(InputAction.CallbackContext context)
