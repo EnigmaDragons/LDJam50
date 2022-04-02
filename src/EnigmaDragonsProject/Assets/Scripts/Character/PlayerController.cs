@@ -1,27 +1,21 @@
 using KinematicCharacterController.Walkthrough.BasicMovement;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     public MyCharacterController Character;
     
-    private const string HorizontalInput = "Horizontal";
-    private const string VerticalInput = "Vertical";
+    [SerializeField] private DefaultInputActions.PlayerActions _playerActions;
     
-    private void Update()
-    {
-        HandleCharacterInput();
-    }
-    
-    private void HandleCharacterInput()
+    public void Move(InputAction.CallbackContext context)
     {
         PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
 
-        // Build the CharacterInputs struct
-        characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
-        characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
-
-        // Apply inputs to character
+        var move = context.action.ReadValue<Vector2>();
+        characterInputs.MoveAxisForward = move.y;
+        characterInputs.MoveAxisRight = move.x;
+        
         Character.SetInputs(ref characterInputs);
     }
 }
