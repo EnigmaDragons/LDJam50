@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff61fe755e3564499e6e163da1bfe11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refillRete: 0
+  amountPerClick: 10
 --- !u!1 &568940911
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,4 +570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6f68974ee46284795da158045765ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxWater: 0
+  maxDistanceFromPump: 20
+  pump: {fileID: 238669296}
+  pumpingDelay: 0
