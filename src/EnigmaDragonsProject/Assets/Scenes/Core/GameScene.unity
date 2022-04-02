@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceFromPump: 0
-  pump: {fileID: 727529214}
+  pump: {fileID: 727529218}
   pumpingDelay: 0
 --- !u!114 &445381410
 MonoBehaviour:
@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274e78aabe97ae8469b2c107170edf1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  melee: {fileID: 11400000, guid: fcad588706af5634095af6ed44e92d52, type: 2}
+  ranged: {fileID: 0}
 --- !u!1 &727529213
 GameObject:
   m_ObjectHideFlags: 0

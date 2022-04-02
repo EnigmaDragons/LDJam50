@@ -15,10 +15,14 @@ public class WateringTool : ScriptableObject, IWaterHolder
     public bool isRanged;
     [ShowIf("isRanged")]
     public float range;
-    [ShowIf("@!isRanged")]
-    public float maxCapacity;
     [ShowIf("isRanged")]
     public int maxCharges;
+    
+    [ShowIf("@!isRanged")]
+    public float maxCapacity;
+    [ShowIf("@!isRanged")]
+    public float waterTransferRate;
+
     
     [SerializeField] private bool upgradable;
     [ShowIf("upgradable")]
@@ -29,7 +33,7 @@ public class WateringTool : ScriptableObject, IWaterHolder
     
     public bool TryUpgrade(out WateringTool upgrade)
     {
-        upgrade = null;
+        upgrade = this;
         if (!upgradable) return false;
         
         upgrade = upgradesInto;
