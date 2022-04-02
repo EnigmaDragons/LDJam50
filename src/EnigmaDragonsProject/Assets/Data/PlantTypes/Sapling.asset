@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterCapacity: 60
   waterConsumptionPerSecond: 1
+  wiltingSeconds: 30
