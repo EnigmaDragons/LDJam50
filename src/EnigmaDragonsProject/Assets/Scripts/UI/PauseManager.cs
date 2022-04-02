@@ -32,7 +32,7 @@ public class PauseManager : MonoBehaviour
         Application.Quit();
     }
 
-    private void Reset() 
+    public void Reset() 
     {
         buttonGroup.SetActive(true);
         optionsGroup.SetActive(false);
