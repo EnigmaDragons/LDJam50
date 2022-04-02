@@ -39,12 +39,6 @@ public class WateringTool : ScriptableObject, IWaterHolder
     [ReadOnly]
     [ShowIf("isRanged")]
     private int currentCharge;
-
-    private void Awake()
-    {
-        currentWater = 0;
-        currentCharge = 0;
-    }
     
     public bool TryUpgrade(out WateringTool upgrade)
     {
@@ -110,8 +104,11 @@ public class WateringTool : ScriptableObject, IWaterHolder
         currentCharge--;
         return true;
     }
-    
-    
-    
-    
+
+
+    public void Reset()
+    {
+        currentWater = 0;
+        currentCharge = 0;
+    }
 }
