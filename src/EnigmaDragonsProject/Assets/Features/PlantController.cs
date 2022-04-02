@@ -6,7 +6,7 @@ public class PlantController : MonoBehaviour
     [SerializeField] private float currentWater;
     [SerializeField] private Navigator navigator;
 
-    private void OnAwake() => currentWater = plant.WaterCapacity;
+    private void Awake() => currentWater = plant.WaterCapacity;
     
     private void Update()
     {
