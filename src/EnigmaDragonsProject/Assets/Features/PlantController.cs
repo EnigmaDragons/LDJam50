@@ -7,12 +7,12 @@ public class PlantController : MonoBehaviour
     [SerializeField] private Navigator navigator;
 
     private float _currentWater;
-    private float _wiltingSeconds;
+    private float _wiltingSecondsRemaining;
     
     private void Awake()
     {
         _currentWater = plant.WaterCapacity;
-        _wiltingSeconds = plant.WiltingSeconds;
+        _wiltingSecondsRemaining = plant.WiltingSeconds;
     }
     
     private void Update()
@@ -22,14 +22,14 @@ public class PlantController : MonoBehaviour
             _currentWater -= Time.deltaTime * plant.WaterConsumption;
             if (_currentWater < 0)
             {
-                _wiltingSeconds += _currentWater / plant.WaterConsumption;
+                _wiltingSecondsRemaining += _currentWater / plant.WaterConsumption;
                 _currentWater = 0;
             }
         }
         else 
-            _wiltingSeconds -= Time.deltaTime;
+            _wiltingSecondsRemaining -= Time.deltaTime;
 
-        if (_wiltingSeconds <= 0)
+        if (_wiltingSecondsRemaining <= 0)
             navigator.NavigateToGameOverScene();
     }
 }
