@@ -1,10 +1,11 @@
 using UnityEngine;
 
+[CreateAssetMenu]
 public class Plant : ScriptableObject
 {
     [SerializeField] private float waterCapacity;
-    [SerializeField] private float waterConsumption;
+    [SerializeField] private float waterConsumptionPerSecond;
 
     public float WaterCapacity => waterCapacity;
-    public float WaterConsumption => waterConsumption;
+    public float WaterConsumption => waterConsumptionPerSecond;
 }
