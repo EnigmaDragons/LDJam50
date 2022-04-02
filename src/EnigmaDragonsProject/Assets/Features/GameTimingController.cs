@@ -20,5 +20,11 @@ public class GameTimingController : MonoBehaviour
             _t -= events[_eventIndex].SecondsToAppear;
             _eventIndex++;
         }
+        else if (gameState.State.IsWaterAboveCertainLevel(0.8f))
+        {
+            events[_eventIndex].Tile.gameObject.SetActive(true);
+            _t = 0;
+            _eventIndex++;
+        }
     }
 }

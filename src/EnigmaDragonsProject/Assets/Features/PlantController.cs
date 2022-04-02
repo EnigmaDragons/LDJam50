@@ -12,7 +12,7 @@ public class PlantController : MonoBehaviour
     
     private void Start()
     {
-        gameState.UpdateState(x => _id = x.InitPlant(transform,  plant.StartingWater, plant.WiltingSeconds));
+        gameState.UpdateState(x => _id = x.InitPlant(transform,  plant.StartingWater, plant.WiltingSeconds, plant.WaterCapacity));
     }
     
     private void Update()

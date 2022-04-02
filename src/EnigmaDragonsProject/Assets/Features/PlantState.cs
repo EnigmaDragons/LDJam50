@@ -8,4 +8,5 @@ public class PlantState
     public Transform Transform;
     public float Water;
     public float WiltingRemainingSeconds;
+    public float WaterCapacity;
 }
