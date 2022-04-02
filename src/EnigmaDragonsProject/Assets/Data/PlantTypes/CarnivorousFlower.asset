@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aadaad39c4d7b694ba8e09c1c5060b51, type: 3}
-  m_Name: Begonia
+  m_Name: CarnivorousFlower
   m_EditorClassIdentifier: 
-  waterCapacity: 60
-  startingWater: 30
+  waterCapacity: 80
+  startingWater: 40
   waterConsumptions:
   - threshold: 0
-    waterConsumptionPerSecond: 0.75
+    waterConsumptionPerSecond: 1
   wiltingSeconds: 30
