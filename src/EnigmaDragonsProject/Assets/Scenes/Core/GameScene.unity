@@ -1249,38 +1249,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &1787812241
+=======
+--- !u!1001 &2017980711188381394
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 4576445170969790801, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
       propertyPath: m_Name
       value: GardenShowGreybox
       objectReference: {fileID: 0}
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
+=======
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+>>>>>>> Stashed changes
         type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
+=======
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+>>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
+=======
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+>>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
+=======
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+>>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -1302,22 +1323,64 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
+=======
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+>>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
+=======
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502685779849032281, guid: 7fbff81f94265b24b98544508d69d0a3,
+>>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d21a9efbbaacf4f920b8fe75244819, type: 3}
+=======
+    - target: {fileID: 2502685779849032283, guid: 7fbff81f94265b24b98544508d69d0a3,
+        type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7fbff81f94265b24b98544508d69d0a3, type: 3}
+>>>>>>> Stashed changes
 --- !u!1001 &8816765357826556188
 PrefabInstance:
   m_ObjectHideFlags: 0
