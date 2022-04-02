@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
 
         var isMoving = move.magnitude > 0;
         UpdateIsMoving(isMoving);
-        Debug.Log($"Move {move}"); 
     }
 
     private void UpdateIsMoving(bool isMoving)
