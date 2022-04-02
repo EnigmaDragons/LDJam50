@@ -10,7 +10,7 @@ ModelImporter:
       name: groundText
     second: {fileID: 2100000, guid: ac49d2d75bb3c474b9509734c7f35685, type: 2}
   materials:
-    materialImportMode: 0
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
