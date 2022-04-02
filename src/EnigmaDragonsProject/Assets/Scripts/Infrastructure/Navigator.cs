@@ -5,6 +5,7 @@ public sealed class Navigator : ScriptableObject
 {
     [SerializeField] private bool loggingEnabled;
 
+    public void NavigateToVictoryScene() => NavigateTo("Victory");
     public void NavigateToGameOverScene() => NavigateTo("GameOver");
     public void NavigateToGameScene() => NavigateTo("GameScene");
     public void NavigateToMainMenu() => NavigateTo("MainMenu");

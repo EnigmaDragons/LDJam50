@@ -9,6 +9,7 @@ public class PlantController : MonoBehaviour
     [SerializeField] private CurrentGameState gameState;
 
     [ShowInInspector] [ReadOnly] private int _id;
+    public int Id => _id;
     
     private void Start()
     {
