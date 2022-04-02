@@ -83,7 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToSpawn:
   - {fileID: 6008012971090607542}
-  gameState: {fileID: 0}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!1 &7274017311169165631
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7912687846605689337}
     m_Modifications:
+    - target: {fileID: 1786013327, guid: 1d68a7cbdb3008143915c52ae370004f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 2170355017181888957, guid: 1d68a7cbdb3008143915c52ae370004f,
         type: 3}
       propertyPath: m_RootOrder
