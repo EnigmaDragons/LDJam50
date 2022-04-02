@@ -66,6 +66,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameWorldHedges
       objectReference: {fileID: 0}
+    - target: {fileID: 3524757226246963144, guid: 45dd492148a6f69419ab983aa21df55e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5664059717075372711, guid: 45dd492148a6f69419ab983aa21df55e,
         type: 3}
       propertyPath: m_RootOrder
@@ -136,10 +141,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7912687846605689337}
     m_Modifications:
+    - target: {fileID: 683891834039174911, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_TreeDistance
+      value: 4388
+      objectReference: {fileID: 0}
+    - target: {fileID: 683891834039174911, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_DetailObjectDensity
+      value: 0.878
+      objectReference: {fileID: 0}
+    - target: {fileID: 683891834039174911, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_DrawTreesAndFoliage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 683891834039174911, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 683891834039174911, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_BakeLightProbesForTrees
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 683891834039174911, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_PreserveTreePrototypeLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4576445170969790801, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
       propertyPath: m_Name
       value: GardenShowGreybox
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576445170969790801, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445897149831171212, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_EnableTreeColliders
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
@@ -275,6 +320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWithCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 2544407002514705547, guid: 1d68a7cbdb3008143915c52ae370004f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d68a7cbdb3008143915c52ae370004f, type: 3}
 --- !u!4 &842625454338553945 stripped
@@ -369,6 +419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameWorldFlowers
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982312203948012747, guid: 8873b0ed9f6f9f54ca396fedf81eff75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8579367259706552177, guid: 8873b0ed9f6f9f54ca396fedf81eff75,
         type: 3}
