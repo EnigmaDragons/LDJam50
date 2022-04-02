@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6275996989579470829}
+  - component: {fileID: 492577550637118888}
   m_Layer: 6
   m_Name: GoldenAppleTree
   m_TagString: Untagged
@@ -32,6 +33,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492577550637118888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121949131073154623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f7b99ef9414b0c9ac9e74c0c2f8cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plant: {fileID: 11400000, guid: d01c6cf3f99795e4e8a8992cce89623e, type: 2}
+  navigator: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  waterFill: {fileID: 2906217018850198435}
+  wiltingFill: {fileID: 8368352052688489184}
 --- !u!1001 &3275111033104125760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,3 +125,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3275111033104125760}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2906217018850198435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 371402774201535715, guid: 5a18f56de65eac24bb32b69707d0a285,
+    type: 3}
+  m_PrefabInstance: {fileID: 3275111033104125760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8368352052688489184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6436158419086525856, guid: 5a18f56de65eac24bb32b69707d0a285,
+    type: 3}
+  m_PrefabInstance: {fileID: 3275111033104125760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

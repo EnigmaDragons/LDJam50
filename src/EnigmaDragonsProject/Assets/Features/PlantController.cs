@@ -9,6 +9,7 @@ public class PlantController : MonoBehaviour
     [SerializeField] private Navigator navigator;
     [SerializeField] private CurrentGameState gameState;
     [SerializeField] private Image waterFill;
+    [SerializeField] private Image wiltingFill;
 
     [ShowInInspector] [ReadOnly] private int _id;
     public int Id => _id;
@@ -33,20 +34,32 @@ public class PlantController : MonoBehaviour
             if (water < 0)
             {
                 wiltingSecondsRemaining += water / waterConsumption;
+                if (wiltingFill != null)
+                {
+                    wiltingFill.fillAmount = wiltingSecondsRemaining / plant.WiltingSeconds;
+                    wiltingFill.color = new Color(1, 1, 1, 1);
+                }
                 water = 0;
             }
+            if (waterFill != null)
+                waterFill.fillAmount = water / plantState.WaterCapacity;
         }
-        else 
+        else
+        {
             wiltingSecondsRemaining -= Time.deltaTime;
+            if (wiltingFill != null)
+            {
+                wiltingFill.fillAmount = wiltingSecondsRemaining / plant.WiltingSeconds;  
+                wiltingFill.color = new Color(1, 1, 1, 1);
+            }
+        }
 
         gameState.UpdateState(x =>
         {
             plantState.Water = water;
             plantState.WiltingRemainingSeconds = wiltingSecondsRemaining;
         });
-        if (waterFill != null)
-            waterFill.fillAmount = plantState.Water / plantState.WaterCapacity;
-        
+
         if (wiltingSecondsRemaining <= 0)
             navigator.NavigateToGameOverScene();
     }
@@ -59,6 +72,8 @@ public class PlantController : MonoBehaviour
             var plantState = x.PlantById(_id);
             waterConsumed = Math.Min(plant.WaterCapacity - plantState.Water, amount);
             plantState.Water += waterConsumed;
+            if (plantState.Water > 0 && wiltingFill != null)
+                wiltingFill.color = new Color(1, 1, 1, 0.5f);
         });
         return waterConsumed;
     }
