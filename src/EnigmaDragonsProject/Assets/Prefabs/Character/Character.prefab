@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5713005619272068985}
   - component: {fileID: 5713005619272068986}
   - component: {fileID: 5713005619272068988}
-  - component: {fileID: 5713005619272068984}
+  - component: {fileID: 4023238619567124597}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -91,7 +91,7 @@ MonoBehaviour:
   CheckMovementInitialOverlaps: 1
   KillVelocityWhenExceedMaxMovementIterations: 1
   KillRemainingMovementWhenExceedMaxMovementIterations: 1
---- !u!114 &5713005619272068984
+--- !u!114 &4023238619567124597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,19 +100,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 5713005619272068989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31e9f34d26f4f374f97ce0f3ef08b1a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 76020eee813ed7844bcea94c5d5ce76a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Motor: {fileID: 5713005619272068988}
   MaxStableMoveSpeed: 10
   StableMovementSharpness: 15
   OrientationSharpness: 10
-  MaxAirMoveSpeed: 10
-  AirAccelerationSpeed: 1
+  OrientationMethod: 1
+  MaxAirMoveSpeed: 15
+  AirAccelerationSpeed: 15
   Drag: 0.1
-  RotationObstruction: 0
+  AllowJumpingWhenSliding: 0
+  JumpUpSpeed: 0
+  JumpScalableForwardSpeed: 0
+  JumpPreGroundingGraceTime: 0
+  JumpPostGroundingGraceTime: 0
+  IgnoredColliders: []
+  BonusOrientationMethod: 0
+  BonusOrientationSharpness: 10
   Gravity: {x: 0, y: -30, z: 0}
-  MeshRoot: {fileID: 5713005620501562638}
+  MeshRoot: {fileID: 0}
+  CameraFollowPoint: {fileID: 0}
+  CrouchedCapsuleHeight: 1
 --- !u!1 &5713005619792595196
 GameObject:
   m_ObjectHideFlags: 0
