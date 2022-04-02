@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToSpawn:
-  - {fileID: 6008012971090607542}
+  - {fileID: 3429058707152010713}
   - {fileID: 1614203044489692395}
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!1001 &1503633031499382752
@@ -439,9 +439,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7399157220856482360}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6008012971090607542 stripped
+--- !u!1 &3429058707152010713 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3877504433833228174, guid: 8873b0ed9f6f9f54ca396fedf81eff75,
+  m_CorrespondingSourceObject: {fileID: 5276355038785812449, guid: 8873b0ed9f6f9f54ca396fedf81eff75,
     type: 3}
   m_PrefabInstance: {fileID: 7399157220856482360}
   m_PrefabAsset: {fileID: 0}
