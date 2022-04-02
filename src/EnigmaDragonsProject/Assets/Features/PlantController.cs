@@ -1,12 +1,14 @@
 ﻿using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlantController : MonoBehaviour
 {
     [SerializeField] private Plant plant;
     [SerializeField] private Navigator navigator;
     [SerializeField] private CurrentGameState gameState;
+    [SerializeField] private Image waterFill;
 
     [ShowInInspector] [ReadOnly] private int _id;
     public int Id => _id;
@@ -40,6 +42,7 @@ public class PlantController : MonoBehaviour
             plantState.Water = water;
             plantState.WiltingRemainingSeconds = wiltingSecondsRemaining;
         });
+        waterFill.fillAmount = plantState.Water / plantState.WaterCapacity;
         
         if (wiltingSecondsRemaining <= 0)
             navigator.NavigateToGameOverScene();
