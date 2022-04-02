@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Sapling
   m_EditorClassIdentifier: 
   waterCapacity: 60
-  waterConsumptionPerSecond: 1
+  startingWater: 30
+  waterConsumptions:
+  - threshold: 0
+    waterConsumptionPerSecond: 1
   wiltingSeconds: 30

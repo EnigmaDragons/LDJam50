@@ -11,6 +11,6 @@ public class Plant : ScriptableObject
 
     public float WaterCapacity => waterCapacity;
     public float StartingWater => startingWater;
-    public float WaterConsumption(float water) => (waterConsumptions.Where(x => water >= x.Threshold).OrderByDesc(x => x.Threshold).FirstOrDefault() ?? waterConsumptions.First()).WaterConsumptionPerSecond;
+    public float WaterConsumption(float water) => (waterConsumptions.Where(x => water >= x.Threshold).OrderByDescending(x => x.Threshold).FirstOrDefault() ?? waterConsumptions.First()).WaterConsumptionPerSecond;
     public float WiltingSeconds => wiltingSeconds;
 }

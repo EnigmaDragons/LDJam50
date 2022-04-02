@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadaad39c4d7b694ba8e09c1c5060b51, type: 3}
   m_Name: Sunflower
   m_EditorClassIdentifier: 
-  waterCapacity: 0
-  waterConsumptionPerSecond: 0
-  wiltingSeconds: 0
+  waterCapacity: 100
+  startingWater: 100
+  waterConsumptions:
+  - threshold: 66
+    waterConsumptionPerSecond: 3
+  - threshold: 34
+    waterConsumptionPerSecond: 2
+  - threshold: 0
+    waterConsumptionPerSecond: 1
+  wiltingSeconds: 20
