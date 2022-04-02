@@ -11,7 +11,7 @@ public class PlantController : MonoBehaviour
     
     private void Awake()
     {
-        _currentWater = plant.WaterCapacity;
+        _currentWater = plant.StartingWater;
         _wiltingSecondsRemaining = plant.WiltingSeconds;
     }
     
@@ -19,10 +19,11 @@ public class PlantController : MonoBehaviour
     {
         if (_currentWater > 0)
         {
-            _currentWater -= Time.deltaTime * plant.WaterConsumption;
+            var waterConsumption = plant.WaterConsumption(_currentWater);
+            _currentWater -= Time.deltaTime * waterConsumption;
             if (_currentWater < 0)
             {
-                _wiltingSecondsRemaining += _currentWater / plant.WaterConsumption;
+                _wiltingSecondsRemaining += _currentWater / waterConsumption;
                 _currentWater = 0;
             }
         }
