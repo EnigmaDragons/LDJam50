@@ -83,8 +83,8 @@ public class PlayerWater : MonoBehaviour
         }
         
         var tool = playerTools.GetMeleeTool();
-        var amount = tool.waterTransferRate * Time.deltaTime;
-        amount = Math.Max(tool.WaterAmount, amount);
+        float amount = tool.waterTransferRate * Time.deltaTime;
+        amount = Math.Min(tool.WaterAmount, amount);
         amount = cachedPlant.AddWater(amount);
         tool.UseWater(amount);
         waterParticle.GetComponent<ParticleSystem>().Play();
