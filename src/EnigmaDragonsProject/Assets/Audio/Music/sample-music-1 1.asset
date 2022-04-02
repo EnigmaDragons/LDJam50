@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2cd7c3672a89964589361a843fb5884, type: 3}
-  m_Name: sample-music-1
+  m_Name: sample-music-1 1
   m_EditorClassIdentifier: 
   volume: 1
   pitch: 1
