@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7316f824c3924a629e51437f42653b23, type: 3}
-  m_Name: WaterBottle
+  m_Name: WaterBucket
   m_EditorClassIdentifier: 
-  name: Wamter bottle
-  sprite: {fileID: 21300000, guid: 5ae2eca0955c7454a84e6a430819f6b1, type: 3}
+  name: Water Bucket
+  sprite: {fileID: 21300000, guid: 1cc6cf4b4c73cd8408e54dd5945a3521, type: 3}
   description: 
   isRanged: 0
-  range: 1
-  maxCharges: 10
-  maxCapacity: 15
-  waterTransferRate: 10
-  upgradable: 1
-  upgradesInto: {fileID: 11400000, guid: 09201435db7a0b14b84bb1f5eb70e9de, type: 2}
+  range: 0
+  maxCharges: 0
+  maxCapacity: 150
+  waterTransferRate: 50
+  upgradable: 0
+  upgradesInto: {fileID: 0}

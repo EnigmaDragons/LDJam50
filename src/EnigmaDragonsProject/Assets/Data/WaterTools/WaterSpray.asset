@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: WaterSpray
   m_EditorClassIdentifier: 
   name: Water Spray
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 1af39d809ec4a73439dce14f8bd5c188, type: 3}
   description: 
   isRanged: 0
   range: 0
   maxCharges: 0
   maxCapacity: 30
-  waterTransferRate: 10
-  upgradable: 0
-  upgradesInto: {fileID: 0}
+  waterTransferRate: 15
+  upgradable: 1
+  upgradesInto: {fileID: 11400000, guid: f03c628ffd863c245a2572a88fa83427, type: 2}

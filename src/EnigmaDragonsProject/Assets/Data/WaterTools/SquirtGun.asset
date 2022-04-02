@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7316f824c3924a629e51437f42653b23, type: 3}
-  m_Name: WaterBottle
+  m_Name: SquirtGun
   m_EditorClassIdentifier: 
-  name: Wamter bottle
-  sprite: {fileID: 21300000, guid: 5ae2eca0955c7454a84e6a430819f6b1, type: 3}
+  name: Squirt Gun
+  sprite: {fileID: 21300000, guid: 25c12445d6371d1418d9442c64fb7281, type: 3}
   description: 
-  isRanged: 0
-  range: 1
-  maxCharges: 10
-  maxCapacity: 15
-  waterTransferRate: 10
-  upgradable: 1
-  upgradesInto: {fileID: 11400000, guid: 09201435db7a0b14b84bb1f5eb70e9de, type: 2}
+  isRanged: 1
+  range: 6
+  maxCharges: 8
+  maxCapacity: 0
+  waterTransferRate: 0
+  upgradable: 0
+  upgradesInto: {fileID: 0}
