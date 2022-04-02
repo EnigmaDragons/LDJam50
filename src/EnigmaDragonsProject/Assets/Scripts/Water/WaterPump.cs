@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WaterPump : MonoBehaviour
 {
-    [SerializeField] private float refillRete;
+    [SerializeField] private float amountPerClick;
 
 
     public float TakeWater()
     {
-        return refillRete * Time.deltaTime;
+        return amountPerClick;
     }
 }
