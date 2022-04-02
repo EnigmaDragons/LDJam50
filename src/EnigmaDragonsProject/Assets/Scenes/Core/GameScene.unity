@@ -515,7 +515,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1768228778
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,8 +561,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> 5a1557bb0e8db77356bd8f5433190bcb0b60d446
 --- !u!1001 &8816765357826556188
 PrefabInstance:
   m_ObjectHideFlags: 0
