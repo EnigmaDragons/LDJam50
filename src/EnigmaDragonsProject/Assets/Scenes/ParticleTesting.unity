@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -998,6 +998,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd6e2db0961ca8747b3d8b2d175fcac7, type: 3}
+--- !u!1 &1638530338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 453081818377971245, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+    type: 3}
+  m_PrefabInstance: {fileID: 2005432215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724582521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1315,6 +1321,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 453081818377971245, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 453081818377971247, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562534670584012662, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+        type: 3}
+      propertyPath: waterParticle
+      value: 
+      objectReference: {fileID: 1638530338}
     - target: {fileID: 3954813336124525017, guid: 82a9762c1fb6a114abc5da1a974c6b59,
         type: 3}
       propertyPath: m_Name
