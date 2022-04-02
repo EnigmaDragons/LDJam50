@@ -12,7 +12,8 @@ public class WateringTool : ScriptableObject, IWaterHolder
     [TextArea]
     public string description;
 
-    
+    public bool isRanged;
+    [ShowIf("isRanged")]
     public float range;
     public float maxCapacity;
     
