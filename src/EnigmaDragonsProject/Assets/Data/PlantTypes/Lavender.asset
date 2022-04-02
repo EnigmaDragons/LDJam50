@@ -16,5 +16,5 @@ MonoBehaviour:
   startingWater: 20
   waterConsumptions:
   - threshold: 0
-    waterConsumptionPerSecond: 1
+    waterConsumptionPerSecond: 0.75
   wiltingSeconds: 12
