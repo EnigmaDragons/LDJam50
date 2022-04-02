@@ -16,6 +16,8 @@ public class PlantController : MonoBehaviour
     private void Start()
     {
         gameState.UpdateState(x => _id = x.InitPlant(transform,  plant.StartingWater, plant.WiltingSeconds, plant.WaterCapacity));
+        if (waterFill == null)
+            Log.Error($"{name} does not have a Water Fill UI");
     }
     
     private void Update()
@@ -42,7 +44,8 @@ public class PlantController : MonoBehaviour
             plantState.Water = water;
             plantState.WiltingRemainingSeconds = wiltingSecondsRemaining;
         });
-        waterFill.fillAmount = plantState.Water / plantState.WaterCapacity;
+        if (waterFill != null)
+            waterFill.fillAmount = plantState.Water / plantState.WaterCapacity;
         
         if (wiltingSecondsRemaining <= 0)
             navigator.NavigateToGameOverScene();
