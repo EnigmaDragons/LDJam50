@@ -9,31 +9,17 @@ public class PlayerController : MonoBehaviour
     
     private bool _isMoving;
 
-    private void Update()
+    public void Move(InputAction.CallbackContext context)
     {
         var characterInputs = new PlayerCharacterInputs();
-        //var move = context.action.ReadValue<Vector2>();
-        var move = new Vector2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
-        characterInputs.MoveAxisForward = move.x;
-        characterInputs.MoveAxisRight = move.y;
+        var move = context.action.ReadValue<Vector2>();
+        characterInputs.MoveAxisForward = move.y;
+        characterInputs.MoveAxisRight = move.x;
         Character.SetInputs(ref characterInputs);
         
         var isMoving = move.magnitude > 0;
         UpdateIsMoving(isMoving);
-        Debug.Log($"Move {move}"); 
-    }
-    
-    public void Move(InputAction.CallbackContext context)
-    {
-        // var characterInputs = new PlayerCharacterInputs();
-        // var move = context.action.ReadValue<Vector2>();
-        // characterInputs.MoveAxisForward = move.y;
-        // characterInputs.MoveAxisRight = move.x;
-        // Character.SetInputs(ref characterInputs);
-        //
-        // var isMoving = move.magnitude > 0;
-        // UpdateIsMoving(isMoving);
-        // Debug.Log($"Move {move}");
+        //Debug.Log($"Move {move}");
     }
 
     private void UpdateIsMoving(bool isMoving)
