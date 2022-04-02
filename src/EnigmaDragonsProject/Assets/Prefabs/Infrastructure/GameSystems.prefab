@@ -45,9 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24058bb353614714823732f416b102df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events:
-  - tile: {fileID: 0}
-    secondsToAppear: 120
+  secondsTilNextEvent:
+  - 150
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!114 &4373249817353728588
 MonoBehaviour:

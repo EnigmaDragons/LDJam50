@@ -113,4 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plant: {fileID: 11400000, guid: 6c0c70af6b89da54dae2c374b869117d, type: 2}
   navigator: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
-  gameState: {fileID: 11400000, guid: 1a21b9dca07b3fb49ad8dac7cd4eb0ed, type: 2}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}

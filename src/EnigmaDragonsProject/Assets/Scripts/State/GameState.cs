@@ -6,6 +6,8 @@ using UnityEngine;
 [Serializable]
 public sealed class GameState
 {
+    public bool IsSpawning;
+    
     private List<PlantState> _plantStates;
     private int _currentId;
 

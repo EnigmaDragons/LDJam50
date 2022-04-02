@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameTimingController : MonoBehaviour
 {
-    [SerializeField] private GameTimingEvent[] events;
+    [SerializeField] private float[] secondsTilNextEvent;
     [SerializeField] private CurrentGameState gameState;
     
     private int _eventIndex;
@@ -11,18 +11,20 @@ public class GameTimingController : MonoBehaviour
 
     private void Update()
     {
-        if (_eventIndex == events.Length)
+        if (_eventIndex == secondsTilNextEvent.Length && !gameState.State.IsSpawning)
             return;
         _t += Time.deltaTime;
-        if (_t >= events[_eventIndex].SecondsToAppear)
+        if (_t >= secondsTilNextEvent[_eventIndex])
         {
-            events[_eventIndex].Tile.gameObject.SetActive(true);
-            _t -= events[_eventIndex].SecondsToAppear;
+            gameState.UpdateState(x => x.IsSpawning = true);
+            Message.Publish(new SpawnNextSegment());
+            _t -= secondsTilNextEvent[_eventIndex];
             _eventIndex++;
         }
         else if (gameState.State.IsWaterAboveCertainLevel(0.8f))
         {
-            events[_eventIndex].Tile.gameObject.SetActive(true);
+            gameState.UpdateState(x => x.IsSpawning = true);
+            Message.Publish(new SpawnNextSegment());
             _t = 0;
             _eventIndex++;
         }

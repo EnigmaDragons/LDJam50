@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7912687846605689337}
+  - component: {fileID: 1862281260079913965}
   m_Layer: 0
   m_Name: GameWorld
   m_TagString: Untagged
@@ -36,6 +37,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862281260079913965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954813336124525017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a3e01b4b3540d79a8086cc0261aa9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 5236388253040507052}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!1001 &1562534670503993523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -333,6 +349,12 @@ PrefabInstance:
 --- !u!4 &2907037053119718048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5162130867395566238, guid: 82ec527892594a94eb0bcaa61ee4d18d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8067156809056024638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5236388253040507052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2837038238695784594, guid: 82ec527892594a94eb0bcaa61ee4d18d,
     type: 3}
   m_PrefabInstance: {fileID: 8067156809056024638}
   m_PrefabAsset: {fileID: 0}
