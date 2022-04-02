@@ -1,192 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1786013326
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1786013327}
-  - component: {fileID: 1786013330}
-  - component: {fileID: 1786013329}
-  - component: {fileID: 1786013328}
-  m_Layer: 0
-  m_Name: PlayerWater
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1786013327
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786013326}
-  m_LocalRotation: {x: -0, y: -0, z: -7.1054265e-15, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3073415292486321079}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1786013330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786013326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d6f68974ee46284795da158045765ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistanceFromPump: 1.5
-  pumpingDelay: 0.2
-  meleeToolRange: 1.5
-  playerTools: {fileID: 11400000, guid: 07ec9277d232a034091c3f45647ea780, type: 2}
---- !u!1773428102 &1786013329
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786013326}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 7625784710797335489}
-    weight: 1
---- !u!114 &1786013328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786013326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 3f8bdf971c0c6f04090499536840965d,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3646d0b8-7cc8-4b19-8461-81124810d426
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 279f96c8-2d08-4ea3-99de-d6dcca22ef03
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ce408963-83b9-4f1a-bbac-d6860e649935
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3dbcda4d-3f0e-44a3-bfd9-5180d53c8a1a
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 955f6dbe-7827-4ab3-8d07-0808e1ed5ea1
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 24ca5b4a-340d-4ef2-bf4b-2bc3e8cf4834
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 56e90983-8322-41e6-9ccf-7d1716cac604
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8f18f6cf-e6b0-4c5b-990d-06deee70fc99
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 278c0ba7-9cfb-4bd5-ad06-7d9b90183814
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 212b5f89-0e99-408d-be96-f87d2cabd139
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 62801ca4-a4d7-42b4-8bcb-9d5be9194cb1
-    m_ActionName: Movement/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1786013330}
-        m_TargetAssemblyTypeName: PlayerWater, EnigmaDragons.Game
-        m_MethodName: TogglePiss
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 45c64a6a-699f-4b47-8227-88144d3ba0e5
-    m_ActionName: Watering/WaterPlantsMelee[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1786013330}
-        m_TargetAssemblyTypeName: PlayerWater, EnigmaDragons.Game
-        m_MethodName: TryTakeWater
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 3cda0a01-61d7-493c-9d65-f5745e2518a3
-    m_ActionName: Watering/TakeWater[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b5d7de76-ae71-488a-b204-619c3aa859e4
-    m_ActionName: Watering/WaterPlantsRanged[/Mouse/rightButton]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Watering
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &2544407002514705547
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +120,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicPlayerWithCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 4452332136090202360, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452332136090202362, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5449411559357841188, guid: a50c190fc29e3354b922025366cdb6c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -379,6 +202,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a50c190fc29e3354b922025366cdb6c6, type: 3}
+--- !u!1 &1433999016882560969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4452332136090202360, guid: a50c190fc29e3354b922025366cdb6c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3327961109133864753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3073415292486321079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 326999241440078982, guid: a50c190fc29e3354b922025366cdb6c6,
@@ -403,3 +232,82 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3327961109133864753}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4162309904806274782
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3073415292486321079}
+    m_Modifications:
+    - target: {fileID: 4162309905247961164, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: waterParticle
+      value: 
+      objectReference: {fileID: 1433999016882560969}
+    - target: {fileID: 4162309905247961167, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_Sources.Array.data[0].sourceTransform
+      value: 
+      objectReference: {fileID: 7625784710797335489}
+    - target: {fileID: 4162309905247961168, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerWater
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -7.1054265e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162309905247961169, guid: b76270a3ca2aff443b1b46483a61d699,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b76270a3ca2aff443b1b46483a61d699, type: 3}
