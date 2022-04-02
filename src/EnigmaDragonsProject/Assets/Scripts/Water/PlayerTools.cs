@@ -6,10 +6,16 @@ public class PlayerTools : MonoBehaviour
     [SerializeField] private WateringTool melee;
     [SerializeField] private WateringTool ranged;
 
+    [ShowInInspector]
+    private float MeleeWater => melee ? melee.WaterAmount : 0f;
+    [ShowInInspector]
+    private float RangedWater => ranged ? ranged.WaterAmount : 0f;
+
     public void FillTolls()
     {
-        melee.Fill();
-        ranged.Fill();
+        print("fill");
+        if(melee) melee.Fill();
+        if(ranged) ranged.Fill();
     }
     
     [Button]

@@ -17,7 +17,8 @@ MonoBehaviour:
   description: 
   isRanged: 0
   range: 1
+  maxCharges: 10
   maxCapacity: 15
-  maxCharges: 0
+  waterTransferRate: 10
   upgradable: 0
   upgradesInto: {fileID: 0}

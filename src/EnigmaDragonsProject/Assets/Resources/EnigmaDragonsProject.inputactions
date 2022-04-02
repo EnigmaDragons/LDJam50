@@ -588,6 +588,85 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Watering",
+            "id": "f409f032-62f9-4d23-af06-c912c781ede3",
+            "actions": [
+                {
+                    "name": "WaterPlantsMelee",
+                    "type": "Value",
+                    "id": "45c64a6a-699f-4b47-8227-88144d3ba0e5",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TakeWater",
+                    "type": "Button",
+                    "id": "3cda0a01-61d7-493c-9d65-f5745e2518a3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "WaterPlantsRanged",
+                    "type": "Button",
+                    "id": "b5d7de76-ae71-488a-b204-619c3aa859e4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d5c277b2-185e-433b-9a7a-d2be8a90391a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WaterPlantsMelee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7455711a-657b-4dca-acc5-f8d31260bae9",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WaterPlantsMelee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a2123f7-b473-42fe-b1fb-fbbba3917030",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakeWater",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa3c0514-debf-4c39-8487-5f5a7dd340b6",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WaterPlantsRanged",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -1,4 +1,5 @@
 ﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class PlantController : MonoBehaviour
@@ -6,6 +7,8 @@ public class PlantController : MonoBehaviour
     [SerializeField] private Plant plant;
     [SerializeField] private Navigator navigator;
 
+    [ShowInInspector]
+    [ReadOnly]
     private float _currentWater;
     private float _wiltingSecondsRemaining;
     
@@ -32,5 +35,13 @@ public class PlantController : MonoBehaviour
 
         if (_wiltingSecondsRemaining <= 0)
             navigator.NavigateToGameOverScene();
+    }
+
+    public void AddWater(float amount)
+    {
+        _currentWater += amount;
+        if(_currentWater > plant.WaterCapacity) _currentWater = plant.WaterCapacity;
+        
+        //SendMessage("OnWaterAdded", amount);
     }
 }
