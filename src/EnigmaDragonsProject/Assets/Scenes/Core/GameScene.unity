@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 1768228780}
   - component: {fileID: 1768228779}
   m_Layer: 0
-  m_Name: WhenAppearsGoToGameOverScene
+  m_Name: WhenAppearsGoToVictoryScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db773f5502c44513a1bdad51315c93b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: GameOver
+  sceneName: Victory
   navigator: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
 --- !u!4 &1768228780
 Transform:
