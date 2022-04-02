@@ -8,7 +8,9 @@ public class WateringTool : ScriptableObject, IWaterHolder
     
     [PreviewField]
     public Sprite sprite;
-
+    
+    [InfoBox("TODO: Decide if tools should start full or empty")]
+    
     [TextArea]
     public string description;
 
@@ -37,6 +39,12 @@ public class WateringTool : ScriptableObject, IWaterHolder
     [ReadOnly]
     [ShowIf("isRanged")]
     private int currentCharge;
+
+    private void Awake()
+    {
+        currentWater = 0;
+        currentCharge = 0;
+    }
     
     public bool TryUpgrade(out WateringTool upgrade)
     {
