@@ -65,6 +65,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e719d8c95e4046f3bea4702affbee9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  watering:
+    clip: {fileID: 8300000, guid: 9db35b633cb00ec45b92ba13e0180885, type: 3}
+    volume: 1
   fillWater:
     clip: {fileID: 8300000, guid: b624aab431e5a4548a5f923852d79f44, type: 3}
     volume: 1

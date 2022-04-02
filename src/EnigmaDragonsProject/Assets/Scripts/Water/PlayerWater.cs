@@ -1,8 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Codice.CM.Common;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerWater : MonoBehaviour
@@ -12,6 +8,7 @@ public class PlayerWater : MonoBehaviour
     [SerializeField] private float meleeToolRange;
     [SerializeField] private PlayerTools playerTools;
     [SerializeField] private GameObject waterParticle;
+    [SerializeField] private AudioSource wateringSoundSource;
 
     private float lastPumpTime;
     private bool isPissing = false;
@@ -21,6 +18,7 @@ public class PlayerWater : MonoBehaviour
     private void Awake()
     {
         playerTools.Reset();
+        StopWatering();
     }
 
     public void TryTakeWater()
@@ -38,16 +36,36 @@ public class PlayerWater : MonoBehaviour
         var value = context.ReadValue<float>();
         isPissing = value > 0.5f && playerTools.GetMeleeTool().WaterAmount > 0;
         if (isPissing)
-            waterParticle.GetComponent<ParticleSystem>().Play();
+            StartWatering();
         else
-            waterParticle.GetComponent<ParticleSystem>().Stop();
+            StopWatering();
     }
 
+    private void StartWatering()
+    {
+        Log.Info("Start Watering");
+        waterParticle.GetComponent<ParticleSystem>().Play();
+        Message.Publish(new LoopSoundRequested(GameSounds.Watering, wateringSoundSource));
+    }
+
+    private void StopWatering()
+    {
+        Log.Info("Stop Watering");
+        waterParticle.GetComponent<ParticleSystem>().Stop();
+        Message.Publish(new StopSoundRequested(GameSounds.Watering, wateringSoundSource));
+    }
+    
     private void FixedUpdate()
     {
         CheckForPlants();
         CheckForPumps();
-        
+
+        if (isPissing && playerTools.GetMeleeTool().WaterAmount <= 0)
+        {
+            isPissing = false;
+            StopWatering();
+        }
+
         if (isPissing) TryPiss();
     }
 
