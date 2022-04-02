@@ -4,23 +4,24 @@ using System.Collections.Generic;
 using Codice.CM.Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(PlayerTools))]
 public class PlayerWater : MonoBehaviour
 {
     [SerializeField] private float maxDistanceFromPump;
     [SerializeField] private float pumpingDelay;
     [SerializeField] private float meleeToolRange;
-    [SerializeField] private PlayerTools playerTools;
-
+    
     private float lastPumpTime;
+    private PlayerTools playerTools;
     private bool isPissing = false;
     private Collider nearestPlant;
     private Collider nearestPump;
-
     private void Awake()
     {
-        playerTools.Reset();
+        playerTools = GetComponent<PlayerTools>();        
     }
-
+    
     public void TryTakeWater()
     {
         if (!nearestPump) return;

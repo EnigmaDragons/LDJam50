@@ -1,25 +1,16 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "playerTools")]
-public class PlayerTools : ScriptableObject
+public class PlayerTools : MonoBehaviour
 {
-    [SerializeField] private WateringTool startMelee;
-    [SerializeField] private WateringTool startRanged;
-
-    [ShowInInspector]
-    [ReadOnly]
-    private WateringTool melee;
-    
-    [ShowInInspector]
-    [ReadOnly]
-    private WateringTool ranged;
+    [SerializeField] private WateringTool melee;
+    [SerializeField] private WateringTool ranged;
 
     [ShowInInspector]
     private float MeleeWater => melee ? melee.WaterAmount : 0f;
     [ShowInInspector]
     private float RangedWater => ranged ? ranged.WaterAmount : 0f;
-    
+
     public void FillTolls()
     {
         if(melee) melee.Fill();
@@ -46,14 +37,5 @@ public class PlayerTools : ScriptableObject
     public WateringTool GetRangedTool()
     {
         return ranged;
-    }
-
-    public void Reset()
-    {
-        melee = startMelee;
-        ranged = startRanged;
-        
-        melee.Reset();
-        ranged.Reset();
     }
 }
