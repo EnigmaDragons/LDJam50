@@ -158,7 +158,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 100
   m_PresetInfoIsWorld: 1
 --- !u!114 &8545297221899845074
 MonoBehaviour:
@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 465074617904971159}
   - component: {fileID: 5294107052904676899}
   - component: {fileID: 1703167543924977853}
+  - component: {fileID: 4403984669781549494}
   m_Layer: 5
   m_Name: Sea Blue
   m_TagString: Untagged
@@ -213,7 +214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 875, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5294107052904676899
@@ -254,3 +255,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4403984669781549494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197040831832240670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60cb0c11bfad413cb02ec3164d8b7bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
