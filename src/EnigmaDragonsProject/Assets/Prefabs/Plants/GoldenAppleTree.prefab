@@ -175,6 +175,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldenAppleTree
       objectReference: {fileID: 0}
+    - target: {fileID: 1001081185391530634, guid: 5a18f56de65eac24bb32b69707d0a285,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1004676461658024416, guid: 5a18f56de65eac24bb32b69707d0a285,
         type: 3}
       propertyPath: m_RootOrder

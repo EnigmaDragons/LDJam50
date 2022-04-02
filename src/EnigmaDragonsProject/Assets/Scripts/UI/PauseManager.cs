@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PauseManager : MonoBehaviour
@@ -5,6 +6,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject buttonGroup;
     [SerializeField] private GameObject optionsGroup;
+    [SerializeField] private TextMeshProUGUI titleText;
     
     private void Start() 
     {
@@ -29,6 +31,7 @@ public class PauseManager : MonoBehaviour
 
     public void OpenOptions()
     {
+        titleText.text = "Options";
         buttonGroup.SetActive(false);
         optionsGroup.SetActive(true);
     }
@@ -40,6 +43,7 @@ public class PauseManager : MonoBehaviour
 
     public void Reset() 
     {
+        titleText.text = "Paused";
         buttonGroup.SetActive(true);
         optionsGroup.SetActive(false);
     }
