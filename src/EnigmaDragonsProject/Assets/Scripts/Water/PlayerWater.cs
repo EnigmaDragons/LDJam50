@@ -36,11 +36,11 @@ public class PlayerWater : MonoBehaviour
     public void TogglePiss(InputAction.CallbackContext context)
     {
         var value = context.ReadValue<float>();
-        isPissing = value > 0.5f;
-        if (!isPissing)
-        {
+        isPissing = value > 0.5f && playerTools.GetMeleeTool().WaterAmount > 0;
+        if (isPissing)
+            waterParticle.GetComponent<ParticleSystem>().Play();
+        else
             waterParticle.GetComponent<ParticleSystem>().Stop();
-        }
     }
 
     private void FixedUpdate()
@@ -88,6 +88,11 @@ public class PlayerWater : MonoBehaviour
         amount = cachedPlant.AddWater(amount);
         tool.UseWater(amount);
         waterParticle.GetComponent<ParticleSystem>().Play();
+        if (tool.WaterAmount == 0)
+        {
+            isPissing = false;
+            waterParticle.GetComponent<ParticleSystem>().Stop();
+        }
     }
 
     private void OnDrawGizmosSelected()
