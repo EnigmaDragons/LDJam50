@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class PlayerWater : MonoBehaviour
 {
     [SerializeField] private float maxDistanceFromPump;
@@ -34,7 +35,7 @@ public class PlayerWater : MonoBehaviour
         if (!nearestPump) return;
         if (!(Time.time - lastPumpTime > pumpingDelay)) return;
         lastPumpTime = Time.time;
-        playerTools.FillTolls();
+        playerTools.FillTools();
         
         if (animator != null)
             animator.SetTrigger("FillWater");
