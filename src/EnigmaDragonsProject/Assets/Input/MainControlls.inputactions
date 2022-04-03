@@ -26,6 +26,17 @@
                     "action": "TakeWater",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c033687-9a54-4d75-b3ce-a51c2ee7c8dd",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakeWater",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

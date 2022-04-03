@@ -52,6 +52,7 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   waterFill: {fileID: 8409069713210602747}
   wiltingFill: {fileID: 2937942865898356152}
+  fireVFX: {fileID: 3739019907786745743}
 --- !u!136 &3799494031856932843
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -369,3 +370,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d109182cf5ba704c941d2dd68bbc858, type: 3}
+--- !u!1 &3739019907786745743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1572011884065796, guid: 5d109182cf5ba704c941d2dd68bbc858,
+    type: 3}
+  m_PrefabInstance: {fileID: 3739746322158228363}
+  m_PrefabAsset: {fileID: 0}

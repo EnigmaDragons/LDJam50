@@ -120,6 +120,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicPlayerWithCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: bucketTool
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c4f04945688e974681ec1a720dd135c,
+        type: 2}
+    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: waterGun1Tool
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e72cbdc434061e4f83f5a70c885c51b,
+        type: 2}
+    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: waterBottleTool
+      value: 
+      objectReference: {fileID: 11400000, guid: fcad588706af5634095af6ed44e92d52,
+        type: 2}
+    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: wateringCanTool
+      value: 
+      objectReference: {fileID: 11400000, guid: f03c628ffd863c245a2572a88fa83427,
+        type: 2}
+    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: waterBalloonTool
+      value: 
+      objectReference: {fileID: 11400000, guid: 621a1fdb0baeba6468d9aa044d21343c,
+        type: 2}
+    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: waterSprayBottleTool
+      value: 
+      objectReference: {fileID: 11400000, guid: 09201435db7a0b14b84bb1f5eb70e9de,
+        type: 2}
     - target: {fileID: 4452332136090202360, guid: a50c190fc29e3354b922025366cdb6c6,
         type: 3}
       propertyPath: m_Name

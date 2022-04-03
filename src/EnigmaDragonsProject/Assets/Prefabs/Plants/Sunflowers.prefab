@@ -68,6 +68,7 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   waterFill: {fileID: 8416543448237146322}
   wiltingFill: {fileID: 2935008360761346449}
+  fireVFX: {fileID: 1804865220138716, guid: 95d6aa7f65151d34289e7d8fdbb720d4, type: 3}
 --- !u!1001 &145980956796257995
 PrefabInstance:
   m_ObjectHideFlags: 0
