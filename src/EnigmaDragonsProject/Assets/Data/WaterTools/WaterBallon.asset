@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7316f824c3924a629e51437f42653b23, type: 3}
   m_Name: WaterBallon
   m_EditorClassIdentifier: 
-  name: Water Baloon
-  sprite: {fileID: 21300000, guid: ee9a04507255bc14b8917a25427d95ab, type: 3}
+  name: Water Balloon
+  sprite: {fileID: 21300000, guid: b2c12894b603f424da99b6a76374ddaa, type: 3}
   startingAmount: 0
   description: 
   isRanged: 1
