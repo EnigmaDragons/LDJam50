@@ -68,6 +68,12 @@ public class WateringTool : ScriptableObject, IWaterHolder
         }
     }
 
+    public void UseCharge()
+    {
+        if (!isRanged) return;
+        currentCharge -= 1;
+    }
+
     [ShowIf("isRanged")]
     [Button(ButtonStyle.FoldoutButton)]
     public bool TryUseCharge()

@@ -59,6 +59,7 @@ public class PlayerWater : MonoBehaviour
         var rangedTool = playerTools.GetRangedTool();
         if (value > 0.5f && rangedTool != null && rangedTool.WaterAmount > 0)
         {
+            rangedTool.UseCharge();
             _cooldown = 0.2f;
             var prototype = Instantiate(rangePrototype, transform.position + new Vector3(0, 1, 0) + transform.forward * 1, Quaternion.identity);
             prototype.Init(rangedTool.waterTransferRate, transform.forward, rangedTool.range);
