@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,11 +40,7 @@ public class PlantController : MonoBehaviour
         var wiltingSecondsRemaining = plantState.WiltingRemainingSeconds;
         var isOnFire = plantState.IsOnFire;
 
-        // if plant is full of water
-        if (plantState.Water >= plant.WaterCapacity)
-        {
-            Message.Publish(new PlaySoundRequested(GameSounds.PlantFull, gameObject.transform.position));
-        }
+        CheckIfFull(plantState);
             
         if (plantState.Water > 0)
         {
@@ -74,8 +71,7 @@ public class PlantController : MonoBehaviour
             }
         }
 
-        // if plant is on fire
-        fireVFX.SetActive(true);
+        fireVFX.SetActive(isOnFire);
         if (isOnFire)
         {
             Message.Publish(new LoopSoundRequested(GameSounds.TreeFire, plantSoundSource));
@@ -101,6 +97,13 @@ public class PlantController : MonoBehaviour
             gameState.UpdateState(x => x.Lost = true);
             navigator.NavigateToGameOverScene();   
         }
+    }
+
+    public async void CheckIfFull(PlantState plantState)
+    {
+        if (plantState.Water < plant.WaterCapacity) return;
+        await Task.Delay(500);
+        Message.Publish(new PlaySoundRequested(GameSounds.PlantFull, gameObject.transform.position));     
     }
 
     public float AddWater(float amount)
