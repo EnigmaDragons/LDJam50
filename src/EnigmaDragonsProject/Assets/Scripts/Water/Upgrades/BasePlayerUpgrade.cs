@@ -12,9 +12,9 @@ namespace Water.Upgrades
         [SerializeField] private Sprite icon;
         [TextArea]
         [SerializeField] private string description;
-
         [SerializeField] private List<BasePlayerUpgrade> requirements;
-
+        [SerializeField] protected CurrentGameState gameState;
+        
         public Sprite Icon => icon;
         public string Name => name;
         public string Description => description;
@@ -24,6 +24,8 @@ namespace Water.Upgrades
             var req = requirements.Except(currentUpgrades);
             return !req.Any();
         }
-        
+
+        public abstract void OnUpgradeBought();
+
     }
 }

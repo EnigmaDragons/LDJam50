@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1010,6 +1010,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 491189746, guid: 388d029949c3f1745a1828cc73180e9c, type: 3}
+      propertyPath: orthographic size
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 491189746, guid: 388d029949c3f1745a1828cc73180e9c, type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
       objectReference: {fileID: 0}
@@ -1312,6 +1316,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8179872972847228719, guid: 47cd78b425b34024690c7825b77da70f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8591482619469862817, guid: 47cd78b425b34024690c7825b77da70f,
         type: 3}
       propertyPath: m_Name
@@ -1585,6 +1594,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.2632557e-14
       objectReference: {fileID: 0}
+    - target: {fileID: 4212114072741419383, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+        type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
+        type: 2}
     - target: {fileID: 7344379120124326529, guid: 82a9762c1fb6a114abc5da1a974c6b59,
         type: 3}
       propertyPath: m_Color.b

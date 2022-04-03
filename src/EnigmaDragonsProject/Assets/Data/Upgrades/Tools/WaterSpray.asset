@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99d767e71992414a9000fc9af3cf408a, type: 3}
-  m_Name: UpgradeA
+  m_Name: WaterSpray
   m_EditorClassIdentifier: 
-  name: Upgrade a
-  icon: {fileID: 21300000, guid: b782d001adb6e4c4b9cee5aa848fbdb5, type: 3}
-  description: 'some desc1
-
-'
+  name: Water Spray
+  icon: {fileID: 21300000, guid: 67b6d901ee0f5274f9708370737c280e, type: 3}
+  description: Larger capactity and faster speed
   requirements: []
-  ranged: 0
-  upgrade: {fileID: 0}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  upgrade: {fileID: 11400000, guid: 09201435db7a0b14b84bb1f5eb70e9de, type: 2}
