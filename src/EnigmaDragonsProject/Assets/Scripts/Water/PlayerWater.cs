@@ -16,10 +16,12 @@ public class PlayerWater : MonoBehaviour
     private Collider nearestPlant;
     private Collider nearestPump;
     private Animator animator;
+    private ParticleSystem waterParticles;
     
     private void Awake()
     {
         playerTools.Reset();
+        waterParticles = waterParticle.GetComponent<ParticleSystem>();
         StopWatering();
     }
 
@@ -50,15 +52,18 @@ public class PlayerWater : MonoBehaviour
     private void StartWatering()
     {
         Log.Info("Start Watering");
-        waterParticle.GetComponent<ParticleSystem>().Play();
+        waterParticles.Play();
         Message.Publish(new LoopSoundRequested(GameSounds.Watering, wateringSoundSource));
+        if (animator != null)
+            animator.SetBool("IsPouringWater", true);
     }
 
     private void StopWatering()
     {
-        Log.Info("Stop Watering");
-        waterParticle.GetComponent<ParticleSystem>().Stop();
+        waterParticles.Stop();
         Message.Publish(new StopSoundRequested(GameSounds.Watering, wateringSoundSource));
+        if (animator != null)
+            animator.SetBool("IsPouringWater", false);
     }
     
     private void FixedUpdate()
@@ -73,6 +78,8 @@ public class PlayerWater : MonoBehaviour
         }
 
         if (isPissing) TryPiss();
+        if (!isPissing)
+            StopWatering();
     }
 
     private void CheckForPumps()
