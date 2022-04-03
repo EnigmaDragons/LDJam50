@@ -47,6 +47,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garden2Greybox
       objectReference: {fileID: 0}
+    - target: {fileID: 4747177238167327747, guid: dd08dc97c0e0f9542bbbeeb4256bb838,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8294616717454279697, guid: dd08dc97c0e0f9542bbbeeb4256bb838,
         type: 3}
       propertyPath: m_RootOrder
@@ -238,6 +243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garden2Periphery
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517149719656794734, guid: 930688796a113624c82489aaca5c8811,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5133387415142224970, guid: 930688796a113624c82489aaca5c8811,
         type: 3}
