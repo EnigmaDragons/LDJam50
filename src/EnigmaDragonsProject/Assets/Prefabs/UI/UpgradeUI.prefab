@@ -56,6 +56,7 @@ MonoBehaviour:
     type: 3}
   upgradeCardParent: {fileID: 3663991609217418300}
   upgradeDescriptionText: {fileID: 6408439188334027594}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!1 &144705192072562438
 GameObject:
   m_ObjectHideFlags: 0

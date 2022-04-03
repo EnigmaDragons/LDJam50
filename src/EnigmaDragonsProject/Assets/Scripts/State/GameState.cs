@@ -18,6 +18,7 @@ public sealed class GameState
     public bool Won;
     public string progressionDescription;
     public float progress;
+    public bool GiveUpgrade;
 
     public GameState()
     {

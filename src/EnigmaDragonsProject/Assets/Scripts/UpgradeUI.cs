@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using Water.Upgrades;
 
-public class UpgradeUI : OnMessage<ShowUpgrade>
+public class UpgradeUI : MonoBehaviour
 {
     [SerializeField] private PlayerUpgrades playerUpgrades;
     [SerializeField] private GameObject upgradeUI;
@@ -14,11 +11,20 @@ public class UpgradeUI : OnMessage<ShowUpgrade>
     [SerializeField] private GameObject upgradeCardPrefab;
     [SerializeField] private Transform upgradeCardParent;
     [SerializeField] private TextMeshProUGUI upgradeDescriptionText;
-
+    [SerializeField] private CurrentGameState gameState;
 
     private void Awake()
     {
         CloseUpgradeUI();
+    }
+
+    private void Update()
+    {
+        if (gameState.State.GiveUpgrade)
+        {
+            ShowUpgradeSelection();
+            gameState.UpdateState(x => x.GiveUpgrade = false);
+        }
     }
 
     public void UnlockUpgrade(BasePlayerUpgrade upgrade)
@@ -80,7 +86,4 @@ public class UpgradeUI : OnMessage<ShowUpgrade>
             SpawnUpgrade(upgrade);
         }
     }
-
-
-    protected override void Execute(ShowUpgrade msg) => ShowUpgradeSelection();
 }
