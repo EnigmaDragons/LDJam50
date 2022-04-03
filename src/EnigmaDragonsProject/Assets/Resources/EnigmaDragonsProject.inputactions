@@ -646,6 +646,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c0215095-4d4b-4a4a-a131-b0ca61151707",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WaterPlantsMelee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6a2123f7-b473-42fe-b1fb-fbbba3917030",
                     "path": "<Keyboard>/e",
                     "interactions": "",

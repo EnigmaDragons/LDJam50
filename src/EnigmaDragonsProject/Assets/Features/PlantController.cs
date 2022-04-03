@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,10 @@ public class PlantController : MonoBehaviour
     [SerializeField] private CurrentGameState gameState;
     [SerializeField] private Image waterFill;
     [SerializeField] private Image wiltingFill;
+    [SerializeField] private GameObject fireVFX;
+    private const float spreadRange = 10;
+    private const float spreadTime = 10;
+    private float timeUntilSpread;
 
     [ShowInInspector] [ReadOnly] private int _id;
     public int Id => _id;
@@ -26,10 +31,12 @@ public class PlantController : MonoBehaviour
         var plantState = gameState.State.PlantById(_id);
         var water = plantState.Water;
         var wiltingSecondsRemaining = plantState.WiltingRemainingSeconds;
+        var isOnFire = plantState.IsOnFire;
             
         if (plantState.Water > 0)
         {
             var waterConsumption = plant.WaterConsumption(water);
+            waterConsumption = isOnFire ? waterConsumption + 2.5f : waterConsumption;
             water -= Time.deltaTime * waterConsumption;
             if (water < 0)
             {
@@ -52,6 +59,20 @@ public class PlantController : MonoBehaviour
                 wiltingFill.fillAmount = wiltingSecondsRemaining / plant.WiltingSeconds;  
                 wiltingFill.color = new Color(1, 1, 1, 1);
             }
+        }
+
+        fireVFX.SetActive(isOnFire);
+        if (isOnFire)
+        {
+            timeUntilSpread -= Time.deltaTime;
+            if (timeUntilSpread <= 0)
+            {
+                SpreadFire();
+            }
+        }
+        else
+        {
+            timeUntilSpread = spreadTime;
         }
 
         gameState.UpdateState(x =>
@@ -79,5 +100,23 @@ public class PlantController : MonoBehaviour
                 wiltingFill.color = new Color(1, 1, 1, 0.5f);
         });
         return waterConsumed;
+    }
+
+    private void SpreadFire()
+    {
+        var results = Physics.OverlapSphere(transform.position, spreadRange, layerMask: LayerMask.GetMask("Plants"));
+        
+        Debug.Log(results);
+
+        var res = results.Where(x => {
+            var controller = x.GetComponent<PlantController>();
+            return !gameState.State.PlantById(controller.Id).IsOnFire;
+        }).FirstOrDefault();
+
+        if (res != null)
+        {
+            gameState.UpdateState(x => x.PlantById(res.GetComponent<PlantController>().Id).IsOnFire = true);
+            timeUntilSpread = spreadTime;
+        }
     }
 }

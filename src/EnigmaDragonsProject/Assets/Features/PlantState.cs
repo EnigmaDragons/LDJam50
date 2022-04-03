@@ -9,4 +9,5 @@ public class PlantState
     public float Water;
     public float WiltingRemainingSeconds;
     public float WaterCapacity;
+    public bool IsOnFire;
 }
