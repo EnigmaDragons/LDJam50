@@ -80,3 +80,6 @@ MonoBehaviour:
   plantFull:
     clip: {fileID: 8300000, guid: 53956f3028903d543a5657e2f8df1af8, type: 3}
     volume: 1
+  footStep:
+    clip: {fileID: 8300000, guid: 452430bcb34d23a458da1e0016bfa871, type: 3}
+    volume: 1

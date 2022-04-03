@@ -7,6 +7,7 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
     [SerializeField] private AudioClipVolume treeFire;
     [SerializeField] private AudioClipVolume newPlant;
     [SerializeField] private AudioClipVolume plantFull;
+    [SerializeField] private AudioClipVolume footStep;
     
     protected override void Execute(PlaySoundRequested msg)
     {
@@ -20,7 +21,12 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
 
     protected override void Execute(LoopSoundRequested msg)
     {
-        if (msg.SoundName.Equals(GameSounds.FillWater))
+        if (msg.SoundName.Equals(GameSounds.FootStep))
+        {
+            msg.Src.clip = footStep.clip;
+            msg.Src.volume = footStep.volume;
+        }
+        if (msg.SoundName.Equals(GameSounds.Watering))
         {
             msg.Src.clip = watering.clip;
             msg.Src.volume = watering.volume;
