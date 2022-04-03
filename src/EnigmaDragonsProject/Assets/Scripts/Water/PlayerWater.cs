@@ -14,12 +14,15 @@ public class PlayerWater : MonoBehaviour
     private bool isPissing = false;
     private Collider nearestPlant;
     private Collider nearestPump;
-
+    private Animator animator;
+    
     private void Awake()
     {
         playerTools.Reset();
         StopWatering();
     }
+
+    public void SetAnimator(Animator a) => animator = a;
 
     public void TryTakeWater()
     {
@@ -28,6 +31,8 @@ public class PlayerWater : MonoBehaviour
         lastPumpTime = Time.time;
         playerTools.FillTolls();
         
+        if (animator != null)
+            animator.SetTrigger("FillWater");
         Message.Publish(new PlaySoundRequested(GameSounds.FillWater, nearestPump.transform.position));
     }
 
