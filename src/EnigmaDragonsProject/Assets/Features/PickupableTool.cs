@@ -8,5 +8,6 @@ public class PickupableTool : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         gameState.State.TryUpgrade(tool);
+        gameObject.SetActive(false);
     }
 }
