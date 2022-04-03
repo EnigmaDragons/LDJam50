@@ -110,7 +110,7 @@ public class PlantController : MonoBehaviour
         {
             var plantState = x.PlantById(_id);
             waterConsumed = Math.Min(plant.WaterCapacity - plantState.Water, amount);
-            plantState.Water += waterConsumed;
+            plantState.Water += waterConsumed*gameState.State.playerStats.wateringSpeed;
             if (plantState.Water > 0 && wiltingFill != null)
                 wiltingFill.color = new Color(1, 1, 1, 0.5f);
         });

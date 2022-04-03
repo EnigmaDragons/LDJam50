@@ -44,8 +44,10 @@ namespace KinematicCharacterController.Examples
     {
         public KinematicCharacterMotor Motor;
 
+        [SerializeField] private CurrentGameState gameState;
         [Header("Stable Movement")]
-        public float MaxStableMoveSpeed = 10f;
+        [SerializeField] private float maxStableMoveSpeed = 10f;
+        public float MaxStableMoveSpeed => maxStableMoveSpeed * gameState.State.playerStats.speed;
         public float StableMovementSharpness = 15f;
         public float OrientationSharpness = 10f;
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;

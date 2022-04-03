@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1493,7 +1493,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 030827b70c0bdc544b56bf3d22a1426e, type: 3}
-
 --- !u!850595691 &1957991258
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1556,7 +1555,6 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
-
 --- !u!1001 &2005432215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1608,6 +1606,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 6.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 353182553443007785, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+        type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
+        type: 2}
+    - target: {fileID: 353182553443007785, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+        type: 3}
+      propertyPath: maxStableMoveSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 415021960331950470, guid: 82a9762c1fb6a114abc5da1a974c6b59,
         type: 3}
@@ -1989,6 +1998,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.2632557e-14
       objectReference: {fileID: 0}
+    - target: {fileID: 4212114072741419383, guid: 82a9762c1fb6a114abc5da1a974c6b59,
+        type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
+        type: 2}
     - target: {fileID: 4392578027025143595, guid: 82a9762c1fb6a114abc5da1a974c6b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2364,12 +2379,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6.84
       objectReference: {fileID: 0}
-    - target: {fileID: 4212114072741419383, guid: 82a9762c1fb6a114abc5da1a974c6b59,
-        type: 3}
-      propertyPath: gameState
-      value: 
-      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
-        type: 2}
     - target: {fileID: 7344379120124326529, guid: 82a9762c1fb6a114abc5da1a974c6b59,
         type: 3}
       propertyPath: m_Color.b

@@ -18,8 +18,9 @@ public class WateringTool : ScriptableObject, IWaterHolder
     [ShowInInspector] [ReadOnly] [ShowIf("@!isRanged")] private float currentWater;
     [ShowInInspector] [ReadOnly] [ShowIf("isRanged")] private int currentCharge;
 
+    [SerializeField] private CurrentGameState gameState;
     public float WaterAmount => isRanged ? currentCharge : currentWater;
-    public float MaxWaterAmount => isRanged ? maxCharges : maxCapacity;
+    public float MaxWaterAmount => isRanged ? maxCharges + gameState.State.playerStats.bonusCharges : maxCapacity * gameState.State.playerStats.capacity;
     
     public int UpgradeTier => upgradeTier;
 
@@ -35,7 +36,7 @@ public class WateringTool : ScriptableObject, IWaterHolder
         }
         else
         {
-            currentWater += maxCapacity * 0.1f;
+            currentWater += (maxCapacity * 0.1f)*gameState.State.playerStats.fillSpeed;
             if (currentWater > maxCapacity) currentWater = maxCapacity;
         }
     }

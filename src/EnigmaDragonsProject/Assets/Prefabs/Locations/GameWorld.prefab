@@ -285,6 +285,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 572468319364935318, guid: 1d68a7cbdb3008143915c52ae370004f,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245804571532838093, guid: 1d68a7cbdb3008143915c52ae370004f,
+        type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
+        type: 2}
+    - target: {fileID: 1245804571532838093, guid: 1d68a7cbdb3008143915c52ae370004f,
+        type: 3}
+      propertyPath: maxStableMoveSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2170355017181888957, guid: 1d68a7cbdb3008143915c52ae370004f,
         type: 3}
       propertyPath: m_RootOrder
@@ -360,6 +376,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 3448440579803652243, guid: 1d68a7cbdb3008143915c52ae370004f,
+        type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d68a7cbdb3008143915c52ae370004f, type: 3}
 --- !u!4 &842625454338553945 stripped
@@ -1481,6 +1503,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7912687846605689337}
     m_Modifications:
+    - target: {fileID: 235154407202011321, guid: 8873b0ed9f6f9f54ca396fedf81eff75,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 235154407202011321, guid: 8873b0ed9f6f9f54ca396fedf81eff75,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3107934511379071382, guid: 8873b0ed9f6f9f54ca396fedf81eff75,
         type: 3}
       propertyPath: m_IsActive

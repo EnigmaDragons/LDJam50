@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89f6de557124379bd4c58aa02340c6a, type: 3}
+  m_Name: BetterShots
+  m_EditorClassIdentifier: 
+  name: Better Shots
+  icon: {fileID: 21300000, guid: 7ae3b1d8ad08e5b4cb5e2fc9dff6bfe0, type: 3}
+  description: 'Your water gun is 33% more effective
+
+'
+  requirements: []
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  statsChange:
+    speed: 0
+    fillSpeed: 0
+    capacity: 0
+    wateringSpeed: 0
+    waterPerShot: 0.33
+    spellPower: 0
+    spellDuration: 0
+    spellCooldown: 0
+    bonusCharges: 0

@@ -15,11 +15,13 @@ public sealed class GameState
     private int _currentId;
     public WateringTool MeleeTool;
     public WateringTool RangedTool;
+    public PlayerStats playerStats;
     public bool Lost;
     public bool Won;
 
     public GameState()
     {
+        playerStats = new PlayerStats();
         upgrades = new List<BasePlayerUpgrade>();
         _plantStates = new List<PlantState>();
         _currentId = 0;
