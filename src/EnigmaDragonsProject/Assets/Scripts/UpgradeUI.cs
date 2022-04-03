@@ -24,6 +24,7 @@ public class UpgradeUI : MonoBehaviour
     public void UnlockUpgrade(BasePlayerUpgrade upgrade)
     {
         playerUpgrades.UnlockUpgrade(upgrade);
+        upgrade.OnUpgradeBought();
         CloseUpgradeUI();
     }
     

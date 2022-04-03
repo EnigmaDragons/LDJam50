@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public ExampleCharacterController Character;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource playerSoundSource;
     
     private bool _isMoving;
 
@@ -24,7 +25,14 @@ public class PlayerController : MonoBehaviour
     {
         if (_isMoving == isMoving)
             return;
-
+        if (isMoving) 
+        {
+            Message.Publish(new LoopSoundRequested(GameSounds.FootStep, playerSoundSource));
+        }
+        else
+        {
+            Message.Publish(new StopSoundRequested(GameSounds.FootStep, playerSoundSource));
+        }
         _isMoving = isMoving;
         animator.SetBool("IsWalking", isMoving);
     }
