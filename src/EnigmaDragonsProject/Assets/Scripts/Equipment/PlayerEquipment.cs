@@ -5,6 +5,7 @@ public class PlayerEquipment : MonoBehaviour
     [SerializeField] private GameObject rightHand;
     [SerializeField] private GameObject waterBottle;
     [SerializeField] private GameObject waterSprayBottle;
+    [SerializeField] private GameObject wateringCan;
 
     public void EquipWaterBottle()
     {
@@ -16,6 +17,12 @@ public class PlayerEquipment : MonoBehaviour
     {
         UnequipRightHand();
         waterSprayBottle.gameObject.SetActive(true);
+    }
+
+    public void EquipWateringCan()
+    {
+        UnequipRightHand();
+        wateringCan.gameObject.SetActive(true);
     }
     
     private void UnequipRightHand()
