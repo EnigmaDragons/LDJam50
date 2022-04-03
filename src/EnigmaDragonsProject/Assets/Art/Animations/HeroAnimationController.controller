@@ -71,9 +71,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 1.3738086
   m_TransitionOffset: 0
-  m_ExitTime: 0.80000013
+  m_ExitTime: 0.33497554
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -334,8 +334,8 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PouringWater
-  m_Speed: 1
-  m_CycleOffset: 0
+  m_Speed: 0.5
+  m_CycleOffset: 0.3
   m_Transitions:
   - {fileID: -6849845172425319992}
   m_StateMachineBehaviours: []
@@ -347,7 +347,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b879d93f6ad2e3d4681e180c8716daf1, type: 3}
+  m_Motion: {fileID: 7400000, guid: 269297c43dad5a44db462a002e884f0f, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
