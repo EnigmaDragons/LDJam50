@@ -9,6 +9,7 @@ public class PlayerWater : MonoBehaviour
     [SerializeField] private PlayerTools playerTools;
     [SerializeField] private GameObject waterParticle;
     [SerializeField] private AudioSource wateringSoundSource;
+    [SerializeField] private CurrentGameState gameState;
 
     private float lastPumpTime;
     private bool isPissing = false;

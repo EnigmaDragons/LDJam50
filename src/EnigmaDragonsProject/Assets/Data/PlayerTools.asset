@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMelee: {fileID: 11400000, guid: fcad588706af5634095af6ed44e92d52, type: 2}
   startRanged: {fileID: 11400000, guid: 621a1fdb0baeba6468d9aa044d21343c, type: 2}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}

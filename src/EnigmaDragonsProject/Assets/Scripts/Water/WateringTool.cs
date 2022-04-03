@@ -1,56 +1,26 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Watering tool")]
 public class WateringTool : ScriptableObject, IWaterHolder
 {
     public string name;
-    
-    [PreviewField]
-    public Sprite sprite;
-    
-    [InfoBox("TODO: Decide if tools should start full or empty")]
-    
-    [TextArea]
-    public string description;
-
+    [PreviewField] public Sprite sprite;
+    [SerializeField] private float startingAmount;
+    [TextArea] public string description;
     public bool isRanged;
-    [ShowIf("isRanged")]
-    public float range;
-    [ShowIf("isRanged")]
-    public int maxCharges;
-    
-    [ShowIf("@!isRanged")]
-    public float maxCapacity;
-    [ShowIf("@!isRanged")]
-    public float waterTransferRate;
-
-    
-    [SerializeField] private bool upgradable;
-    [ShowIf("upgradable")]
-    [SerializeField] private WateringTool upgradesInto;
-    
-    [ShowInInspector]
-    [ReadOnly]
-    [ShowIf("@!isRanged")]
-    private float currentWater;
-    
-    [ShowInInspector]
-    [ReadOnly]
-    [ShowIf("isRanged")]
-    private int currentCharge;
-    
-    public bool TryUpgrade(out WateringTool upgrade)
-    {
-        upgrade = this;
-        if (!upgradable) return false;
-        
-        upgrade = upgradesInto;
-        return true;
-    }
+    [ShowIf("isRanged")] public float range;
+    [ShowIf("isRanged")] public int maxCharges;
+    [ShowIf("@!isRanged")] public float maxCapacity;
+    [ShowIf("@!isRanged")] public float waterTransferRate;
+    [SerializeField] private int upgradeTier;
+    [ShowInInspector] [ReadOnly] [ShowIf("@!isRanged")] private float currentWater;
+    [ShowInInspector] [ReadOnly] [ShowIf("isRanged")] private int currentCharge;
 
     public float WaterAmount => isRanged ? currentCharge : currentWater;
     public float MaxWaterAmount => isRanged ? maxCharges : maxCapacity;
+    public int UpgradeTier => upgradeTier;
 
     [Button]
     public void Fill()
@@ -108,7 +78,7 @@ public class WateringTool : ScriptableObject, IWaterHolder
 
     public void Reset()
     {
-        currentWater = 0;
-        currentCharge = 0;
+        currentWater = startingAmount;
+        currentCharge = (int)Math.Round(startingAmount);
     }
 }

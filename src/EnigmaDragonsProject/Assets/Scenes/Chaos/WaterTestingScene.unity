@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -340,6 +340,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plant: {fileID: 11400000, guid: 6c0c70af6b89da54dae2c374b869117d, type: 2}
   navigator: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
+  gameState: {fileID: 0}
+  waterFill: {fileID: 0}
+  wiltingFill: {fileID: 0}
 --- !u!1 &1581202960
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,9 +652,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceFromPump: 1.5
-  pump: {fileID: 1150927558}
   pumpingDelay: 0.2
   meleeToolRange: 1.5
+  playerTools: {fileID: 11400000, guid: 07ec9277d232a034091c3f45647ea780, type: 2}
+  waterParticle: {fileID: 0}
+  wateringSoundSource: {fileID: 0}
+  gameState: {fileID: 0}
 --- !u!114 &1877406883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,8 +670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274e78aabe97ae8469b2c107170edf1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  melee: {fileID: 11400000, guid: fcad588706af5634095af6ed44e92d52, type: 2}
-  ranged: {fileID: 0}
+  startMelee: {fileID: 0}
+  startRanged: {fileID: 0}
+  gameState: {fileID: 0}
 --- !u!1773428102 &1877406884
 ParentConstraint:
   m_ObjectHideFlags: 0
@@ -816,7 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 4568539358434549212}
-  character: {fileID: 5186862771811779284}
+  animator: {fileID: 0}
 --- !u!1 &326999241572653733
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public sealed class GameState
     
     private List<PlantState> _plantStates;
     private int _currentId;
+    public WateringTool MeleeTool;
+    public WateringTool RangedTool;
 
     public GameState()
     {
@@ -26,4 +28,13 @@ public sealed class GameState
     }
 
     public PlantState PlantById(int id) => _plantStates.First(x => x.Id == id);
+
+    public void TryUpgrade(WateringTool tool)
+    {
+        tool.Reset();
+        if (tool.isRanged && tool.UpgradeTier > RangedTool.UpgradeTier)
+            RangedTool = tool;
+        else if (!tool.isRanged && tool.UpgradeTier > MeleeTool.UpgradeTier)
+            MeleeTool = tool;
+    }
 }
