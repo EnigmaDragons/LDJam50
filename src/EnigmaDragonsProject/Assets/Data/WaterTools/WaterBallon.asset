@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Baloon
   sprite: {fileID: 21300000, guid: ee9a04507255bc14b8917a25427d95ab, type: 3}
+  startingAmount: 0
   description: 
   isRanged: 1
   range: 4
   maxCharges: 5
   maxCapacity: 0
   waterTransferRate: 0
-  upgradable: 1
-  upgradesInto: {fileID: 11400000, guid: 0e72cbdc434061e4f83f5a70c885c51b, type: 2}
+  upgradeTier: 1

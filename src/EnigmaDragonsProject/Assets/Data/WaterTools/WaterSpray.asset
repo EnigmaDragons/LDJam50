@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Spray
   sprite: {fileID: 21300000, guid: 67b6d901ee0f5274f9708370737c280e, type: 3}
+  startingAmount: 0
   description: 
   isRanged: 0
   range: 0
   maxCharges: 0
   maxCapacity: 30
   waterTransferRate: 15
-  upgradable: 1
-  upgradesInto: {fileID: 11400000, guid: f03c628ffd863c245a2572a88fa83427, type: 2}
+  upgradeTier: 2

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Bucket
   sprite: {fileID: 21300000, guid: de000d78d7ba50f49a5c65974571b913, type: 3}
+  startingAmount: 0
   description: 
   isRanged: 0
   range: 0
   maxCharges: 0
   maxCapacity: 150
   waterTransferRate: 50
-  upgradable: 0
-  upgradesInto: {fileID: 0}
+  upgradeTier: 4
