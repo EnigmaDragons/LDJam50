@@ -156,6 +156,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7912687846605689337}
     m_Modifications:
+    - target: {fileID: 515592451838345070, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 683891834039174911, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
       propertyPath: m_TreeDistance
@@ -191,6 +196,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1908894664876364463, guid: 91d21a9efbbaacf4f920b8fe75244819,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4576445170969790801, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
       propertyPath: m_Name
@@ -219,7 +229,7 @@ PrefabInstance:
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.79
       objectReference: {fileID: 0}
     - target: {fileID: 6693025439984254521, guid: 91d21a9efbbaacf4f920b8fe75244819,
         type: 3}
