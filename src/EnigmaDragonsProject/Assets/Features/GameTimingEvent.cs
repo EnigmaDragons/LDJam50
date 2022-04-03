@@ -4,9 +4,9 @@ using UnityEngine;
 [Serializable]
 public class GameTimingEvent
 {
-    [SerializeField] private GameObject tile;
     [SerializeField] private float secondsToAppear;
-
-    public GameObject Tile => tile;
+    [SerializeField] private string description;
+        
     public float SecondsToAppear => secondsToAppear;
+    public string Description => description;
 }
