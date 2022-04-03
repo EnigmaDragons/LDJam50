@@ -32,7 +32,7 @@ public class WateringTool : ScriptableObject, IWaterHolder
         if (isRanged)
         {
             currentCharge++;
-            if(currentCharge > MaxWaterAmount) currentCharge = maxCharges;
+            if(currentCharge > MaxWaterAmount) currentCharge = (int)MaxWaterAmount;
         }
         else
         {
