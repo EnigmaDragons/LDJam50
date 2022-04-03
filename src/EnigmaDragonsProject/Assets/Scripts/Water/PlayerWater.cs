@@ -10,6 +10,7 @@ public class PlayerWater : MonoBehaviour
     [SerializeField] private GameObject waterParticle;
     [SerializeField] private AudioSource wateringSoundSource;
     [SerializeField] private CurrentGameState gameState;
+    [SerializeField] private WaterShot rangePrototype;
 
     private float lastPumpTime;
     private bool isPissing = false;
@@ -17,6 +18,7 @@ public class PlayerWater : MonoBehaviour
     private Collider nearestPump;
     private Animator animator;
     private ParticleSystem waterParticles;
+    private float _cooldown;
     
     private void Awake()
     {
@@ -49,6 +51,20 @@ public class PlayerWater : MonoBehaviour
             StopWatering();
     }
 
+    public void FireWaterCharge(InputAction.CallbackContext context)
+    {
+        if (_cooldown > 0)
+            return;
+        var value = context.ReadValue<float>();
+        var rangedTool = playerTools.GetRangedTool();
+        if (value > 0.5f && rangedTool != null && rangedTool.WaterAmount > 0)
+        {
+            _cooldown = 0.2f;
+            var prototype = Instantiate(rangePrototype, transform.position + new Vector3(0, 1, 0) + transform.forward * 1, Quaternion.identity);
+            prototype.Init(rangedTool.waterTransferRate, transform.forward, rangedTool.range);
+        }
+    }
+
     private void StartWatering()
     {
         Log.Info("Start Watering");
@@ -68,6 +84,7 @@ public class PlayerWater : MonoBehaviour
     
     private void FixedUpdate()
     {
+        _cooldown = Math.Max(0, _cooldown - Time.fixedTime);
         CheckForPlants();
         CheckForPumps();
 
