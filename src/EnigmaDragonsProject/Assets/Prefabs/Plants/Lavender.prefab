@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2415900213349803537}
   - component: {fileID: 1803303532163459947}
+  - component: {fileID: 3492456278763939698}
   m_Layer: 6
   m_Name: Lavender
   m_TagString: Untagged
@@ -55,6 +56,20 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   waterFill: {fileID: 2924060723283220017}
   wiltingFill: {fileID: 8422565411330826098}
+--- !u!136 &3492456278763939698
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415900213349803630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.27
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.48, z: 0}
 --- !u!1001 &2415900212588843079
 PrefabInstance:
   m_ObjectHideFlags: 0

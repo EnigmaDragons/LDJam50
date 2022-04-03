@@ -54,6 +54,9 @@ MonoBehaviour:
   playerTools: {fileID: 11400000, guid: 07ec9277d232a034091c3f45647ea780, type: 2}
   waterParticle: {fileID: 2276428382043011758}
   wateringSoundSource: {fileID: 7428951765994328484}
+  gameState: {fileID: 0}
+  rangePrototype: {fileID: -3516202315063839240, guid: 43baabf85ac53944193de535eaa0d3e3,
+    type: 3}
 --- !u!1773428102 &4162309905247961167
 ParentConstraint:
   m_ObjectHideFlags: 0
@@ -183,7 +186,19 @@ MonoBehaviour:
     m_ActionId: 3cda0a01-61d7-493c-9d65-f5745e2518a3
     m_ActionName: Watering/TakeWater[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4162309905247961164}
+        m_TargetAssemblyTypeName: PlayerWater, EnigmaDragons.Game
+        m_MethodName: FireWaterCharge
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b5d7de76-ae71-488a-b204-619c3aa859e4
     m_ActionName: Watering/WaterPlantsRanged[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0

@@ -13,7 +13,7 @@ public class WateringTool : ScriptableObject, IWaterHolder
     [ShowIf("isRanged")] public float range;
     [ShowIf("isRanged")] public int maxCharges;
     [ShowIf("@!isRanged")] public float maxCapacity;
-    [ShowIf("@!isRanged")] public float waterTransferRate;
+    public float waterTransferRate;
     [SerializeField] private int upgradeTier;
     [ShowInInspector] [ReadOnly] [ShowIf("@!isRanged")] private float currentWater;
     [ShowInInspector] [ReadOnly] [ShowIf("isRanged")] private int currentCharge;
@@ -66,6 +66,12 @@ public class WateringTool : ScriptableObject, IWaterHolder
             currentWater = 0;
             return amount;
         }
+    }
+
+    public void UseCharge()
+    {
+        if (!isRanged) return;
+        currentCharge -= 1;
     }
 
     [ShowIf("isRanged")]

@@ -20,5 +20,5 @@ MonoBehaviour:
   range: 6
   maxCharges: 8
   maxCapacity: 0
-  waterTransferRate: 0
+  waterTransferRate: 10
   upgradeTier: 1
