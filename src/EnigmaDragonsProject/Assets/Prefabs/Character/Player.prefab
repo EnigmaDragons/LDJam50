@@ -166,6 +166,7 @@ MonoBehaviour:
   waterBottle: {fileID: 4824544196337106348}
   waterSprayBottle: {fileID: 3047387834756855026}
   wateringCan: {fileID: 3241746012499934366}
+  bucket: {fileID: 8986792966531736209}
 --- !u!114 &7409872440256674362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +300,12 @@ Animator:
 --- !u!4 &6851784016160459674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5713005619272068985, guid: 3a660de3d3a8ae4429868be49f085b7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179592448900605155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8986792966531736209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7847875860465862258, guid: 3a660de3d3a8ae4429868be49f085b7c,
     type: 3}
   m_PrefabInstance: {fileID: 1179592448900605155}
   m_PrefabAsset: {fileID: 0}
