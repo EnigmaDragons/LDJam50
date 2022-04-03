@@ -68,7 +68,7 @@ public class PlayerWater : MonoBehaviour
 
     private void StartWatering()
     {
-        Log.Info("Start Watering");
+        if (!nearestPlant) return;
         waterParticles.Play();
         Message.Publish(new LoopSoundRequested(GameSounds.Watering, wateringSoundSource));
         if (animator != null)
@@ -124,7 +124,11 @@ public class PlayerWater : MonoBehaviour
     private PlantController cachedPlant;
     public void TryPiss()
     {
-        if (!nearestPlant) return;
+        if (!nearestPlant)
+        {
+            waterParticles.Stop();
+            return;
+        }
         if (cachedPlant is null || lastPlant is null || lastPlant != nearestPlant)
         {
             lastPlant = nearestPlant;
@@ -136,11 +140,11 @@ public class PlayerWater : MonoBehaviour
         amount = Math.Min(tool.WaterAmount, amount);
         amount = cachedPlant.AddWater(amount);
         tool.UseWater(amount);
-        waterParticle.GetComponent<ParticleSystem>().Play();
+        waterParticles.Play();
         if (tool.WaterAmount == 0)
         {
             isPissing = false;
-            waterParticle.GetComponent<ParticleSystem>().Stop();
+            waterParticles.Stop();
         }
     }
 
