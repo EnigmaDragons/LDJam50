@@ -12,6 +12,7 @@ public class PlantController : MonoBehaviour
     [SerializeField] private Image waterFill;
     [SerializeField] private Image wiltingFill;
     [SerializeField] private GameObject fireVFX;
+
     private const float spreadRange = 10;
     private const float spreadTime = 10;
     private float timeUntilSpread;
@@ -61,9 +62,10 @@ public class PlantController : MonoBehaviour
             }
         }
 
-        fireVFX.SetActive(isOnFire);
+        fireVFX.SetActive(true);
         if (isOnFire)
         {
+            Message.Publish(new PlaySoundRequested(GameSounds.TreeFire, fireVFX.transform.position));
             timeUntilSpread -= Time.deltaTime;
             if (timeUntilSpread <= 0)
             {
