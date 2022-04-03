@@ -19,6 +19,7 @@ public sealed class GameState
     public string progressionDescription;
     public float progress;
     public bool GiveUpgrade;
+    public bool WaterBaloonUnlocked;
 
     public GameState()
     {
@@ -28,6 +29,8 @@ public sealed class GameState
         _currentId = 0;
         Lost = false;
         Won = false;
+        GiveUpgrade = false;
+        WaterBaloonUnlocked = false;
     }
 
     public bool IsWaterAboveCertainLevel(float percent) => _plantStates.All(x => x.Water > x.WaterCapacity * percent);  
