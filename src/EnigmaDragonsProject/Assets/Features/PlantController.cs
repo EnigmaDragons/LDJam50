@@ -11,6 +11,7 @@ public class PlantController : MonoBehaviour
     [SerializeField] private CurrentGameState gameState;
     [SerializeField] private Image waterFill;
     [SerializeField] private Image wiltingFill;
+    [SerializeField] private AudioSource plantSoundSource;
     [SerializeField] private GameObject fireVFX;
 
     private const float spreadRange = 10;
@@ -27,12 +28,22 @@ public class PlantController : MonoBehaviour
             Log.Error($"{name} does not have a Water Fill UI");
     }
     
+    private void OnEnable() {
+        Message.Publish(new PlaySoundRequested(GameSounds.NewPlant, Camera.main.transform.position));
+    }
+
     private void Update()
     {
         var plantState = gameState.State.PlantById(_id);
         var water = plantState.Water;
         var wiltingSecondsRemaining = plantState.WiltingRemainingSeconds;
         var isOnFire = plantState.IsOnFire;
+
+        // if plant is full of water
+        if (plantState.Water >= plant.WaterCapacity)
+        {
+            Message.Publish(new PlaySoundRequested(GameSounds.PlantFull, gameObject.transform.position));
+        }
             
         if (plantState.Water > 0)
         {
@@ -44,6 +55,7 @@ public class PlantController : MonoBehaviour
                 wiltingSecondsRemaining += water / waterConsumption;
                 if (wiltingFill != null)
                 {
+
                     wiltingFill.fillAmount = wiltingSecondsRemaining / plant.WiltingSeconds;
                     wiltingFill.color = new Color(1, 1, 1, 1);
                 }
@@ -62,10 +74,11 @@ public class PlantController : MonoBehaviour
             }
         }
 
+        // if plant is on fire
         fireVFX.SetActive(true);
         if (isOnFire)
         {
-            Message.Publish(new PlaySoundRequested(GameSounds.TreeFire, fireVFX.transform.position));
+            Message.Publish(new LoopSoundRequested(GameSounds.TreeFire, plantSoundSource));
             timeUntilSpread -= Time.deltaTime;
             if (timeUntilSpread <= 0)
             {
@@ -107,8 +120,6 @@ public class PlantController : MonoBehaviour
     private void SpreadFire()
     {
         var results = Physics.OverlapSphere(transform.position, spreadRange, layerMask: LayerMask.GetMask("Plants"));
-        
-        Debug.Log(results);
 
         var res = results.Where(x => {
             var controller = x.GetComponent<PlantController>();

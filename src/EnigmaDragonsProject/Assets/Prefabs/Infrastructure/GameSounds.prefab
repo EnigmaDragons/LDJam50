@@ -71,3 +71,12 @@ MonoBehaviour:
   fillWater:
     clip: {fileID: 8300000, guid: b624aab431e5a4548a5f923852d79f44, type: 3}
     volume: 1
+  treeFire:
+    clip: {fileID: 8300000, guid: 591914849b2954847819e2d6beea5587, type: 3}
+    volume: 1
+  newPlant:
+    clip: {fileID: 8300000, guid: 7f91de8eb8a8a1e4abd852b1dbdbae0c, type: 3}
+    volume: 1
+  plantFull:
+    clip: {fileID: 8300000, guid: 53956f3028903d543a5657e2f8df1af8, type: 3}
+    volume: 1
