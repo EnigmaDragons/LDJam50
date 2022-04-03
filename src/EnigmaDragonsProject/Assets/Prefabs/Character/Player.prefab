@@ -163,10 +163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHand: {fileID: 4960485049078858761}
+  leftHand: {fileID: 4959876942035101967}
   waterBottle: {fileID: 4824544196337106348}
   waterSprayBottle: {fileID: 3047387834756855026}
   wateringCan: {fileID: 3241746012499934366}
   bucket: {fileID: 8986792966531736209}
+  waterBalloon: {fileID: 4950217948597343254}
 --- !u!114 &7409872440256674362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +284,18 @@ GameObject:
 --- !u!1 &4824544196337106348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5956846650116561231, guid: 3a660de3d3a8ae4429868be49f085b7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179592448900605155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4950217948597343254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6119395641884700917, guid: 3a660de3d3a8ae4429868be49f085b7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179592448900605155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4959876942035101967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6092179361460588012, guid: 3a660de3d3a8ae4429868be49f085b7c,
     type: 3}
   m_PrefabInstance: {fileID: 1179592448900605155}
   m_PrefabAsset: {fileID: 0}

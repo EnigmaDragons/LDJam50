@@ -1,5 +1,6 @@
 @echo off
 set arg1=%1
+git checkout **Sirenix*
 git add .
 git commit -m %arg1%
 git pull

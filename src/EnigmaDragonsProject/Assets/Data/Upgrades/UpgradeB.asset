@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d767e71992414a9000fc9af3cf408a, type: 3}
+  m_Name: UpgradeB
+  m_EditorClassIdentifier: 
+  name: Upgrade b
+  icon: {fileID: 21300000, guid: ee9a04507255bc14b8917a25427d95ab, type: 3}
+  description: 'some desc2
+
+'
+  requirements: []
+  ranged: 0
+  upgrade: {fileID: 0}

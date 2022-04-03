@@ -20,8 +20,11 @@ public class WateringTool : ScriptableObject, IWaterHolder
 
     public float WaterAmount => isRanged ? currentCharge : currentWater;
     public float MaxWaterAmount => isRanged ? maxCharges : maxCapacity;
+    
     public int UpgradeTier => upgradeTier;
 
+    
+    
     [Button]
     public void Fill()
     {
