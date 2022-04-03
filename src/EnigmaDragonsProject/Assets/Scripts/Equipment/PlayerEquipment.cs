@@ -9,18 +9,26 @@ public class PlayerEquipment : MonoBehaviour
     [SerializeField] private GameObject wateringCan;
     [SerializeField] private GameObject bucket;
     [SerializeField] private GameObject waterBalloon;
+    [SerializeField] private GameObject waterGun1;
 
     private void Start()
     {
         UnequipLeftHand();
         UnequipRightHand();
         EquipWaterBottle();
+        EquipWaterGun1();
     }
     
     public void EquipWaterBalloon()
     {
         UnequipLeftHand();
         waterBalloon.gameObject.SetActive(true);
+    }
+
+    public void EquipWaterGun1()
+    {
+        UnequipLeftHand();
+        waterGun1.gameObject.SetActive(true);
     }
     
     public void EquipWaterBottle()

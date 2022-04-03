@@ -6434,6 +6434,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 509057285330616430}
+  - {fileID: 5451360760221899998}
   m_Father: {fileID: 6096817228402979554}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7994,6 +7995,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3951301552613780800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4943548598620062915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6096895348960549306}
+    m_Modifications:
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0193
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4715494
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.50870353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.52691525
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4911439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.168
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -94.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136350788092979726, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+        type: 3}
+      propertyPath: m_Name
+      value: Watergun_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8b01d9c4d4838e42b1486a5cc3f4710, type: 3}
+--- !u!4 &5451360760221899998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1097784263621122077, guid: e8b01d9c4d4838e42b1486a5cc3f4710,
+    type: 3}
+  m_PrefabInstance: {fileID: 4943548598620062915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5957174505216205023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8164,6 +8255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaterBalloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915409095992133910, guid: 8f0f688a6b1c45540ad1b0d13ca51459,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901751885424589197, guid: 8f0f688a6b1c45540ad1b0d13ca51459,
         type: 3}
