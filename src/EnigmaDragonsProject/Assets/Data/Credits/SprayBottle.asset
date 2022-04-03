@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70987c2d965c4750a3c7c1f3728d5eee, type: 3}
-  m_Name: AllCredits
+  m_Script: {fileID: 11500000, guid: 95e24bf5005ad284cbf3dc477865d8f4, type: 3}
+  m_Name: SprayBottle
   m_EditorClassIdentifier: 
-  credits:
-  - {fileID: 11400000, guid: 120e5b277ce9dd244b785a2f16009e7a, type: 2}
-  - {fileID: 11400000, guid: 41f624b9988b881448dff053ad887c87, type: 2}
+  role: '"Spray Bottle" 3D Model'
+  personName: ' Anthony Yanez'
+  link: 
