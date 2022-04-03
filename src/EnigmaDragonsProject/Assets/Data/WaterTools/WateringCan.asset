@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Watering Can
   sprite: {fileID: 21300000, guid: 26d26047fed45b946b077b05fc5fbf5f, type: 3}
+  startingAmount: 0
   description: 
   isRanged: 0
   range: 0
   maxCharges: 0
   maxCapacity: 90
   waterTransferRate: 30
-  upgradable: 1
-  upgradesInto: {fileID: 11400000, guid: 2c4f04945688e974681ec1a720dd135c, type: 2}
+  upgradeTier: 3

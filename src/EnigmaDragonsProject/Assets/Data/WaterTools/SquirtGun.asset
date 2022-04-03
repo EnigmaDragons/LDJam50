@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Squirt Gun
   sprite: {fileID: 21300000, guid: 826fbe5d8c37f8c448d52a0cf92a9ff5, type: 3}
+  startingAmount: 0
   description: 
   isRanged: 1
   range: 6
   maxCharges: 8
   maxCapacity: 0
   waterTransferRate: 0
-  upgradable: 0
-  upgradesInto: {fileID: 0}
+  upgradeTier: 1
