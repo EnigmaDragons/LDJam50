@@ -13,7 +13,7 @@ public class PlantController : MonoBehaviour
 
     [ShowInInspector] [ReadOnly] private int _id;
     public int Id => _id;
-    
+
     private void Start()
     {
         gameState.UpdateState(x => _id = x.InitPlant(transform,  plant.StartingWater, plant.WiltingSeconds, plant.WaterCapacity));
@@ -60,8 +60,11 @@ public class PlantController : MonoBehaviour
             plantState.WiltingRemainingSeconds = wiltingSecondsRemaining;
         });
 
-        if (wiltingSecondsRemaining <= 0)
-            navigator.NavigateToGameOverScene();
+        if (wiltingSecondsRemaining <= 0 && !gameState.State.Lost)
+        {
+            gameState.UpdateState(x => x.Lost = true);
+            navigator.NavigateToGameOverScene();   
+        }
     }
 
     public float AddWater(float amount)

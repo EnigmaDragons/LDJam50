@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Codice.CM.Common.Serialization.Replication;
 using UnityEngine;
 
 [Serializable]
@@ -12,10 +13,15 @@ public sealed class GameState
     private int _currentId;
     public WateringTool MeleeTool;
     public WateringTool RangedTool;
+    public bool Lost;
+    public bool Won;
 
     public GameState()
     {
         _plantStates = new List<PlantState>();
+        _currentId = 0;
+        Lost = false;
+        Won = false;
     }
 
     public bool IsWaterAboveCertainLevel(float percent) => _plantStates.All(x => x.Water > x.WaterCapacity * percent);  
