@@ -56,6 +56,7 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   waterFill: {fileID: 2924060723283220017}
   wiltingFill: {fileID: 8422565411330826098}
+  fireVFX: {fileID: 1804865220138716, guid: 95d6aa7f65151d34289e7d8fdbb720d4, type: 3}
 --- !u!136 &3492456278763939698
 CapsuleCollider:
   m_ObjectHideFlags: 0
