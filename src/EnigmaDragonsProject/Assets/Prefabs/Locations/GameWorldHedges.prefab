@@ -3497,10 +3497,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5664059717075372711}
     m_Modifications:
+    - target: {fileID: 367268315204734164, guid: eac710d79887a254b9031606762c8eff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1937066229617706106, guid: eac710d79887a254b9031606762c8eff,
         type: 3}
       propertyPath: m_Name
       value: Hedge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713232184871687584, guid: eac710d79887a254b9031606762c8eff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8332501208858868810, guid: eac710d79887a254b9031606762c8eff,
         type: 3}
