@@ -15,6 +15,10 @@ namespace Water.Upgrades
 
         [SerializeField] private List<BasePlayerUpgrade> requirements;
 
+        public Sprite Icon => icon;
+        public string Name => name;
+        public string Description => description;
+
         public bool CanAppear(List<BasePlayerUpgrade> currentUpgrades)
         {
             var req = requirements.Except(currentUpgrades);

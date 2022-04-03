@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99d767e71992414a9000fc9af3cf408a, type: 3}
-  m_Name: New Weapon Upgrade
+  m_Name: UpgradeC
   m_EditorClassIdentifier: 
-  name: 
-  icon: {fileID: 0}
-  description: 
-  requirements:
-  - {fileID: 0}
+  name: Upgrade c
+  icon: {fileID: 21300000, guid: 826fbe5d8c37f8c448d52a0cf92a9ff5, type: 3}
+  description: some desc3
+  requirements: []
   ranged: 0
   upgrade: {fileID: 0}
