@@ -1,21 +1,16 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class GameTimingController : MonoBehaviour
 {
     [SerializeField] private GameTimingEvent[] secondsTilNextEvent;
     [SerializeField] private CurrentGameState gameState;
-    [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private Image image;
-    
+
     private int _eventIndex;
     private float _t;
 
     private void Start()
     {
-        text.text = secondsTilNextEvent[_eventIndex].Description;
+        Message.Publish(new UpdateProgressionBar { Description = secondsTilNextEvent[_eventIndex].Description, Progress = 1 });
     }
 
     private void Update()
@@ -26,11 +21,10 @@ public class GameTimingController : MonoBehaviour
         if (_t >= secondsTilNextEvent[_eventIndex].SecondsToAppear)
         {
             gameState.UpdateState(x => x.IsSpawning = true);
-            Message.Publish(new SpawnNextSegment());
+            secondsTilNextEvent[_eventIndex].Plant.gameObject.SetActive(true);
             _t = 0;
             _eventIndex++;
-            text.text = secondsTilNextEvent[_eventIndex].Description;
         }
-        image.fillAmount = _t / secondsTilNextEvent[_eventIndex].SecondsToAppear;
+        Message.Publish(new UpdateProgressionBar { Description = secondsTilNextEvent[_eventIndex].Description, Progress = 1 - _t / secondsTilNextEvent[_eventIndex].SecondsToAppear });
     }
 }

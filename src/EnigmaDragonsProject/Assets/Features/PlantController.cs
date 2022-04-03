@@ -14,7 +14,8 @@ public class PlantController : MonoBehaviour
     [SerializeField] private Image wiltingFill;
     [SerializeField] private AudioSource plantSoundSource;
     [SerializeField] private GameObject fireVFX;
-
+    public Plant Plant => plant;
+    
     private const float spreadRange = 10;
     private const float spreadTime = 10;
     private float timeUntilSpread;
