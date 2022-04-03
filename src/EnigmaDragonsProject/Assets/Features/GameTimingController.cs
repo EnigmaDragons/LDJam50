@@ -1,36 +1,33 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class GameTimingController : MonoBehaviour
 {
     [SerializeField] private GameTimingEvent[] secondsTilNextEvent;
     [SerializeField] private CurrentGameState gameState;
-    [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private Image image;
-    
+
     private int _eventIndex;
     private float _t;
 
     private void Start()
     {
-        text.text = secondsTilNextEvent[_eventIndex].Description;
+        Message.Publish(new UpdateProgressionBar { Description = secondsTilNextEvent[_eventIndex].Description, Progress = 1 });
     }
 
     private void Update()
     {
-        if (_eventIndex == secondsTilNextEvent.Length && !gameState.State.IsSpawning)
+        if (_eventIndex == secondsTilNextEvent.Length)
             return;
         _t = gameState.State.IsWaterAboveCertainLevel(0.8f) ? _t + Time.deltaTime * 10 : _t + Time.deltaTime;
         if (_t >= secondsTilNextEvent[_eventIndex].SecondsToAppear)
         {
-            gameState.UpdateState(x => x.IsSpawning = true);
-            Message.Publish(new SpawnNextSegment());
+            secondsTilNextEvent[_eventIndex].Plant.gameObject.SetActive(true);
             _t = 0;
             _eventIndex++;
-            text.text = secondsTilNextEvent[_eventIndex].Description;
         }
-        image.fillAmount = _t / secondsTilNextEvent[_eventIndex].SecondsToAppear;
+        gameState.UpdateState(x =>
+        {
+            x.progressionDescription = secondsTilNextEvent[_eventIndex].Description;
+            x.progress = _t / secondsTilNextEvent[_eventIndex].SecondsToAppear;
+        });
     }
 }

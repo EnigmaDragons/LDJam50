@@ -22,3 +22,4 @@ MonoBehaviour:
   - threshold: 0
     waterConsumptionPerSecond: 1
   wiltingSeconds: 20
+  incomingDescription: Planting Sunflower

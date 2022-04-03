@@ -18,3 +18,4 @@ MonoBehaviour:
   - threshold: 0
     waterConsumptionPerSecond: 0
   wiltingSeconds: 9999
+  incomingDescription: Planting Golden Apple Tree

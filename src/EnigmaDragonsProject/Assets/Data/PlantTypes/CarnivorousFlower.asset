@@ -18,3 +18,4 @@ MonoBehaviour:
   - threshold: 0
     waterConsumptionPerSecond: 1
   wiltingSeconds: 30
+  incomingDescription: Planting Carnivorous Flower

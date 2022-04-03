@@ -1125,9 +1125,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Adding Lavender
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4465db4f9aff06f45a504ba93ac493b2, type: 2}
-  m_sharedMaterial: {fileID: -6670066766322023224, guid: 4465db4f9aff06f45a504ba93ac493b2,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1157,7 +1156,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2396,7 +2395,7 @@ GameObject:
   - component: {fileID: 593972054437749846}
   - component: {fileID: 5144438788267829229}
   - component: {fileID: 3892567077570381920}
-  - component: {fileID: 6175967928440329877}
+  - component: {fileID: 7944135899181378387}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -2490,7 +2489,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 255
---- !u!114 &6175967928440329877
+--- !u!114 &7944135899181378387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2499,47 +2498,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8591482619469862817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24058bb353614714823732f416b102df, type: 3}
+  m_Script: {fileID: 11500000, guid: c59ad782d8e44b52becd4df60f03a1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsTilNextEvent:
-  - secondsToAppear: 90
-    description: Planting Begonias
-  - secondsToAppear: 90
-    description: Planting Begonias
-  - secondsToAppear: 90
-    description: Planting Begonias
-  - secondsToAppear: 27
-    description: Preparing Upgrade
-  - secondsToAppear: 90
-    description: Planting Begonias
-  - secondsToAppear: 90
-    description: Planting Sunflowers
-  - secondsToAppear: 90
-    description: Planting Sunflowers
-  - secondsToAppear: 90
-    description: Planting Sunflowers
-  - secondsToAppear: 90
-    description: Planting Sunflowers
-  - secondsToAppear: 90
-    description: Planting Sunflowers
-  - secondsToAppear: 90
-    description: Planting Lavender
-  - secondsToAppear: 90
-    description: Planting Lavender
-  - secondsToAppear: 90
-    description: Planting Lavender
-  - secondsToAppear: 90
-    description: Planting Lavender
-  - secondsToAppear: 90
-    description: Planting Lavender
-  - secondsToAppear: 90
-    description: Planting Golden Apple Tree
-  - secondsToAppear: 99999
-    description: Water The Golden Apple Tree To Win
-  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   text: {fileID: 2270799537530313798}
   image: {fileID: 8726429144496871262}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!1 &8702890355375223687
 GameObject:
   m_ObjectHideFlags: 0

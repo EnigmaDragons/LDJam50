@@ -2,8 +2,10 @@
 
 public class UponEnableSendShowUpgrades : MonoBehaviour
 {
+    [SerializeField] private CurrentGameState gameState;
+    
     private void OnEnable()
     {
-        Message.Publish(new ShowUpgrade());
+        gameState.UpdateState(x => x.GiveUpgrade = true);
     }
 }
