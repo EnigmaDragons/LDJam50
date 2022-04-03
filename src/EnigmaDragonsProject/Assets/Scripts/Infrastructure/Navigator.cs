@@ -7,7 +7,7 @@ public sealed class Navigator : ScriptableObject
 
     public void NavigateToVictoryScene() => NavigateTo("Victory");
     public void NavigateToGameOverScene() => NavigateTo("GameOver");
-    public void NavigateToGameScene() => NavigateTo("GameScene");
+    public void NavigateToGameScene() => NavigateTo("GameSceneNewGarden");
     public void NavigateToMainMenu() => NavigateTo("MainMenu");
     public void NavigateToScene(string sceneName) => NavigateTo(sceneName);
 

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Core/CreditsScene.unity
     guid: 514d334c5df4df64f87ea2cadf28e400
   - enabled: 1
+    path: Assets/Scenes/Core/GameSceneNewGarden.unity
+    guid: 60837017c07f09a489e98269801dbe2c
+  - enabled: 1
     path: Assets/Scenes/Core/GameScene.unity
     guid: da00057e27b0d9d4b8b6bb444b471ab3
   - enabled: 1
