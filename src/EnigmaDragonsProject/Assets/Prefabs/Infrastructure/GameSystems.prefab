@@ -47,7 +47,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   secondsTilNextEvent:
   - 90
-  - 0
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
+  - 90
   - 90
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!114 &4373249817353728588
