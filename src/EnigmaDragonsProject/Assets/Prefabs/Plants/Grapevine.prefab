@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4566719045330226676}
   - component: {fileID: 8629989306707871347}
+  - component: {fileID: 7140600470398444362}
   m_Layer: 6
   m_Name: Grapevine
   m_TagString: Untagged
@@ -51,6 +52,20 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   waterFill: {fileID: 629887398367487463}
   wiltingFill: {fileID: 6110083292459576484}
+--- !u!136 &7140600470398444362
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122551546586659688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6099119
+  m_Height: 2.8
+  m_Direction: 0
+  m_Center: {x: 0, y: 0.5960841, z: 0}
 --- !u!1001 &4770186285898284347
 PrefabInstance:
   m_ObjectHideFlags: 0
