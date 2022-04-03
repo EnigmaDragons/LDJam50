@@ -1724,6 +1724,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSounds
       objectReference: {fileID: 0}
+    - target: {fileID: 9146843938594590881, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: watering.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 58ff0fa545c514e908b2d49cb580a1e2, type: 3}
+    - target: {fileID: 9146843938594590881, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: fillWater.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 70b66e14d7efa4eba877743b3a94c390, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1622b38efd9113459fa515b731da71c, type: 3}
 --- !u!1001 &1095757143946985246
