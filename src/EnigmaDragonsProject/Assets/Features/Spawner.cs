@@ -9,10 +9,9 @@ public class Spawner : OnMessage<SpawnNextSegment>
     
     protected override void Execute(SpawnNextSegment msg)
     {
-        if (_index == objectsToSpawn.Length && gameState.State.IsSpawning)
+        if (_index == objectsToSpawn.Length)
             return;
         objectsToSpawn[_index].SetActive(true);
         _index++;
-        gameState.UpdateState(x => x.IsSpawning = false);
     }
 }

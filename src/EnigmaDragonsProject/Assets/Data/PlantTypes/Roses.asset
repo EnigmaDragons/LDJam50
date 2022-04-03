@@ -18,3 +18,4 @@ MonoBehaviour:
   - threshold: 0
     waterConsumptionPerSecond: 0.4
   wiltingSeconds: 15
+  incomingDescription: Planting Roses

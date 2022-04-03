@@ -10,5 +10,5 @@ public class GameTimingEvent
 
     public PlantController Plant => plant;
     public float SecondsToAppear => secondsToAppearOverride > 0 ? secondsToAppearOverride : 90;
-    public string Description => string.IsNullOrWhiteSpace(descriptionOverride) ? descriptionOverride : plant.Plant.IncomingDescription;
+    public string Description => string.IsNullOrWhiteSpace(descriptionOverride) ? plant.Plant.IncomingDescription : descriptionOverride;
 }

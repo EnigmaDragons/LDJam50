@@ -8,8 +8,6 @@ using Water.Upgrades;
 [Serializable]
 public sealed class GameState
 {
-    public bool IsSpawning;
-
     public List<BasePlayerUpgrade> upgrades;
     private List<PlantState> _plantStates;
     private int _currentId;
@@ -18,6 +16,8 @@ public sealed class GameState
     public PlayerStats playerStats;
     public bool Lost;
     public bool Won;
+    public string progressionDescription;
+    public float progress;
 
     public GameState()
     {

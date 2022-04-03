@@ -18,3 +18,4 @@ MonoBehaviour:
   - threshold: 0
     waterConsumptionPerSecond: 0
   wiltingSeconds: 10
+  incomingDescription: Planting Burning Tree

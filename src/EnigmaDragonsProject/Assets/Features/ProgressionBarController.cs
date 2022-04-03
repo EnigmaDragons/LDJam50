@@ -2,14 +2,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ProgressionBarController : OnMessage<UpdateProgressionBar>
+public class ProgressionBarController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image image;
+    [SerializeField] private CurrentGameState gameState;
     
-    protected override void Execute(UpdateProgressionBar msg)
+    private void Update()
     {
-        text.text = msg.Description;
-        image.fillAmount = msg.Progress;
+        text.text = gameState.State.progressionDescription;
+        image.fillAmount = 1 - gameState.State.progress;
     }
 }

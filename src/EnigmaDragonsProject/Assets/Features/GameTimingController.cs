@@ -15,16 +15,19 @@ public class GameTimingController : MonoBehaviour
 
     private void Update()
     {
-        if (_eventIndex == secondsTilNextEvent.Length && !gameState.State.IsSpawning)
+        if (_eventIndex == secondsTilNextEvent.Length)
             return;
         _t = gameState.State.IsWaterAboveCertainLevel(0.8f) ? _t + Time.deltaTime * 10 : _t + Time.deltaTime;
         if (_t >= secondsTilNextEvent[_eventIndex].SecondsToAppear)
         {
-            gameState.UpdateState(x => x.IsSpawning = true);
             secondsTilNextEvent[_eventIndex].Plant.gameObject.SetActive(true);
             _t = 0;
             _eventIndex++;
         }
-        Message.Publish(new UpdateProgressionBar { Description = secondsTilNextEvent[_eventIndex].Description, Progress = 1 - _t / secondsTilNextEvent[_eventIndex].SecondsToAppear });
+        gameState.UpdateState(x =>
+        {
+            x.progressionDescription = secondsTilNextEvent[_eventIndex].Description;
+            x.progress = _t / secondsTilNextEvent[_eventIndex].SecondsToAppear;
+        });
     }
 }

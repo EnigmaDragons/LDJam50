@@ -18,3 +18,4 @@ MonoBehaviour:
   - threshold: 0
     waterConsumptionPerSecond: 0.75
   wiltingSeconds: 30
+  incomingDescription: Planting Begonia
