@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using Water.Upgrades;
 
-public class UpgradeUI : MonoBehaviour
+public class UpgradeUI : OnMessage<ShowUpgrade>
 {
     [SerializeField] private PlayerUpgrades playerUpgrades;
     [SerializeField] private GameObject upgradeUI;
@@ -80,7 +80,7 @@ public class UpgradeUI : MonoBehaviour
             SpawnUpgrade(upgrade);
         }
     }
-    
-    
-    
+
+
+    protected override void Execute(ShowUpgrade msg) => ShowUpgradeSelection();
 }
