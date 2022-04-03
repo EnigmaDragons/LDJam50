@@ -6,54 +6,29 @@ public class PlayerTools : ScriptableObject
 {
     [SerializeField] private WateringTool startMelee;
     [SerializeField] private WateringTool startRanged;
+    [SerializeField] private CurrentGameState gameState;
 
-    [ShowInInspector]
-    [ReadOnly]
-    private WateringTool melee;
-    
-    [ShowInInspector]
-    [ReadOnly]
-    private WateringTool ranged;
-
-    [ShowInInspector]
-    private float MeleeWater => melee ? melee.WaterAmount : 0f;
-    [ShowInInspector]
-    private float RangedWater => ranged ? ranged.WaterAmount : 0f;
-    
     public void FillTolls()
     {
-        if(melee) melee.Fill();
-        if(ranged) ranged.Fill();
-    }
-    
-    [Button]
-    public void UpgradeMelee()
-    {
-        melee.TryUpgrade(out melee);
+        gameState.UpdateState(x =>
+        {
+            if(x.MeleeTool) x.MeleeTool.Fill();
+            if(x.RangedTool) x.RangedTool.Fill();
+        });
     }
 
-    [Button]
-    public void UpgradeRanged()
-    {
-        ranged.TryUpgrade(out ranged);
-    }
+    public WateringTool GetMeleeTool() => gameState.State.MeleeTool;
 
-    public WateringTool GetMeleeTool()
-    {
-        return melee;
-    }
-    
-    public WateringTool GetRangedTool()
-    {
-        return ranged;
-    }
+    public WateringTool GetRangedTool() => gameState.State.RangedTool;
 
     public void Reset()
     {
-        melee = startMelee;
-        ranged = startRanged;
-        
-        melee.Reset();
-        ranged.Reset();
+        gameState.UpdateState(x =>
+        {
+            x.MeleeTool = startMelee;
+            x.RangedTool = startRanged;
+            startMelee.Reset();
+            startRanged.Reset();
+        });
     }
 }
