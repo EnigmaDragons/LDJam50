@@ -12,11 +12,21 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
     protected override void Execute(PlaySoundRequested msg)
     {
         if (msg.SoundName.Equals(GameSounds.FillWater))
-            AudioSource.PlayClipAtPoint(fillWater.clip, msg.WorldPosition, fillWater.volume);
-        if (msg.SoundName.Equals(GameSounds.NewPlant))
-            AudioSource.PlayClipAtPoint(newPlant.clip, msg.WorldPosition, newPlant.volume);
+            PlayOneShot(fillWater, msg.WorldPosition);
+        if ( msg.SoundName.Equals(GameSounds.NewPlant))
+            PlayOneShot(newPlant, msg.WorldPosition);
         if (msg.SoundName.Equals(GameSounds.PlantFull))
-            AudioSource.PlayClipAtPoint(plantFull.clip, msg.WorldPosition, plantFull.volume);
+            PlayOneShot(plantFull, msg.WorldPosition);
+    }
+
+    private void PlayOneShot(AudioClipVolume a, Vector3 position)
+    {
+        if (a == null)
+            Log.Warn("Request Sound is Null");
+        else if (a.clip == null)
+            Log.Warn("Requested Sound Clip is Null");
+        else
+            AudioSource.PlayClipAtPoint(a.clip, position, a.volume);
     }
 
     protected override void Execute(LoopSoundRequested msg)
