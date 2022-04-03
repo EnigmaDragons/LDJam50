@@ -19,29 +19,29 @@ public class PlantMinimapIcon : MonoBehaviour
 
     [SerializeField]
     private PlantController plant;
-    private PlantState state;
+    [ShowInInspector]
+    private PlantState State => gameState.State.PlantById(plant.Id);
     private void Awake()
     {
         renderer = GetComponent<SpriteRenderer>();
-        state = gameState.State.PlantById(plant.Id);
     }
 
 
     private void Update()
     {
-        if (state.Water <= 0)
+        if (State.Water <= 0)
         {
             renderer.sprite = plantDying;
             return;
         }
 
-        if (state.IsOnFire)
+        if (State.IsOnFire)
         {
             renderer.sprite = plantOnFire;
             return;
         }
 
-        if (state.Water < state.WaterCapacity * 0.5)
+        if (State.Water < State.WaterCapacity * 0.5)
         {
             renderer.sprite = plantNeedWater;
             return;
