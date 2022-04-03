@@ -32,12 +32,12 @@ public class WateringTool : ScriptableObject, IWaterHolder
         if (isRanged)
         {
             currentCharge++;
-            if(currentCharge > maxCharges) currentCharge = maxCharges;
+            if(currentCharge > MaxWaterAmount) currentCharge = maxCharges;
         }
         else
         {
-            currentWater += (maxCapacity * 0.1f)*gameState.State.playerStats.fillSpeed;
-            if (currentWater > maxCapacity) currentWater = maxCapacity;
+            currentWater += (MaxWaterAmount * 0.1f)*gameState.State.playerStats.fillSpeed;
+            if (currentWater > MaxWaterAmount) currentWater = MaxWaterAmount;
         }
     }
 
