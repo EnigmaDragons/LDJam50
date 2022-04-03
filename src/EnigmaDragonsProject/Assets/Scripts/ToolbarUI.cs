@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,12 +12,20 @@ public class ToolbarUI : MonoBehaviour
 
     private void Update()
     {
-        meleeImage.sprite = playerTools.GetMeleeTool().sprite;
-        meleeSlider.maxValue = playerTools.GetMeleeTool().MaxWaterAmount;
-        meleeSlider.value = playerTools.GetMeleeTool().WaterAmount;
-        
-        rangedImage.sprite = playerTools.GetRangedTool().sprite;
-        rangedSlider.maxValue = playerTools.GetRangedTool().MaxWaterAmount;
-        rangedSlider.value = playerTools.GetRangedTool().WaterAmount;
+        var meleeTool = playerTools.GetMeleeTool();
+        if (meleeTool != null)
+        {
+            meleeImage.sprite = meleeTool.sprite;
+            meleeSlider.maxValue = meleeTool.MaxWaterAmount;
+            meleeSlider.value = meleeTool.WaterAmount;
+        }
+
+        var rangedTool = playerTools.GetRangedTool();
+        if (rangedTool != null)
+        {
+            rangedImage.sprite = rangedTool.sprite;
+            rangedSlider.maxValue = rangedTool.MaxWaterAmount;
+            rangedSlider.value = rangedTool.WaterAmount;
+        }
     }
 }
