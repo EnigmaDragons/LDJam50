@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c87074b45f59284eb62c5df631a81b9, type: 3}
   m_Name: PlayerUpgrades
   m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   availableUpgrades:
   - {fileID: 11400000, guid: 00ca27af5a788a84697d2b8f732b39b0, type: 2}
   - {fileID: 11400000, guid: ca2b57283beaa6d42835aaab8607cd95, type: 2}

@@ -8,16 +8,17 @@ namespace Water.Upgrades
     [CreateAssetMenu(menuName = "OneTime/PlayerUpgrades")]
     public class PlayerUpgrades : ScriptableObject
     {
+        [SerializeField] private CurrentGameState gameState;
         [SerializeField] private List<BasePlayerUpgrade> availableUpgrades;
         
         [ShowInInspector]
-        [ReadOnly]
-        private List<BasePlayerUpgrade> currentUpgrades;
+        [ShowIf("@gameState != null")]
+        private List<BasePlayerUpgrade> CurrentUpgrades => gameState.State.upgrades;
 
         public List<BasePlayerUpgrade> GetUpgradeSelection()
         {
-            var available = availableUpgrades.Except(currentUpgrades);
-            available = available.Where(upg => upg.CanAppear(currentUpgrades));
+            var available = availableUpgrades.Except(CurrentUpgrades);
+            available = available.Where(upg => upg.CanAppear(CurrentUpgrades));
             var rand = new System.Random();
             available = available.OrderBy(i => rand.Next());
             available = available.Take(3);
@@ -26,13 +27,13 @@ namespace Water.Upgrades
 
         public void UnlockUpgrade(BasePlayerUpgrade upgrade)
         {
-            currentUpgrades.Add(upgrade);
+            CurrentUpgrades.Add(upgrade);
         }
 
         [Button]
         public void ResetUpgrades()
         {
-            currentUpgrades.Clear();   
+            CurrentUpgrades.Clear();   
         }
     }
 }

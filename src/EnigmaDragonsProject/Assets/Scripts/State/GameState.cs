@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Codice.CM.Common.Serialization.Replication;
 using UnityEngine;
+using Water.Upgrades;
 
 [Serializable]
 public sealed class GameState
 {
     public bool IsSpawning;
-    
+
+    public List<BasePlayerUpgrade> upgrades;
     private List<PlantState> _plantStates;
     private int _currentId;
     public WateringTool MeleeTool;
@@ -18,6 +20,7 @@ public sealed class GameState
 
     public GameState()
     {
+        upgrades = new List<BasePlayerUpgrade>();
         _plantStates = new List<PlantState>();
         _currentId = 0;
         Lost = false;
