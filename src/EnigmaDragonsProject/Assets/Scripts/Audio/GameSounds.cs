@@ -7,6 +7,7 @@ public static class GameSounds
     public static string NewPlant => "NewPlant";
     public static string PlantFull => "PlantFull";
     public static string MenuToggle => "MenuToggle";
+    public static string ButtonHover => "ButtonHover";
     public static string PlantDie => "PlantDie";
     public static string GameOver => "GameOver";
     public static string ThrowWaterBalloon => "ThrowWaterBalloon";
