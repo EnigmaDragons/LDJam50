@@ -662,12 +662,12 @@ MonoBehaviour:
   m_text: "Lady Darcie Faye Cunningham, a long-time friend of the family, is going
     to be traveling on holiday to Tuscany.\n\nShe requested a small favor from you.
     On her estate is a unique and well-kept garden. Her regular gardener has mysteriously
-    wound up in the hospital due to a slight misunderstanding with the fine fellows
-    at Her Majesty's Revenue and Customs Office. \n\nDespite your complete lack of
-    gardening skills, providing a favor for Lady Darcie is something you simply cannot
-    pass up. For smaller favors than this, she is rumored to have given luxury cars,
-    gorgeous seaside properties, and even arranged audiences with royalty at the
-    palace.\n\nDo your best to keep all the plants in the garden well-watered."
+    wound up in hospital due to a slight misunderstanding with the fine fellows at
+    Her Majesty's Revenue and Customs Office. \n\nDespite your complete lack of gardening
+    skills, providing a favor for Lady Darcie is something you simply cannot pass
+    up. For smaller favors than this, she is rumored to have given luxury cars, gorgeous
+    seaside properties, and even arranged an audience with royalty at the palace.\n\nDo
+    your best to keep all the plants in her garden well-watered."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2fa85e8f554433c4c8159fc0c3eca1d8, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2fa85e8f554433c4c8159fc0c3eca1d8, type: 2}
