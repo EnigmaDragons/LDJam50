@@ -9,24 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d89f6de557124379bd4c58aa02340c6a, type: 3}
-  m_Name: BetterShots
+  m_Script: {fileID: 11500000, guid: 99d767e71992414a9000fc9af3cf408a, type: 3}
+  m_Name: Soaker
   m_EditorClassIdentifier: 
-  name: Better Shots
-  icon: {fileID: 21300000, guid: c6a85c93da688504591346d16bfd1ad2, type: 3}
-  description: 'Your water gun is 40% more effective
-
-'
+  name: Soaker
+  icon: {fileID: 21300000, guid: 41201e6df9f704a4091f858b492b5491, type: 3}
+  description: Upgrade your Squirt Gun to a Soaker
   requirements:
   - {fileID: 11400000, guid: bdb9348b16879f74aa0df196bb30f66f, type: 2}
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
-  statsChange:
-    speed: 0
-    fillSpeed: 0
-    capacity: 0
-    wateringSpeed: 0
-    waterPerShot: 0.4
-    spellPower: 0
-    spellDuration: 0
-    spellCooldown: 0
-    bonusCharges: 0
+  upgrade: {fileID: 11400000, guid: d68139734f03c5d419358b90913b7f88, type: 2}

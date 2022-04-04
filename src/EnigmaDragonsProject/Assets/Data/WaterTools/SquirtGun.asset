@@ -17,9 +17,9 @@ MonoBehaviour:
   startingAmount: 0
   description: 
   isRanged: 1
-  range: 6
-  maxCharges: 8
+  range: 5
+  maxCharges: 10
   maxCapacity: 0
-  waterTransferRate: 10
+  waterTransferRate: 5
   upgradeTier: 1
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
