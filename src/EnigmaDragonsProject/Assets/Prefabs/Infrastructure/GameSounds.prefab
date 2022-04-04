@@ -78,7 +78,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 47249931a83144b20ae41111977a2a8d, type: 3}
     volume: 1
   plantFull:
-    clip: {fileID: 8300000, guid: cfa2db26079d14c609cfd2b59337d4b7, type: 3}
+  - clip: {fileID: 8300000, guid: cfa2db26079d14c609cfd2b59337d4b7, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: fef7ca144818e45089b5b3aff7c254cc, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 05a321180fe9f4b69b4f4fd51de5a494, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: f1fc7fb4a799d49a38de57f62c35a05b, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 88c7bdda9d3c4413aa43a3c04bd616d7, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 41b6f3f48f56f4684a8a77a7ac2621fb, type: 3}
     volume: 1
   footStep:
     clip: {fileID: 8300000, guid: 0ad1516a8b3374bf48cac9837f3b5760, type: 3}

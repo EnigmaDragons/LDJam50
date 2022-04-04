@@ -6,7 +6,7 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
     [SerializeField] private AudioClipVolume fillWater;
     [SerializeField] private AudioClipVolume treeFire;
     [SerializeField] private AudioClipVolume newPlant;
-    [SerializeField] private AudioClipVolume plantFull;
+    [SerializeField] private AudioClipVolume[] plantFull;
     [SerializeField] private AudioClipVolume footStep;
     
     protected override void Execute(PlaySoundRequested msg)
@@ -16,7 +16,7 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
         if ( msg.SoundName.Equals(GameSounds.NewPlant))
             PlayOneShot(newPlant, msg.WorldPosition);
         if (msg.SoundName.Equals(GameSounds.PlantFull))
-            PlayOneShot(plantFull, msg.WorldPosition);
+            PlayOneShot(plantFull.Random(), msg.WorldPosition);
     }
 
     private void PlayOneShot(AudioClipVolume a, Vector3 position)
