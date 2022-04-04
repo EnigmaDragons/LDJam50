@@ -19,8 +19,9 @@ public sealed class GameState
     public string progressionDescription;
     public float progress;
     public bool GiveUpgrade;
-    public bool WaterBaloonUnlocked;
+    public bool WaterBalloonUnlocked => playerAbilities.WaterBalloon;
     public float WaterBalloonCooldown;
+    public PlayerAbilities playerAbilities;
 
     public GameState()
     {
@@ -31,7 +32,7 @@ public sealed class GameState
         Lost = false;
         Won = false;
         GiveUpgrade = false;
-        WaterBaloonUnlocked = false;
+        playerAbilities = new PlayerAbilities();
     }
 
     public bool IsWaterAboveCertainLevel(float percent) => _plantStates.All(x => x.Water > x.WaterCapacity * percent);  
@@ -69,7 +70,22 @@ public sealed class GameState
 
     public void UnlockSpell(string spellName)
     {
-        if (spellName == "Water Balloon")
-            WaterBaloonUnlocked = true;
+        switch (spellName)
+        {
+            case "Water Balloon":
+                playerAbilities.WaterBalloon = true;
+                break;
+            case "Dash":
+                playerAbilities.Dash = true;
+                break;
+        }
     }
+}
+
+[Serializable]
+public class PlayerAbilities
+{
+    public bool WaterBalloon;
+    public bool Dash;
+
 }

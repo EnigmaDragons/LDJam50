@@ -9,6 +9,6 @@ public class GameTimingEvent
     [SerializeField] private string descriptionOverride;
 
     public PlantController Plant => plant;
-    public float SecondsToAppear => secondsToAppearOverride > 0 ? secondsToAppearOverride : 90;
+    public float SecondsToAppear => secondsToAppearOverride > 0 ? secondsToAppearOverride : 20;
     public string Description => string.IsNullOrWhiteSpace(descriptionOverride) ? plant.Plant.IncomingDescription : descriptionOverride;
 }
