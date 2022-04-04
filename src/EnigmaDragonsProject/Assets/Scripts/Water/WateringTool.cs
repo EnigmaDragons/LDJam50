@@ -23,8 +23,6 @@ public class WateringTool : ScriptableObject, IWaterHolder
     public float MaxWaterAmount => isRanged ? maxCharges + gameState.State.playerStats.bonusCharges : maxCapacity * gameState.State.playerStats.capacity;
     
     public int UpgradeTier => upgradeTier;
-
-    
     
     [Button]
     public void Fill()
@@ -41,7 +39,6 @@ public class WateringTool : ScriptableObject, IWaterHolder
         }
     }
 
-    
     /// <summary>
     /// Removes water from the tool
     /// Works only for ranged tools
@@ -85,10 +82,14 @@ public class WateringTool : ScriptableObject, IWaterHolder
         return true;
     }
 
-
     public void Reset()
     {
         currentWater = startingAmount;
         currentCharge = (int)Math.Round(startingAmount);
+    }
+
+    public void Empty()
+    {
+        currentWater = 0;
     }
 }

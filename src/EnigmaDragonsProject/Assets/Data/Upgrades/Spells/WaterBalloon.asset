@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaterBalloon
   m_EditorClassIdentifier: 
   name: Water Balloon
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: b2c12894b603f424da99b6a76374ddaa, type: 3}
   description: Gain the Water Balloon Ability
   requirements: []
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
