@@ -16,6 +16,7 @@ public class PlantController : MonoBehaviour
     [SerializeField] private GameObject fireVFX;
     public Plant Plant => plant;
     
+    private Camera mainCamera;
     private const float spreadRange = 10;
     private const float spreadTime = 10;
     private float timeUntilSpread;
@@ -23,15 +24,20 @@ public class PlantController : MonoBehaviour
     [ShowInInspector] [ReadOnly] private int _id;
     public int Id => _id;
 
+    private void Awake() {
+        mainCamera = Camera.main;
+    }
+
     private void Start()
-    {
+    {   
         gameState.UpdateState(x => _id = x.InitPlant(transform,  plant.StartingWater, plant.WiltingSeconds, plant.WaterCapacity));
         if (waterFill == null)
             Log.Error($"{name} does not have a Water Fill UI");
     }
     
-    private void OnEnable() {
-        Message.Publish(new PlaySoundRequested(GameSounds.NewPlant, Camera.main.transform.position));
+    private void OnEnable()
+    {
+        Message.Publish(new PlaySoundRequested(GameSounds.NewPlant, mainCamera.transform.position));
     }
 
     private void Update()
@@ -93,9 +99,17 @@ public class PlantController : MonoBehaviour
 
         if (wiltingSecondsRemaining <= 0 && !gameState.State.Lost)
         {
-            gameState.UpdateState(x => x.Lost = true);
-            navigator.NavigateToGameOverScene();   
+            Die();
         }
+    }
+
+    private async void Die()
+    {
+        gameState.UpdateState(x => x.Lost = true);
+        Message.Publish(new PlaySoundRequested(GameSounds.PlantDie, mainCamera.transform.position));
+        await Task.Delay(2000);
+        navigator.NavigateToGameOverScene();
+        Message.Publish(new PlaySoundRequested(GameSounds.GameOver, mainCamera.transform.position));
     }
 
     private bool IsFullEnoughToBeHappy(float waterAmount) => waterAmount >= plant.WaterCapacity * 0.9;

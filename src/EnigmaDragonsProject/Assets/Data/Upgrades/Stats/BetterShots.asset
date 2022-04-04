@@ -17,7 +17,8 @@ MonoBehaviour:
   description: 'Your water gun is 33% more effective
 
 '
-  requirements: []
+  requirements:
+  - {fileID: 11400000, guid: bdb9348b16879f74aa0df196bb30f66f, type: 2}
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   statsChange:
     speed: 0
