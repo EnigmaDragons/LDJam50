@@ -118,7 +118,7 @@ public class PlayerWater : MonoBehaviour
             TryTakeWater();
         if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(0))
             TogglePiss(true);
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.F) || Input.GetMouseButtonUp(0))
             TogglePiss(false);
         if (Input.GetMouseButtonDown(1))
             FireWaterCharge();
