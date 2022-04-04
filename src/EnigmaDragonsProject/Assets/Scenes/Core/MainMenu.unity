@@ -1271,6 +1271,8 @@ GameObject:
   - component: {fileID: 1279554867}
   - component: {fileID: 1279554866}
   - component: {fileID: 1279554869}
+  - component: {fileID: 1279554871}
+  - component: {fileID: 1279554870}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -1394,12 +1396,122 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1279554866}
-  sound: {fileID: 8300000, guid: 831fdf6e1219a4942a1f62d8b9f50239, type: 3}
+  sound: {fileID: 8300000, guid: 3d2af25f302844e92bd5a67baa31ef61, type: 3}
   player: {fileID: 11400000, guid: bfe56e3518f684c4387de97bd5db348d, type: 2}
   volume:
     UseConstant: 1
     ConstantValue: 1
     FloatVariable: {fileID: 0}
+--- !u!114 &1279554870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279554864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1279554871}
+          m_TargetAssemblyTypeName: ButtonHover, EnigmaDragons.Game
+          m_MethodName: OnButtonHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1279554871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279554864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b8c3089b4b5f9449e8120645544019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1337574022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136152479679976747, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893869300712551986, guid: f1622b38efd9113459fa515b731da71c,
+        type: 3}
+      propertyPath: m_Name
+      value: GameSounds
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1622b38efd9113459fa515b731da71c, type: 3}
 --- !u!1 &1611929015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1727,8 @@ GameObject:
   - component: {fileID: 1827418396}
   - component: {fileID: 1827418395}
   - component: {fileID: 1827418398}
+  - component: {fileID: 1827418400}
+  - component: {fileID: 1827418399}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -1738,12 +1852,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1827418395}
-  sound: {fileID: 8300000, guid: 831fdf6e1219a4942a1f62d8b9f50239, type: 3}
+  sound: {fileID: 8300000, guid: 3d2af25f302844e92bd5a67baa31ef61, type: 3}
   player: {fileID: 11400000, guid: bfe56e3518f684c4387de97bd5db348d, type: 2}
   volume:
     UseConstant: 1
     ConstantValue: 1
     FloatVariable: {fileID: 0}
+--- !u!114 &1827418399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827418393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1827418400}
+          m_TargetAssemblyTypeName: ButtonHover, EnigmaDragons.Game
+          m_MethodName: OnButtonHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1827418400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827418393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b8c3089b4b5f9449e8120645544019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1909727429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1912,8 @@ GameObject:
   - component: {fileID: 1909727432}
   - component: {fileID: 1909727431}
   - component: {fileID: 1909727434}
+  - component: {fileID: 1909727436}
+  - component: {fileID: 1909727435}
   m_Layer: 5
   m_Name: StartGameButton
   m_TagString: Untagged
@@ -1880,12 +2037,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1909727431}
-  sound: {fileID: 8300000, guid: 831fdf6e1219a4942a1f62d8b9f50239, type: 3}
+  sound: {fileID: 8300000, guid: 3d2af25f302844e92bd5a67baa31ef61, type: 3}
   player: {fileID: 11400000, guid: bfe56e3518f684c4387de97bd5db348d, type: 2}
   volume:
     UseConstant: 1
     ConstantValue: 1
     FloatVariable: {fileID: 0}
+--- !u!114 &1909727435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909727429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1909727436}
+          m_TargetAssemblyTypeName: ButtonHover, EnigmaDragons.Game
+          m_MethodName: OnButtonHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1909727436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909727429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b8c3089b4b5f9449e8120645544019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1978677260
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -147,9 +147,18 @@ public class PlayerWater : MonoBehaviour
         var range = maxDistanceFromPump;
         var results = new Collider[1];
         var size = Physics.OverlapSphereNonAlloc(transform.position, range, results, layerMask: LayerMask.GetMask("Pumps"));
-        if (size == 0) {nearestPump = null; return;}
-
-        nearestPump = results[0];
+        if (size == 0)
+        {
+            if (nearestPump != null)
+                Message.Publish(new HideControlPrompt());
+            nearestPump = null;
+        }
+        else
+        {
+            if (nearestPump == null)
+                Message.Publish(new ShowControlPrompt { Prompt = "Tap E to get water" });
+            nearestPump = results[0];   
+        }
     }
     
     private void CheckForPlants()
@@ -157,9 +166,18 @@ public class PlayerWater : MonoBehaviour
         var range = meleeToolRange;
         var results = new Collider[1];
         var size = Physics.OverlapSphereNonAlloc(transform.position, range, results, layerMask: LayerMask.GetMask("Plants"));
-        if (size == 0) {nearestPlant = null; return;}
-
-        nearestPlant = results[0];
+        if (size == 0)
+        {
+            if (nearestPlant != null)
+                Message.Publish(new HideControlPrompt());
+            nearestPlant = null;
+        }
+        else
+        {
+            if (nearestPlant == null)
+                Message.Publish(new ShowControlPrompt { Prompt = gameState.State.MeleeTool.WaterAmount > 0 ? "Hold F to give water" : "Get water from fountain" });
+            nearestPlant = results[0];    
+        }
     }
 
     private Collider lastPlant;
@@ -185,6 +203,7 @@ public class PlayerWater : MonoBehaviour
         waterParticles.Play();
         if (tool.WaterAmount == 0)
         {
+            Message.Publish(new ShowControlPrompt { Prompt = "Get water from fountain" });
             isPissing = false;
             waterParticles.Stop();
         }

@@ -84,6 +84,9 @@ MonoBehaviour:
   menuToggle:
     clip: {fileID: 8300000, guid: 3d2af25f302844e92bd5a67baa31ef61, type: 3}
     volume: 1
+  buttonHover:
+    clip: {fileID: 8300000, guid: 831fdf6e1219a4942a1f62d8b9f50239, type: 3}
+    volume: 1
   plantDie:
     clip: {fileID: 8300000, guid: 49eef21472ac2469a9f109078041e435, type: 3}
     volume: 1

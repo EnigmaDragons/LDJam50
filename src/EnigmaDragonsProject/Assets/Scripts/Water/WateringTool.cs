@@ -21,7 +21,6 @@ public class WateringTool : ScriptableObject, IWaterHolder
     [SerializeField] private CurrentGameState gameState;
     public float WaterAmount => isRanged ? currentCharge : currentWater;
     public float MaxWaterAmount => isRanged ? maxCharges + gameState.State.playerStats.bonusCharges : maxCapacity * gameState.State.playerStats.capacity;
-    
     public int UpgradeTier => upgradeTier;
     
     [Button]
