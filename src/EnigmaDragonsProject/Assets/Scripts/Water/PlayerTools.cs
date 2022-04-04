@@ -26,22 +26,14 @@ public class PlayerTools : ScriptableObject
 
     public void Reset()
     {
-        Log.Info("Init Player Tools");
         gameState.UpdateState(x =>
         {
             x.MeleeTool = startMelee;
             x.RangedTool = startRanged;
-            if (startMelee != null)
-            {
+            if (startMelee != null) 
                 startMelee.Reset();
-                Log.Info($"Player Melee Tool {gameState.State.MeleeTool.name ?? "null"}");
-            }
-
-            if (startRanged != null)
-            {
+            if (startRanged != null) 
                 startRanged.Reset();
-                Log.Info($"Player Ranged Tool {gameState.State.RangedTool.name ?? "null"}");
-            }
         });
     }
 }

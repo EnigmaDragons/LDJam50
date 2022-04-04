@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Spell Power
   icon: {fileID: 21300000, guid: 808b908d0180caa48b1c5aff4a7daf53, type: 3}
   description: Your Water Balloon gains +50% water given and +50% radius
-  requirements: []
+  requirements:
+  - {fileID: 11400000, guid: 939f90f35410a924daf58c3a80ac51a9, type: 2}
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   statsChange:
     speed: 0

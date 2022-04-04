@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1373634266255983917}
   - component: {fileID: 5433229592328378892}
   - component: {fileID: 816577256085863322}
+  - component: {fileID: 8823912947895015108}
   m_Layer: 0
   m_Name: InitAudioLevels
   m_TagString: InitAudio
@@ -108,3 +109,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueTag: InitAudio
+--- !u!114 &8823912947895015108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886059230243004558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368e00a08d575db4c8556e955d051e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 95f47694e0b28ce48a808ae15f18f4d8, type: 2}

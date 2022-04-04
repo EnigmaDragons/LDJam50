@@ -22,4 +22,4 @@ MonoBehaviour:
   maxCapacity: 0
   waterTransferRate: 10
   upgradeTier: 2
-  gameState: {fileID: 0}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
