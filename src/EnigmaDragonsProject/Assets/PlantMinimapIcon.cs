@@ -31,26 +31,12 @@ public class PlantMinimapIcon : MonoBehaviour
     private void Update()
     {
         if (State.Water <= 0)
-        {
             renderer.sprite = plantDying;
-            return;
-        }
-
-        if (State.IsOnFire)
-        {
+        else if (State.IsOnFire)
             renderer.sprite = plantOnFire;
-            return;
-        }
-
-        if (State.Water < State.WaterCapacity * 0.5)
-        {
+        else if (State.Water < State.WaterCapacity * 0.5)
             renderer.sprite = plantNeedWater;
-            return;
-        }
-
-        renderer.sprite = plantDefault;
+        else
+            renderer.sprite = plantDefault;
     }
-    
-    
-    
 }

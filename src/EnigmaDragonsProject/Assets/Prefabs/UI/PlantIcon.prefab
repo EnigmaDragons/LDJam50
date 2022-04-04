@@ -132,6 +132,6 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   plantDefault: {fileID: 21300000, guid: 7ae3b1d8ad08e5b4cb5e2fc9dff6bfe0, type: 3}
   plantNeedWater: {fileID: 21300000, guid: b4a3fd51f7b860549a9d8c98e2d121a6, type: 3}
-  plantOnFire: {fileID: 21300000, guid: 7c26b3537ac041d41888431eaa21039b, type: 3}
-  plantDying: {fileID: 21300000, guid: 410075791f7624d4bbb69b1c4a96fab3, type: 3}
+  plantOnFire: {fileID: 21300000, guid: 14365c90a19391e46a97a33976f1e5f8, type: 3}
+  plantDying: {fileID: 21300000, guid: 1aa65f2c425a9254fa483a96afae01ea, type: 3}
   plant: {fileID: 0}
