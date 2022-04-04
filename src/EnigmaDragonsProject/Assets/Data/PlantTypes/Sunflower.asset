@@ -23,3 +23,4 @@ MonoBehaviour:
     waterConsumptionPerSecond: 1
   wiltingSeconds: 20
   incomingDescription: Planting Sunflower
+  prefab: {fileID: 117188414419157554, guid: f6f2d8538acd75d4780c56549e7facb2, type: 3}

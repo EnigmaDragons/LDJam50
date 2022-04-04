@@ -19,3 +19,4 @@ MonoBehaviour:
     waterConsumptionPerSecond: 0.1
   wiltingSeconds: 20
   incomingDescription: Planting Burning Tree
+  prefab: {fileID: 2087273153556741889, guid: 9ccb0db9d443c30458ebea4ad400b8cb, type: 3}

@@ -19,3 +19,4 @@ MonoBehaviour:
     waterConsumptionPerSecond: 1.5
   wiltingSeconds: 25
   incomingDescription: Planting Grape Vines
+  prefab: {fileID: 6122551546586659688, guid: f5f512ee20abb274ba9428bbf931e3c0, type: 3}

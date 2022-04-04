@@ -19,3 +19,4 @@ MonoBehaviour:
     waterConsumptionPerSecond: 0.75
   wiltingSeconds: 30
   incomingDescription: Planting Begonia
+  prefab: {fileID: 2171165753511566165, guid: 757e759a4eddc444a814894b4f8ed6c8, type: 3}

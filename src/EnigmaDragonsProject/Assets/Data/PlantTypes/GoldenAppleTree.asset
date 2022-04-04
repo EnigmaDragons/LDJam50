@@ -19,3 +19,4 @@ MonoBehaviour:
     waterConsumptionPerSecond: 0
   wiltingSeconds: 9999
   incomingDescription: Planting Golden Apple Tree
+  prefab: {fileID: 121949131073154623, guid: 7d6771bfd7ec6d842be8d7ea6bf4e035, type: 3}
