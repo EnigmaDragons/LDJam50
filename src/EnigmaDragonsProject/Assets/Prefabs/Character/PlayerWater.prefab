@@ -57,6 +57,8 @@ MonoBehaviour:
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   rangePrototype: {fileID: -3516202315063839240, guid: 43baabf85ac53944193de535eaa0d3e3,
     type: 3}
+  waterBalloonPrototype: {fileID: 5029007247029707259, guid: 64108b624e48a0f4da7aeeef93ca1218,
+    type: 3}
 --- !u!1773428102 &4162309905247961167
 ParentConstraint:
   m_ObjectHideFlags: 0

@@ -12,14 +12,13 @@ public class PlayerStats
     public float capacity = 1f; //done
     public float wateringSpeed = 1f; //done
     public float waterPerShot = 1f; //not done
-    public float spellPower = 1f;
+    public float spellPower = 1f; //implemented
     public float spellDuration = 1f;
-    public float spellCooldown = 1f;
+    public float spellCooldown = 1f; //implemented
     
     [InfoBox("Except this one, this one is additive")]
     public int bonusCharges = 0; //done
-    
-    
+
     public static PlayerStats operator +(PlayerStats stats1, PlayerStats stats2)
     {
         stats1.speed += stats2.speed;

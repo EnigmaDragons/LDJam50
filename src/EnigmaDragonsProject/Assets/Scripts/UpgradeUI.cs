@@ -13,6 +13,16 @@ public class UpgradeUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI upgradeDescriptionText;
     [SerializeField] private CurrentGameState gameState;
 
+    private void OnEnable() 
+    {
+        Time.timeScale = 0;
+    }
+
+    private void OnDisable() 
+    {
+        Time.timeScale = 1;
+    }
+    
     private void Awake()
     {
         CloseUpgradeUI();
