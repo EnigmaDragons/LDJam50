@@ -6,9 +6,9 @@ public class WaterBalloon : MonoBehaviour
     [SerializeField] private float speed = 1;
     [SerializeField] private GameObject onCollision;
     [SerializeField] private CurrentGameState gameState;
-    private const float _water = 10;
-    private const float _maxDistance = 6;
-    private const float _spread = 4;
+    private const float _water = 25;
+    private const float _maxDistance = 5;
+    private const float _spread = 5;
     private Vector3 _direction;
     private float _distanceRemaining;
     private bool _collided;

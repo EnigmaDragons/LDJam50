@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d89f6de557124379bd4c58aa02340c6a, type: 3}
-  m_Name: BiggerBottle
+  m_Name: SpellPower
   m_EditorClassIdentifier: 
-  name: Bigger Bottle
-  icon: {fileID: 21300000, guid: fb8d69d9ff266ee47a487db6f0f79ece, type: 3}
-  description: 'Water Guns have 5 more shots
-
-'
+  name: Spell Power
+  icon: {fileID: 21300000, guid: 808b908d0180caa48b1c5aff4a7daf53, type: 3}
+  description: Your Water Balloon gains +50% water given and +50% radius
   requirements: []
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   statsChange:
@@ -25,7 +23,7 @@ MonoBehaviour:
     capacity: 0
     wateringSpeed: 0
     waterPerShot: 0
-    spellPower: 0
+    spellPower: 0.5
     spellDuration: 0
     spellCooldown: 0
-    bonusCharges: 5
+    bonusCharges: 0

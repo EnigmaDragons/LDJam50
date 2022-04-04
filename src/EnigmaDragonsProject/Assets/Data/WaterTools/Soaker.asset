@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7316f824c3924a629e51437f42653b23, type: 3}
-  m_Name: WaterBottle
+  m_Name: Soaker
   m_EditorClassIdentifier: 
-  name: Water Bottle
-  sprite: {fileID: 21300000, guid: cabd2fac57c126d4e828b7dbaaca8028, type: 3}
+  name: Soaker
+  sprite: {fileID: 21300000, guid: 41201e6df9f704a4091f858b492b5491, type: 3}
   startingAmount: 0
   description: 
-  isRanged: 0
-  range: 1
+  isRanged: 1
+  range: 7
   maxCharges: 10
-  maxCapacity: 20
+  maxCapacity: 0
   waterTransferRate: 10
-  upgradeTier: 1
-  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  upgradeTier: 2
+  gameState: {fileID: 0}
