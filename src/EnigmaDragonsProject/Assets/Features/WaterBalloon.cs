@@ -25,7 +25,7 @@ public class WaterBalloon : MonoBehaviour
         transform.position += travelDistance;
         _distanceRemaining -= Time.deltaTime * speed;
         if (_distanceRemaining <= 0)
-            gameObject.SetActive(false);
+            OnTriggerEnter(null);
     }
 
     private void OnTriggerEnter(Collider other)

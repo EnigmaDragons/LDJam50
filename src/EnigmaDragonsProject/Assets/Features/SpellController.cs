@@ -8,41 +8,37 @@ public class SpellController : MonoBehaviour
     [SerializeField] private GameObject ui;
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI timer;
-
-    private bool _enabled;
-    private float _cooldownTime;
-
-    public bool IsAvailable() => _cooldownTime <= 0;
-
-    public void Use(float cooldown)
-    {
-        _cooldownTime = cooldown;
-        timer.text = _cooldownTime.ToString("0.0");
-        icon.color = new Color(1, 1, 1, 0.5f);
-    }
+    [SerializeField] private CurrentGameState gameState;
+    [SerializeField] private string spellName;
     
-    public void Init()
+    private bool _isUnlocked;
+    
+    public void Awake()
     {
-        if (_enabled)
-            return;
-        _enabled = true;
-        ui.SetActive(true);
+        ui.SetActive(false);
         timer.text = "";
         icon.color = new Color(1, 1, 1, 1);
     }
 
-    private void Update() 
+    private void Update()
     {
-        if (_cooldownTime > 0)
+        if (!gameState.State.WaterBaloonUnlocked)
+            return;
+        if (!_isUnlocked)
+            ui.SetActive(true);
+        if (gameState.State.GetSpellCooldown(spellName) > 0)
         {
-            _cooldownTime = Math.Max(0, _cooldownTime - Time.deltaTime);
-            if (_cooldownTime <= 0)
+            gameState.UpdateState(x => x.SetSpellCooldown(spellName, Math.Max(0, gameState.State.GetSpellCooldown(spellName) - Time.deltaTime)));
+            if (gameState.State.GetSpellCooldown(spellName) <= 0)
             {
                 icon.color = new Color(1, 1, 1, 1);
                 timer.text = "";
             }
             else
-                timer.text = _cooldownTime.ToString("0.0");
+            {
+                icon.color = new Color(1, 1, 1, 0.5f);
+                timer.text = gameState.State.GetSpellCooldown(spellName).ToString("0.0");   
+            }
         }
     }
 }

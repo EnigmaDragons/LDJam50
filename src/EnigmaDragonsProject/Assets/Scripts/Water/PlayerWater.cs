@@ -12,7 +12,9 @@ public class PlayerWater : MonoBehaviour
     [SerializeField] private AudioSource wateringSoundSource;
     [SerializeField] private CurrentGameState gameState;
     [SerializeField] private WaterShot rangePrototype;
-
+    [SerializeField] private WaterBalloon waterBalloonPrototype;
+    private const float _waterBalloonCooldown = 10f;
+    
     private float lastPumpTime;
     private bool isPissing = false;
     private Collider nearestPlant;
@@ -67,6 +69,15 @@ public class PlayerWater : MonoBehaviour
         }
     }
 
+    public void FireWaterBalloon()
+    {
+        if (gameState.State.WaterBalloonCooldown > 0 || !gameState.State.WaterBaloonUnlocked)
+            return;
+        var prototype = Instantiate(waterBalloonPrototype, transform.position + new Vector3(0, 1, 0) + transform.forward * 3, Quaternion.identity);
+        prototype.Init(transform.forward);
+        gameState.UpdateState(x => x.WaterBalloonCooldown = _waterBalloonCooldown * x.playerStats.spellCooldown);
+    }
+
     private void StartWatering()
     {
         if (!nearestPlant) return;
@@ -83,6 +94,12 @@ public class PlayerWater : MonoBehaviour
         if (animator != null)
             animator.SetBool("IsPouringWater", false);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+            FireWaterBalloon();
+    } 
     
     private void FixedUpdate()
     {

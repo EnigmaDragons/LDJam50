@@ -20,6 +20,7 @@ public sealed class GameState
     public float progress;
     public bool GiveUpgrade;
     public bool WaterBaloonUnlocked;
+    public float WaterBalloonCooldown;
 
     public GameState()
     {
@@ -30,7 +31,7 @@ public sealed class GameState
         Lost = false;
         Won = false;
         GiveUpgrade = false;
-        WaterBaloonUnlocked = false;
+        WaterBaloonUnlocked = true;
     }
 
     public bool IsWaterAboveCertainLevel(float percent) => _plantStates.All(x => x.Water > x.WaterCapacity * percent);  
@@ -51,5 +52,18 @@ public sealed class GameState
             RangedTool = tool;
         else if (!tool.isRanged && tool.UpgradeTier > MeleeTool.UpgradeTier)
             MeleeTool = tool;
+    }
+
+    public float GetSpellCooldown(string spellName)
+    {
+        if (spellName == "Water Balloon")
+            return WaterBalloonCooldown;
+        return 0;
+    }
+
+    public void SetSpellCooldown(string spellName, float cooldown)
+    {
+        if (spellName == "Water Balloon")
+            WaterBalloonCooldown = cooldown;
     }
 }
