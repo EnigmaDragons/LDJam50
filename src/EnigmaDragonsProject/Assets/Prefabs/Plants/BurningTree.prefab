@@ -402,6 +402,27 @@ PrefabInstance:
       propertyPath: plant
       value: 
       objectReference: {fileID: 8020564483182867320}
+    - target: {fileID: 1779732709482857381, guid: ac28b23e3335687449bf34820dee9245,
+        type: 3}
+      propertyPath: plantDefault
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c728079e87d1a944bfb05f369c0a534,
+        type: 3}
+    - target: {fileID: 3468790873327565144, guid: ac28b23e3335687449bf34820dee9245,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468790873327565144, guid: ac28b23e3335687449bf34820dee9245,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468790873327565144, guid: ac28b23e3335687449bf34820dee9245,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5241422766378032339, guid: ac28b23e3335687449bf34820dee9245,
         type: 3}
       propertyPath: m_Name
