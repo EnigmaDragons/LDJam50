@@ -1926,6 +1926,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1403306994062683069, guid: caf5b6ad41d0568459618712fde67e3a,
+        type: 3}
+      propertyPath: plantWhoDied
+      value: 
+      objectReference: {fileID: 11400000, guid: f26cfc637ac443a41a3535e643407e02,
+        type: 2}
     - target: {fileID: 4640650651086053464, guid: caf5b6ad41d0568459618712fde67e3a,
         type: 3}
       propertyPath: m_Name

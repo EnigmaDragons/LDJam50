@@ -19,3 +19,4 @@ MonoBehaviour:
     waterConsumptionPerSecond: 2
   wiltingSeconds: 99999
   incomingDescription: Planting Void Tree
+  prefab: {fileID: 4330072407245125558, guid: 0ed3ff031b41a124597e906788bb297a, type: 3}

@@ -14,6 +14,7 @@ public sealed class GameState
     public WateringTool RangedTool;
     public PlayerStats playerStats;
     public bool Lost;
+    public Plant PlantWhoDied;
     public bool Won;
     public string progressionDescription;
     public float progress;
@@ -33,6 +34,7 @@ public sealed class GameState
         Won = false;
         GiveUpgrade = false;
         playerAbilities = new PlayerAbilities();
+        PlantWhoDied = null;
     }
 
     public bool IsWaterAboveCertainLevel(float percent) => _plantStates.All(x => x.Water > x.WaterCapacity * percent);  
@@ -44,7 +46,7 @@ public sealed class GameState
         return _currentId;
     }
 
-    public PlantState PlantById(int id) => _plantStates.First(x => x.Id == id);
+    public PlantState PlantById(int id) => _plantStates.FirstOrDefault(x => x.Id == id) ?? new PlantState { Id = -1 };
 
     public void TryUpgrade(WateringTool tool)
     {

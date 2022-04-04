@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4373249817353728588}
   - component: {fileID: 1856215332869968890}
   - component: {fileID: 5074494494773845284}
+  - component: {fileID: 1403306994062683069}
+  - component: {fileID: 6352009196499708570}
   m_Layer: 0
   m_Name: GameSystems
   m_TagString: Untagged
@@ -89,3 +91,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   navigator: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
+--- !u!114 &1403306994062683069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4640650651086053464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e687570029aa4fd0a6b60efe357ff5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  navigator: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
+  plantWhoDied: {fileID: 11400000, guid: 6c0c70af6b89da54dae2c374b869117d, type: 2}
+--- !u!114 &6352009196499708570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4640650651086053464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a15d5ff66b7276842b4357acc6811c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: 1c010000
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1403306994062683069}
+        m_TargetAssemblyTypeName: GameOverCheat, EnigmaDragons.Game
+        m_MethodName: Lose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

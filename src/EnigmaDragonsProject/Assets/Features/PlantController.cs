@@ -118,7 +118,11 @@ public class PlantController : MonoBehaviour
 
     private async void Die()
     {
-        gameState.UpdateState(x => x.Lost = true);
+        gameState.UpdateState(x =>
+        {
+            x.Lost = true;
+            x.PlantWhoDied = plant;
+        });
         Message.Publish(new PlaySoundRequested(GameSounds.PlantDie, mainCamera.transform.position));
         await Task.Delay(2000);
         navigator.NavigateToGameOverScene();
