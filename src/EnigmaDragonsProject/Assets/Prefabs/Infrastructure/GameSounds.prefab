@@ -88,7 +88,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 831fdf6e1219a4942a1f62d8b9f50239, type: 3}
     volume: 1
   plantDie:
-    clip: {fileID: 8300000, guid: 49eef21472ac2469a9f109078041e435, type: 3}
+    clip: {fileID: 8300000, guid: a000e66ce12824d1f92197b485d03022, type: 3}
     volume: 1
   gameOver:
     clip: {fileID: 8300000, guid: 1a9c1221d617a4faebe88c3189282598, type: 3}
