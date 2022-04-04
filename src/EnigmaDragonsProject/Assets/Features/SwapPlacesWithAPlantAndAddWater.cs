@@ -20,7 +20,7 @@ public class SwapPlacesWithAPlantAndAddWater : MonoBehaviour
         if (_timeRemainingBeforeSwap <= 0)
         {
             _timeRemainingBeforeSwap += timeToSwap;
-            var otherPlant = gameState.State.Plants.Where(x => x.Id != plant.Id).Random();
+            var otherPlant = gameState.State.Plants.Where(x => x.Id != plant.Id && x.Name != "GoldenAppleTree").Random();
             var yourLocation = transform.position;
             var otherLocation = otherPlant.Transform.position;
             transform.position = otherLocation;

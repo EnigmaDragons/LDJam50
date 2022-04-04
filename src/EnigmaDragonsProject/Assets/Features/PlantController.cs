@@ -31,7 +31,7 @@ public class PlantController : MonoBehaviour
 
     private void Start()
     {   
-        gameState.UpdateState(x => _id = x.InitPlant(transform,  plant.StartingWater, plant.WiltingSeconds, plant.WaterCapacity));
+        gameState.UpdateState(x => _id = x.InitPlant(plant.name, transform,  plant.StartingWater, plant.WiltingSeconds, plant.WaterCapacity));
         if (waterFill == null)
             Log.Error($"{name} does not have a Water Fill UI");
     }
