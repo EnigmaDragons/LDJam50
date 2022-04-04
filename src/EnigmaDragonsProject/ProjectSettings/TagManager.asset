@@ -10,6 +10,7 @@ TagManager:
   - Plant
   - Character
   - UICamera
+  - InitAudio
   layers:
   - Default
   - TransparentFX
