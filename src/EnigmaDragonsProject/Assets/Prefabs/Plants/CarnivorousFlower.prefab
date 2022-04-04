@@ -406,6 +406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6653672434059171269}
     m_Modifications:
+    - target: {fileID: 115518, guid: 081f939089a04d24a8c11e2c44399762, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 176424, guid: 081f939089a04d24a8c11e2c44399762, type: 3}
       propertyPath: m_Name
       value: Angry_Flower
