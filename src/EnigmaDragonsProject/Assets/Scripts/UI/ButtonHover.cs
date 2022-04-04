@@ -10,7 +10,6 @@ public class ButtonHover : MonoBehaviour {
 
     public void OnButtonHover()
     {
-        Debug.Log("Button hover");
         Message.Publish(new PlaySoundRequested(GameSounds.ButtonHover, mainCamera.transform.position));
     }
 }

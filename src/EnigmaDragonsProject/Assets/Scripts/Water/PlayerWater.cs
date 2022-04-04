@@ -64,6 +64,7 @@ public class PlayerWater : MonoBehaviour
             _cooldown = 0.2f;
             var prototype = Instantiate(rangePrototype, transform.position + new Vector3(0, 1, 0) + GetDirectionOfCursor() * 1, Quaternion.identity);
             prototype.Init(rangedTool.waterTransferRate, GetDirectionOfCursor(), rangedTool.range);
+            Message.Publish(new PlaySoundRequested(GameSounds.WaterGun, transform.position));
         }
     }
 

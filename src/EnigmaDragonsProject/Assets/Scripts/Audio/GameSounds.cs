@@ -11,4 +11,5 @@ public static class GameSounds
     public static string PlantDie => "PlantDie";
     public static string GameOver => "GameOver";
     public static string ThrowWaterBalloon => "ThrowWaterBalloon";
+    public static string WaterGun => "WaterGun";
 }
