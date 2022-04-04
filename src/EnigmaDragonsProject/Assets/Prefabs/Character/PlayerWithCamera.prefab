@@ -55,6 +55,11 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5186862771141293300, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5449411559357841188, guid: a50c190fc29e3354b922025366cdb6c6,
         type: 3}
       propertyPath: m_LocalPosition.x
