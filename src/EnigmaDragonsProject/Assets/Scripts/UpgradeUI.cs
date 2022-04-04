@@ -12,9 +12,11 @@ public class UpgradeUI : MonoBehaviour
     [SerializeField] private Transform upgradeCardParent;
     [SerializeField] private TextMeshProUGUI upgradeDescriptionText;
     [SerializeField] private CurrentGameState gameState;
+    private Camera mainCamera;
     
     private void Awake()
     {
+        mainCamera = Camera.main;
         CloseUpgradeUI();
     }
 
@@ -32,6 +34,7 @@ public class UpgradeUI : MonoBehaviour
         playerUpgrades.UnlockUpgrade(upgrade);
         upgrade.OnUpgradeBought();
         CloseUpgradeUI();
+        Message.Publish(new PlaySoundRequested(GameSounds.ToolUpgrade, mainCamera.transform.position));
     }
     
     public void ShowDescription(BasePlayerUpgrade upgrade)
