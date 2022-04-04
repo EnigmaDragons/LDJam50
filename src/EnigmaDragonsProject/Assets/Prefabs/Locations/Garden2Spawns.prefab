@@ -129,7 +129,7 @@ MonoBehaviour:
     descriptionOverride: 
   - plant: {fileID: 4908542374930593142}
     secondsToAppearOverride: 99999
-    descriptionOverride: Water The Golden Apple Tree To Win
+    descriptionOverride: Water Golden Apple Tree To Win
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
 --- !u!1001 &4822715206825636
 PrefabInstance:
