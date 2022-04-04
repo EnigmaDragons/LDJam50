@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, StopSoundRequested>
+public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, StopSoundRequested, PlayOneShot>
 {
     [SerializeField] private AudioMixerGroup mixerGroup;
     [SerializeField] private AudioClipVolume watering;
@@ -9,19 +9,18 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
     [SerializeField] private AudioClipVolume treeFire;
     [SerializeField] private AudioClipVolume newPlant;
     [SerializeField] private AudioClipVolume[] plantFull;
-    [SerializeField] private AudioClipVolume footStep;
     
     protected override void Execute(PlaySoundRequested msg)
     {
         if (msg.SoundName.Equals(GameSounds.FillWater))
-            PlayOneShot(fillWater, msg.WorldPosition);
+            PlayOneShotClip(fillWater, msg.WorldPosition);
         if ( msg.SoundName.Equals(GameSounds.NewPlant))
-            PlayOneShot(newPlant, msg.WorldPosition);
+            PlayOneShotClip(newPlant, msg.WorldPosition);
         if (msg.SoundName.Equals(GameSounds.PlantFull))
-            PlayOneShot(plantFull.Random(), msg.WorldPosition);
+            PlayOneShotClip(plantFull.Random(), msg.WorldPosition);
     }
 
-    private void PlayOneShot(AudioClipVolume a, Vector3 position)
+    private void PlayOneShotClip(AudioClipVolume a, Vector3 position)
     {
         if (a == null)
             Log.Warn("Request Sound is Null");
@@ -33,11 +32,6 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
 
     protected override void Execute(LoopSoundRequested msg)
     {
-        if (msg.SoundName.Equals(GameSounds.FootStep))
-        {
-            msg.Src.clip = footStep.clip;
-            msg.Src.volume = footStep.volume;
-        }
         if (msg.SoundName.Equals(GameSounds.Watering))
         {
             msg.Src.clip = watering.clip;
@@ -50,6 +44,11 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
         }
         msg.Src.loop = true;
         msg.Src.Play();
+    }
+
+    protected override void Execute(PlayOneShot msg)
+    {
+       PlayOneShotClip(msg.Clip, msg.WorldPosition);
     }
 
     protected override void Execute(StopSoundRequested msg)

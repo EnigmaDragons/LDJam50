@@ -8,6 +8,8 @@ TagManager:
   - UiSounds
   - Loader
   - Plant
+  - Character
+  - UICamera
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Plants
   - Pumps
   - Minimap
-  - Raycast
+  - Pointers
   - 
   - 
   - 
