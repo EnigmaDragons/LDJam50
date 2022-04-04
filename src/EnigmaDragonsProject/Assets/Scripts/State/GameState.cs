@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Codice.CM.Common.Serialization.Replication;
 using UnityEngine;
 using Water.Upgrades;
 
@@ -80,6 +79,8 @@ public sealed class GameState
                 break;
         }
     }
+
+    public IEnumerable<PlantState> Plants => _plantStates;
 }
 
 [Serializable]

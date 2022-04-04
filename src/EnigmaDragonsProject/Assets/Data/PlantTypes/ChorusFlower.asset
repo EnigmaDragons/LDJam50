@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ChorusFlower
   m_EditorClassIdentifier: 
   waterCapacity: 40
-  startingWater: 40
+  startingWater: 30
   waterConsumptions:
   - threshold: 0
     waterConsumptionPerSecond: 0.75
