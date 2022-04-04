@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+
+using UnityEngine;
 using UnityEditor;
 
 namespace KinematicCharacterController
@@ -19,3 +21,5 @@ namespace KinematicCharacterController
         }
     }
 }
+
+#endif

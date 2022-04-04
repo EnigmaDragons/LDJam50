@@ -68,8 +68,10 @@ public class AreaController : MonoBehaviour
             GUI.changed = true;
             Event.current.Use();
         }
-
+        
+#if UNITY_EDITOR        
         UnityEditor.EditorGUI.DrawRect(rect.Padding(1), value ? new Color(0.1f, 0.8f, 0.2f) : new Color(0, 0, 0, 0.5f));
+#endif
 
         return value;
     }
