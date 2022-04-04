@@ -45,6 +45,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicPlayerWithCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 1529244584986549552, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: steps.Array.data[0].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529244584986549552, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: steps.Array.data[1].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529244584986549552, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: steps.Array.data[2].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529244584986549552, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: steps.Array.data[3].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529244584986549552, guid: a50c190fc29e3354b922025366cdb6c6,
+        type: 3}
+      propertyPath: steps.Array.data[4].volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4452332136090202360, guid: a50c190fc29e3354b922025366cdb6c6,
         type: 3}
       propertyPath: m_Name
