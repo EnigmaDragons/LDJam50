@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.12107852, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 513816350}
   - component: {fileID: 513816349}
   - component: {fileID: 513816348}
+  - component: {fileID: 513816351}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -572,6 +573,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513816346}
   m_CullTransparentMesh: 1
+--- !u!114 &513816351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513816346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2f8fee63b8472cb49e686c5220708b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 513816348}
+  sound: {fileID: 8300000, guid: 831fdf6e1219a4942a1f62d8b9f50239, type: 3}
+  player: {fileID: 11400000, guid: bfe56e3518f684c4387de97bd5db348d, type: 2}
+  volume:
+    UseConstant: 1
+    ConstantValue: 1
+    FloatVariable: {fileID: 0}
 --- !u!1 &567803004
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,3 +819,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421067911}
   m_CullTransparentMesh: 1
+--- !u!1001 &1538164807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6438735157852827517, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_Name
+      value: UiSoundEffectsPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488076747389022399, guid: 1711df562ba8eb547be8a5309ddf7a8f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1711df562ba8eb547be8a5309ddf7a8f, type: 3}
