@@ -39,6 +39,7 @@ public class PlantController : MonoBehaviour
     private void OnEnable()
     {
         Message.Publish(new PlaySoundRequested(GameSounds.NewPlant, mainCamera.transform.position));
+        Message.Publish(new NewPlantSpawned());
     }
 
     private void Update()

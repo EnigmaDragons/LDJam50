@@ -76,8 +76,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2e2cc66da81174ccbb5dc672a91470c9, type: 3}
     volume: 1.3
   treeFire:
-    clip: {fileID: 8300000, guid: 61e0fcc3555294695b05b5c97a7a00aa, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: cc89fa71efedbda458f204633c90a1fe, type: 3}
+    volume: 0.5
   newPlant:
     clip: {fileID: 8300000, guid: 47249931a83144b20ae41111977a2a8d, type: 3}
     volume: 1
