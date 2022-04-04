@@ -6,6 +6,10 @@ public class UponEnableSendShowUpgrades : MonoBehaviour
     
     private void OnEnable()
     {
-        gameState.UpdateState(x => x.GiveUpgrade = true);
+        if (gameState == null)
+        
+            Log.Error("Game State is null", gameObject);
+        else
+            gameState.UpdateState(x => x.GiveUpgrade = true);
     }
 }
