@@ -9,17 +9,18 @@ public class PlantMinimapIcon : MonoBehaviour
 {
     
     [SerializeField] private CurrentGameState gameState;
-    
-    
+    [PreviewField]
     [SerializeField] private Sprite plantDefault;
+    [PreviewField]
     [SerializeField] private Sprite plantNeedWater;
+    [PreviewField]
     [SerializeField] private Sprite plantOnFire;
+    [PreviewField]
     [SerializeField] private Sprite plantDying;
     private SpriteRenderer renderer;
 
     [SerializeField]
     private PlantController plant;
-    [ShowInInspector]
     private PlantState State => gameState.State.PlantById(plant.Id);
     private void Awake()
     {
