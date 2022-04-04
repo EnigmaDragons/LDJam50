@@ -54,7 +54,7 @@ MonoBehaviour:
   playerTools: {fileID: 11400000, guid: 07ec9277d232a034091c3f45647ea780, type: 2}
   waterParticle: {fileID: 2276428382043011758}
   wateringSoundSource: {fileID: 7428951765994328484}
-  gameState: {fileID: 0}
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   rangePrototype: {fileID: -3516202315063839240, guid: 43baabf85ac53944193de535eaa0d3e3,
     type: 3}
 --- !u!1773428102 &4162309905247961167
@@ -215,7 +215,8 @@ AudioSource:
   m_GameObject: {fileID: 4162309905247961168}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5586420925646639766, guid: d6eedae8265dd6146907e7ef03b80fb6,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -198,22 +198,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8501070496725574032}
     m_Modifications:
-    - target: {fileID: 572468319364935318, guid: 1d68a7cbdb3008143915c52ae370004f,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 255
-      objectReference: {fileID: 0}
-    - target: {fileID: 1245804571532838093, guid: 1d68a7cbdb3008143915c52ae370004f,
-        type: 3}
-      propertyPath: gameState
-      value: 
-      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
-        type: 2}
-    - target: {fileID: 1245804571532838093, guid: 1d68a7cbdb3008143915c52ae370004f,
-        type: 3}
-      propertyPath: maxStableMoveSpeed
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 2170355017181888957, guid: 1d68a7cbdb3008143915c52ae370004f,
         type: 3}
       propertyPath: m_RootOrder
@@ -278,21 +262,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3175206935194270817, guid: 1d68a7cbdb3008143915c52ae370004f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3175206935194270817, guid: 1d68a7cbdb3008143915c52ae370004f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3448440579803652238, guid: 1d68a7cbdb3008143915c52ae370004f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d68a7cbdb3008143915c52ae370004f, type: 3}
