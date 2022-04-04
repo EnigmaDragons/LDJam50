@@ -23,7 +23,7 @@ public class PlayerWater : MonoBehaviour
     private float _cooldown;
     private Camera cam;
     
-    private void Awake()
+    private void Start()
     {
         playerTools.Reset();
         waterParticles = waterParticle.GetComponent<ParticleSystem>();
