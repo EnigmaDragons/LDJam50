@@ -11,5 +11,7 @@ namespace Water.Upgrades
         {
             gameState.UpdateState(x => x.UnlockSpell(spellName));
         }
+
+        public override string UpgradeType() => "Spell";
     }
 }

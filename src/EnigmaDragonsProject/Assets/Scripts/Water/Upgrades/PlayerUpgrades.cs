@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -19,10 +20,17 @@ namespace Water.Upgrades
         {
             var available = availableUpgrades.Except(CurrentUpgrades);
             available = available.Where(upg => upg.CanAppear(CurrentUpgrades));
-            var rand = new System.Random();
-            available = available.OrderBy(i => rand.Next());
-            available = available.Take(3);
-            return available.ToList();
+            var chosen = new List<BasePlayerUpgrade>();
+            var rand = new System.Random(Guid.NewGuid().GetHashCode());
+            available = available.OrderBy(i => rand.Next()).ToArray();
+            while (chosen.Count < 3 && chosen.Count != available.Count())
+            {
+                var nextUpgradeWanted = available.FirstOrDefault(x => chosen.All(up => up.UpgradeType() != x.UpgradeType()));
+                if (nextUpgradeWanted == null)
+                    nextUpgradeWanted = available.FirstOrDefault(x => chosen.All(up => up != x));
+                chosen.Add(nextUpgradeWanted);
+            }
+            return chosen;
         }
 
         public void UnlockUpgrade(BasePlayerUpgrade upgrade)
