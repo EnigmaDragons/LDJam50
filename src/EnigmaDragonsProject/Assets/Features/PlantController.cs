@@ -122,7 +122,6 @@ public class PlantController : MonoBehaviour
         Message.Publish(new PlaySoundRequested(GameSounds.PlantDie, mainCamera.transform.position));
         await Task.Delay(2000);
         navigator.NavigateToGameOverScene();
-        Message.Publish(new PlaySoundRequested(GameSounds.GameOver, mainCamera.transform.position));
     }
 
     private bool IsFullEnoughToBeHappy(float waterAmount) => waterAmount >= plant.WaterCapacity * 0.9;
