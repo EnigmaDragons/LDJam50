@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, StopSoundRequested>
 {
+    [SerializeField] private AudioMixerGroup mixerGroup;
     [SerializeField] private AudioClipVolume watering;
     [SerializeField] private AudioClipVolume fillWater;
     [SerializeField] private AudioClipVolume treeFire;
     [SerializeField] private AudioClipVolume newPlant;
-    [SerializeField] private AudioClipVolume plantFull;
+    [SerializeField] private AudioClipVolume[] plantFull;
     [SerializeField] private AudioClipVolume footStep;
     
     protected override void Execute(PlaySoundRequested msg)
@@ -16,7 +18,7 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
         if ( msg.SoundName.Equals(GameSounds.NewPlant))
             PlayOneShot(newPlant, msg.WorldPosition);
         if (msg.SoundName.Equals(GameSounds.PlantFull))
-            PlayOneShot(plantFull, msg.WorldPosition);
+            PlayOneShot(plantFull.Random(), msg.WorldPosition);
     }
 
     private void PlayOneShot(AudioClipVolume a, Vector3 position)
@@ -26,7 +28,7 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
         else if (a.clip == null)
             Log.Warn("Requested Sound Clip is Null");
         else
-            AudioSource.PlayClipAtPoint(a.clip, position, a.volume);
+            AudioClipUtils.PlayClipAtPoint(a.clip, position, a.volume, mixerGroup);
     }
 
     protected override void Execute(LoopSoundRequested msg)

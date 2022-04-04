@@ -65,6 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e719d8c95e4046f3bea4702affbee9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixerGroup: {fileID: -5586420925646639766, guid: d6eedae8265dd6146907e7ef03b80fb6,
+    type: 2}
   watering:
     clip: {fileID: 8300000, guid: 58ff0fa545c514e908b2d49cb580a1e2, type: 3}
     volume: 1
@@ -78,7 +80,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 47249931a83144b20ae41111977a2a8d, type: 3}
     volume: 1
   plantFull:
-    clip: {fileID: 8300000, guid: cfa2db26079d14c609cfd2b59337d4b7, type: 3}
+  - clip: {fileID: 8300000, guid: cfa2db26079d14c609cfd2b59337d4b7, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: fef7ca144818e45089b5b3aff7c254cc, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 05a321180fe9f4b69b4f4fd51de5a494, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: f1fc7fb4a799d49a38de57f62c35a05b, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 88c7bdda9d3c4413aa43a3c04bd616d7, type: 3}
+    volume: 1
+  - clip: {fileID: 8300000, guid: 41b6f3f48f56f4684a8a77a7ac2621fb, type: 3}
     volume: 1
   footStep:
     clip: {fileID: 8300000, guid: 0ad1516a8b3374bf48cac9837f3b5760, type: 3}

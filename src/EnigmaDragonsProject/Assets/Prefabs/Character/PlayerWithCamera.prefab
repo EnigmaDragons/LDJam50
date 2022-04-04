@@ -115,63 +115,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2170355017181888957}
     m_Modifications:
-    - target: {fileID: 140764498666459042, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: gameState
-      value: 
-      objectReference: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e,
-        type: 2}
-    - target: {fileID: 162080234938651472, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.2632557e-14
-      objectReference: {fileID: 0}
-    - target: {fileID: 326999241440078980, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: playerSoundSource
-      value: 
-      objectReference: {fileID: 5981619605157466249}
     - target: {fileID: 493597757792224577, guid: a50c190fc29e3354b922025366cdb6c6,
         type: 3}
       propertyPath: m_Name
       value: BasicPlayerWithCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: bucketTool
-      value: 
-      objectReference: {fileID: 11400000, guid: 2c4f04945688e974681ec1a720dd135c,
-        type: 2}
-    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: waterGun1Tool
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e72cbdc434061e4f83f5a70c885c51b,
-        type: 2}
-    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: waterBottleTool
-      value: 
-      objectReference: {fileID: 11400000, guid: fcad588706af5634095af6ed44e92d52,
-        type: 2}
-    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: wateringCanTool
-      value: 
-      objectReference: {fileID: 11400000, guid: f03c628ffd863c245a2572a88fa83427,
-        type: 2}
-    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: waterBalloonTool
-      value: 
-      objectReference: {fileID: 11400000, guid: 621a1fdb0baeba6468d9aa044d21343c,
-        type: 2}
-    - target: {fileID: 4074700174266897703, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: waterSprayBottleTool
-      value: 
-      objectReference: {fileID: 11400000, guid: 09201435db7a0b14b84bb1f5eb70e9de,
-        type: 2}
     - target: {fileID: 4452332136090202360, guid: a50c190fc29e3354b922025366cdb6c6,
         type: 3}
       propertyPath: m_Name
@@ -252,115 +200,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6645088998797412021, guid: a50c190fc29e3354b922025366cdb6c6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a50c190fc29e3354b922025366cdb6c6, type: 3}
---- !u!1 &3073415292486321076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 326999241440078981, guid: a50c190fc29e3354b922025366cdb6c6,
-    type: 3}
-  m_PrefabInstance: {fileID: 3327961109133864753}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &5981619605157466249
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3073415292486321076}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &7200741825180187003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5602872072328222282, guid: a50c190fc29e3354b922025366cdb6c6,

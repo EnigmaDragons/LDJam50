@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 2849559345276540054}
   animator: {fileID: 5008089250492941973}
+  playerSoundSource: {fileID: 5323551362777461586}
 --- !u!114 &2333184905791679053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,17 +167,18 @@ MonoBehaviour:
   rightHand: {fileID: 4960485049078858761}
   leftHand: {fileID: 4959876942035101967}
   waterBottle: {fileID: 4824544196337106348}
-  waterBottleTool: {fileID: 0}
+  waterBottleTool: {fileID: 11400000, guid: fcad588706af5634095af6ed44e92d52, type: 2}
   waterSprayBottle: {fileID: 3047387834756855026}
-  waterSprayBottleTool: {fileID: 0}
+  waterSprayBottleTool: {fileID: 11400000, guid: 09201435db7a0b14b84bb1f5eb70e9de,
+    type: 2}
   wateringCan: {fileID: 3241746012499934366}
-  wateringCanTool: {fileID: 0}
+  wateringCanTool: {fileID: 11400000, guid: f03c628ffd863c245a2572a88fa83427, type: 2}
   bucket: {fileID: 8986792966531736209}
-  bucketTool: {fileID: 0}
+  bucketTool: {fileID: 11400000, guid: 2c4f04945688e974681ec1a720dd135c, type: 2}
   waterBalloon: {fileID: 4950217948597343254}
-  waterBalloonTool: {fileID: 0}
+  waterBalloonTool: {fileID: 11400000, guid: 621a1fdb0baeba6468d9aa044d21343c, type: 2}
   waterGun1: {fileID: 7900025643015162414}
-  waterGun1Tool: {fileID: 0}
+  waterGun1Tool: {fileID: 11400000, guid: 0e72cbdc434061e4f83f5a70c885c51b, type: 2}
 --- !u!114 &7409872440256674362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +318,12 @@ GameObject:
 --- !u!95 &5008089250492941973 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6187540952238891638, guid: 3a660de3d3a8ae4429868be49f085b7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179592448900605155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5323551362777461586 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6467112815622723505, guid: 3a660de3d3a8ae4429868be49f085b7c,
     type: 3}
   m_PrefabInstance: {fileID: 1179592448900605155}
   m_PrefabAsset: {fileID: 0}

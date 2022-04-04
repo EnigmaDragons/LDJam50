@@ -41,8 +41,6 @@ public class PlantController : MonoBehaviour
         var wiltingSecondsRemaining = plantState.WiltingRemainingSeconds;
         var isOnFire = plantState.IsOnFire;
 
-        CheckIfFull(plantState);
-            
         if (plantState.Water > 0)
         {
             var waterConsumption = plant.WaterConsumption(water);
@@ -100,21 +98,23 @@ public class PlantController : MonoBehaviour
         }
     }
 
-    public async void CheckIfFull(PlantState plantState)
-    {
-        if (plantState.Water < plant.WaterCapacity) return;
-        await Task.Delay(500);
-        Message.Publish(new PlaySoundRequested(GameSounds.PlantFull, gameObject.transform.position));     
-    }
-
+    private bool IsFullEnoughToBeHappy(float waterAmount) => waterAmount >= plant.WaterCapacity * 0.9;
+    
     public float AddWater(float amount)
     {
         float waterConsumed = 0;
         gameState.UpdateState(x =>
         {
             var plantState = x.PlantById(_id);
+            var wasFull = IsFullEnoughToBeHappy(plantState.Water);
+            
             waterConsumed = Math.Min(plant.WaterCapacity - plantState.Water, amount);
-            plantState.Water += waterConsumed*gameState.State.playerStats.wateringSpeed;
+            plantState.Water = Math.Clamp(plantState.Water + waterConsumed * gameState.State.playerStats.wateringSpeed, 0, plant.WaterCapacity);
+            
+            var isFull = IsFullEnoughToBeHappy(plantState.Water);
+            if (!wasFull && isFull)
+                Message.Publish(new PlaySoundRequested(GameSounds.PlantFull, gameObject.transform.position));
+            
             if (plantState.Water > 0 && wiltingFill != null)
                 wiltingFill.color = new Color(1, 1, 1, 0.5f);
         });
