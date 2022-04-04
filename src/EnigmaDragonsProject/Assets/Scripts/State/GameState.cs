@@ -23,6 +23,7 @@ public sealed class GameState
     public float WaterBalloonCooldown;
     public PlayerAbilities playerAbilities;
     public bool PlantSpawningComplete = false;
+    public bool VictoryProgressionEnabled;
 
     public GameState()
     {
@@ -35,6 +36,7 @@ public sealed class GameState
         GiveUpgrade = false;
         playerAbilities = new PlayerAbilities();
         PlantWhoDied = null;
+        VictoryProgressionEnabled = false;
     }
 
     public bool IsWaterAboveCertainLevel(float percent) => _plantStates.All(x => x.Water > x.WaterCapacity * percent);  
