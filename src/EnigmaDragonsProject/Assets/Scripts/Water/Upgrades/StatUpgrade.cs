@@ -12,5 +12,7 @@ namespace Water.Upgrades
         {
             gameState.UpdateState(x => x.playerStats += statsChange);
         }
+
+        public override string UpgradeType() => "Stat";
     }
 }

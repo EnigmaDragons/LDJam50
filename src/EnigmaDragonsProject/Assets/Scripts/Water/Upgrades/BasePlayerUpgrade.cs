@@ -26,6 +26,6 @@ namespace Water.Upgrades
         }
 
         public abstract void OnUpgradeBought();
-
+        public abstract string UpgradeType();
     }
 }

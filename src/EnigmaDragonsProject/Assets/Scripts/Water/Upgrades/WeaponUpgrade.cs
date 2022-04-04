@@ -17,5 +17,7 @@ namespace Water.Upgrades
                 t.RangedTool = upgrade;
             });
         }
+
+        public override string UpgradeType() => "Weapon";
     }
 }
