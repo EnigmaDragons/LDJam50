@@ -24,3 +24,5 @@ MonoBehaviour:
   wiltingSeconds: 20
   incomingDescription: Planting Sunflower
   prefab: {fileID: 117188414419157554, guid: f6f2d8538acd75d4780c56549e7facb2, type: 3}
+  deadDescription: "You let Sunflowers die. \n\nThe more water it has, the easier
+    it is to water the Sunflowers."

@@ -20,3 +20,4 @@ MonoBehaviour:
   wiltingSeconds: 12
   incomingDescription: Planting Lavender
   prefab: {fileID: 2415900213349803630, guid: cfb6f29748187064a8202873b7508a0e, type: 3}
+  deadDescription: You let Lavender die.

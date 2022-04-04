@@ -20,3 +20,5 @@ MonoBehaviour:
   wiltingSeconds: 20
   incomingDescription: Planting Burning Tree
   prefab: {fileID: 2087273153556741889, guid: 9ccb0db9d443c30458ebea4ad400b8cb, type: 3}
+  deadDescription: "You let a Flaming Tree die. \n\nFlaming Tree ignites itself if
+    not watered and can also spread fire to nearby plants."
