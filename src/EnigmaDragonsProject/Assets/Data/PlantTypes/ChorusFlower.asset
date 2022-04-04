@@ -20,3 +20,5 @@ MonoBehaviour:
   wiltingSeconds: 20
   incomingDescription: Planting Chorus Flower
   prefab: {fileID: 6961488280408994056, guid: 7f39d11eb2bd1ee44b6db897f46e3a6e, type: 3}
+  deadDescription: "You let a Chorus Flower die. \n\nChorus swaps position every
+    15 seconds with another random plant."

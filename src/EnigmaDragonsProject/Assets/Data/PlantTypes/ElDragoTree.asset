@@ -20,3 +20,5 @@ MonoBehaviour:
   wiltingSeconds: 1
   incomingDescription: Planting El Drago Tree
   prefab: {fileID: 4775823732291019489, guid: 246efc6ae30641c478cd88ceaa496737, type: 3}
+  deadDescription: "You let an El Drago Tree die. \n\nEl Drago Trees pass away inmediately
+    when they have no water. They have no wilting time. "

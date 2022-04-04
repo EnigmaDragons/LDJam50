@@ -20,3 +20,5 @@ MonoBehaviour:
   wiltingSeconds: 30
   incomingDescription: Planting Carnivorous Flower
   prefab: {fileID: 6653672434059171323, guid: 9063c634e7f72d742bfd9e90936cf483, type: 3}
+  deadDescription: "You let a Carnivorous Plant die. \n\nCarnivorous Plant tried
+    to bite you, stealing the water from your melee tool."

@@ -10,6 +10,7 @@ public class Plant : ScriptableObject
     [SerializeField] private float wiltingSeconds;
     [SerializeField] private string incomingDescription;
     [SerializeField] private GameObject prefab;
+    [SerializeField, TextArea(2, 4)] private string deadDescription;
 
     public float WaterCapacity => waterCapacity;
     public float StartingWater => startingWater;
@@ -17,4 +18,5 @@ public class Plant : ScriptableObject
     public float WiltingSeconds => wiltingSeconds;
     public string IncomingDescription => incomingDescription;
     public GameObject Prefab => prefab;
+    public string DeadDescription => deadDescription;
 }

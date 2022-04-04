@@ -20,3 +20,4 @@ MonoBehaviour:
   wiltingSeconds: 15
   incomingDescription: Planting Roses
   prefab: {fileID: 1024596744929116346, guid: 90c85585fc2daed42bf94bde261d902f, type: 3}
+  deadDescription: You let Roses die.
