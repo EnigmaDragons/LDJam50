@@ -10,7 +10,7 @@ public class CreditPresenter : MonoBehaviour
     public CreditPresenter Initialized(RoleCredit credit)
     {
         nameLabel.text = credit.personName;
-        roleLabel.text = credit.role.ToUpperInvariant();
+        roleLabel.text = credit.role;
         return this;
     }
 }
