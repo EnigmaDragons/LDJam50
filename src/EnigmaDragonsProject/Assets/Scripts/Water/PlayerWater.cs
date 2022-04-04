@@ -114,9 +114,9 @@ public class PlayerWater : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
             TryTakeWater();
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(0))
             TogglePiss(true);
         if (Input.GetKeyUp(KeyCode.F))
             TogglePiss(false);
