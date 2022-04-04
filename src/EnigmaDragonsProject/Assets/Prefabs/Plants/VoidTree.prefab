@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6641657716205197812}
   - component: {fileID: 5113504224915876330}
   - component: {fileID: -593345107415115817}
+  - component: {fileID: 8379214493747829255}
   m_Layer: 6
   m_Name: VoidTree
   m_TagString: Untagged
@@ -167,6 +168,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8379214493747829255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330072407245125558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ee654e4d854f12a34ddbff9a8142ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  plant: {fileID: 6641657716205197812}
+  particle: {fileID: 6016194697972636959, guid: 6204819da41c4cc4b9434901a847ec65,
+    type: 3}
+  waterToStealAmount: 10
 --- !u!1001 &1333141936477302562
 PrefabInstance:
   m_ObjectHideFlags: 0

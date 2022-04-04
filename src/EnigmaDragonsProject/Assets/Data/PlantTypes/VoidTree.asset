@@ -16,6 +16,6 @@ MonoBehaviour:
   startingWater: 0
   waterConsumptions:
   - threshold: 0
-    waterConsumptionPerSecond: 0.5
-  wiltingSeconds: 1e+13
+    waterConsumptionPerSecond: 2
+  wiltingSeconds: 99999
   incomingDescription: Planting Void Tree

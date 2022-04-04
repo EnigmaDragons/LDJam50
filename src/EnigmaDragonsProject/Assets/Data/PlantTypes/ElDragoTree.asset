@@ -17,5 +17,5 @@ MonoBehaviour:
   waterConsumptions:
   - threshold: 0
     waterConsumptionPerSecond: 0.75
-  wiltingSeconds: 0
+  wiltingSeconds: 1
   incomingDescription: Planting El Drago Tree
