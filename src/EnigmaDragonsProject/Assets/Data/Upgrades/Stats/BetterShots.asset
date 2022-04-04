@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BetterShots
   m_EditorClassIdentifier: 
   name: Better Shots
-  icon: {fileID: 21300000, guid: 7ae3b1d8ad08e5b4cb5e2fc9dff6bfe0, type: 3}
+  icon: {fileID: 21300000, guid: c6a85c93da688504591346d16bfd1ad2, type: 3}
   description: 'Your water gun is 33% more effective
 
 '

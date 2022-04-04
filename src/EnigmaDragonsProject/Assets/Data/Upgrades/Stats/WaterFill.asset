@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaterFill
   m_EditorClassIdentifier: 
   name: Fill speed
-  icon: {fileID: 21300000, guid: 0b3c678178a3b9a4c8316f061187ba69, type: 3}
+  icon: {fileID: 21300000, guid: b454c2911414fcb4cb4fa8ce8d576490, type: 3}
   description: Tools fill up 50% faster
   requirements: []
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}

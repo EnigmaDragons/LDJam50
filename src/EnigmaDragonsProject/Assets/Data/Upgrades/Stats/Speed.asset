@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Speed
   m_EditorClassIdentifier: 
   name: Speed
-  icon: {fileID: 21300000, guid: 7a264a422f6e6bd43ac92350b7adcaf6, type: 3}
+  icon: {fileID: 21300000, guid: 4f8b0928f063d3d4e808e7e4e38697ff, type: 3}
   description: '+30% Move Speed
 
 '

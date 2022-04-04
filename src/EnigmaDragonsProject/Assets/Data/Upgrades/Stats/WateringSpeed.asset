@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WateringSpeed
   m_EditorClassIdentifier: 
   name: Faster Watering
-  icon: {fileID: 21300000, guid: a97b6741e775c224da3e5c82284db41d, type: 3}
+  icon: {fileID: 21300000, guid: 9030df687a76c574baedcb2a32cff909, type: 3}
   description: 'Watering is 50% faster
 
 

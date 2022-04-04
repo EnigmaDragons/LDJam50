@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Capacity
   m_EditorClassIdentifier: 
   name: Capacity
-  icon: {fileID: 21300000, guid: ee03e533dd287bc499c70471baa03321, type: 3}
+  icon: {fileID: 21300000, guid: 307f9a2904d58e04184e9c08596615b6, type: 3}
   description: 'Tools hold 50% more water
 
 '

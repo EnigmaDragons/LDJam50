@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EvenBiggerBottle
   m_EditorClassIdentifier: 
   name: Even Bigger Bottle
-  icon: {fileID: 21300000, guid: ee03e533dd287bc499c70471baa03321, type: 3}
-  description: 'Water guns have another 3
+  icon: {fileID: 21300000, guid: 5da08bf00d8e0c2488598dd4cd291ced, type: 3}
+  description: 'Water Guns have another 3 shots
 
 '
   requirements:
