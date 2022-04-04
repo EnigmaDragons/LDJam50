@@ -1446,7 +1446,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: Q
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2fa85e8f554433c4c8159fc0c3eca1d8, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2fa85e8f554433c4c8159fc0c3eca1d8, type: 2}
@@ -1473,8 +1473,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 52
+  m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
