@@ -2,10 +2,14 @@
 
 public class FollowMouseOnGround : MonoBehaviour
 {
+    [SerializeField] private CurrentGameState gameState;
+    
     private Camera cam;
     
     private void Update()
     {
+        if (!gameState.State.WaterBalloonUnlocked && gameState.State.RangedTool == null)
+            return;
         if (cam == null)
             cam = Camera.main;
         RaycastHit hit;
