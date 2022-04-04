@@ -285,7 +285,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb, type: 2}
         m_TargetAssemblyTypeName: Navigator, EnigmaDragons.Game
-        m_MethodName: NavigateToGameScene
+        m_MethodName: NavigateToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

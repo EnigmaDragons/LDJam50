@@ -20,6 +20,7 @@ public class PlantController : MonoBehaviour
     private const float spreadRange = 10;
     private const float spreadTime = 10;
     private float timeUntilSpread;
+    private bool wasOnFire;
 
     [ShowInInspector] [ReadOnly] private int _id;
     public int Id => _id;
@@ -76,10 +77,21 @@ public class PlantController : MonoBehaviour
             }
         }
 
-        fireVFX.SetActive(isOnFire);
+        if (!wasOnFire && isOnFire)
+        {
+            wasOnFire = true;
+            fireVFX.SetActive(true);
+            Message.Publish(new LoopSoundRequested(GameSounds.TreeFire, plantSoundSource));
+        }
+        else if (wasOnFire && !isOnFire)
+        {
+            wasOnFire = false;
+            fireVFX.SetActive(false);
+            Message.Publish(new StopSoundRequested(GameSounds.TreeFire, plantSoundSource));
+        }
+        
         if (isOnFire)
         {
-            Message.Publish(new LoopSoundRequested(GameSounds.TreeFire, plantSoundSource));
             timeUntilSpread -= Time.deltaTime;
             if (timeUntilSpread <= 0)
             {
