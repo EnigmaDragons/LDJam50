@@ -4,9 +4,12 @@ using UnityEngine.InputSystem;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
+    private Camera mainCamera;
 
-    private void Start() {
+    private void Awake() 
+    {
         pausePanel.SetActive(false);
+        mainCamera = Camera.main;
     }
 
     private void Update()
@@ -25,12 +28,8 @@ public class MenuManager : MonoBehaviour
     {
         if (wasKeyPressed)
         {
-            if (panel.activeSelf)
-            {
-                panel.SetActive(false);
-                return;
-            }
-            panel.SetActive(true);
+            Message.Publish(new PlaySoundRequested(GameSounds.MenuToggle, mainCamera.transform.position));
+            panel.SetActive(!panel.activeSelf);
         }
     }
 }

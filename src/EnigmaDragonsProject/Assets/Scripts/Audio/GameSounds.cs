@@ -6,6 +6,5 @@ public static class GameSounds
     public static string TreeFire => "TreeFire";
     public static string NewPlant => "NewPlant";
     public static string PlantFull => "PlantFull";
-    public static string FootStep => "FootStep";
-
+    public static string MenuToggle => "MenuToggle";
 }
