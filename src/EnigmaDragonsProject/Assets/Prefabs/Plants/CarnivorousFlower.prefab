@@ -56,6 +56,8 @@ MonoBehaviour:
   wiltingFill: {fileID: 1823891917498285279}
   plantSoundSource: {fileID: 8587529070641824937}
   fireVFX: {fileID: 1804865220138716, guid: 95d6aa7f65151d34289e7d8fdbb720d4, type: 3}
+  windowPointerController: {fileID: 1974714373419946303, guid: 51a9fd2aa1242a7438b5b62a4fbd491a,
+    type: 3}
 --- !u!136 &6022084574112686142
 CapsuleCollider:
   m_ObjectHideFlags: 0

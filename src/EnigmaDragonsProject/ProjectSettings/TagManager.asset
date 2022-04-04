@@ -8,6 +8,7 @@ TagManager:
   - UiSounds
   - Loader
   - Plant
+  - Character
   layers:
   - Default
   - TransparentFX

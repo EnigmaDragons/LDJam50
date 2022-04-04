@@ -48,6 +48,8 @@ public class PlantController : MonoBehaviour
             water -= Time.deltaTime * waterConsumption;
             if (water < 0)
             {
+                // windowPointerController.SpawnPointer(gameObject.transform.position);
+                Message.Publish(new ShowWindowPointer(gameObject));
                 wiltingSecondsRemaining += water / waterConsumption;
                 if (wiltingFill != null)
                 {
