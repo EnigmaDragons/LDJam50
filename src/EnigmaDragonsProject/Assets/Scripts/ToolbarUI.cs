@@ -29,6 +29,7 @@ public class ToolbarUI : MonoBehaviour
         var rangedTool = playerTools.GetRangedTool();
         if (rangedTool != null)
         {
+            rangedPanel.SetActive(true);
             rangedImage.sprite = rangedTool.sprite;
             rangedSlider.maxValue = rangedTool.MaxWaterAmount;
             rangedSlider.value = rangedTool.WaterAmount;
