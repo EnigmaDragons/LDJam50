@@ -9,4 +9,5 @@ public static class GameSounds
     public static string MenuToggle => "MenuToggle";
     public static string PlantDie => "PlantDie";
     public static string GameOver => "GameOver";
+    public static string ThrowWaterBalloon => "ThrowWaterBalloon";
 }

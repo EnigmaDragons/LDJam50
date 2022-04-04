@@ -90,6 +90,9 @@ MonoBehaviour:
   gameOver:
     clip: {fileID: 8300000, guid: 1a9c1221d617a4faebe88c3189282598, type: 3}
     volume: 1
+  throwWaterBalloon:
+    clip: {fileID: 8300000, guid: 7cec9094f3ac54cf5910f5e6f3c39716, type: 3}
+    volume: 1
   plantFull:
   - clip: {fileID: 8300000, guid: cfa2db26079d14c609cfd2b59337d4b7, type: 3}
     volume: 1.4

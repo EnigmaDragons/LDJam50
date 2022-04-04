@@ -1,7 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
-using UnityEngine.InputSystem;
 
 public class PlayerWater : MonoBehaviour
 {
@@ -76,6 +74,7 @@ public class PlayerWater : MonoBehaviour
         var prototype = Instantiate(waterBalloonPrototype, transform.position + new Vector3(0, 1, 0) + GetDirectionOfCursor() * 1.5f, Quaternion.identity);
         prototype.Init(GetDirectionOfCursor());
         gameState.UpdateState(x => x.WaterBalloonCooldown = _waterBalloonCooldown * x.playerStats.spellCooldown);
+        Message.Publish(new PlaySoundRequested(GameSounds.ThrowWaterBalloon, transform.position));
     }
 
     private void StartWatering()
