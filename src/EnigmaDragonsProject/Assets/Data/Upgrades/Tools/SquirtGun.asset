@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274e78aabe97ae8469b2c107170edf1c, type: 3}
-  m_Name: PlayerTools
+  m_Script: {fileID: 11500000, guid: 99d767e71992414a9000fc9af3cf408a, type: 3}
+  m_Name: SquirtGun
   m_EditorClassIdentifier: 
-  startMelee: {fileID: 11400000, guid: fcad588706af5634095af6ed44e92d52, type: 2}
-  startRanged: {fileID: 0}
+  name: Squirt Gun
+  icon: {fileID: 0}
+  description: Gain Squirt Gun Ranged Weapon
+  requirements: []
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  upgrade: {fileID: 11400000, guid: 0e72cbdc434061e4f83f5a70c885c51b, type: 2}

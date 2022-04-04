@@ -31,7 +31,7 @@ public sealed class GameState
         Lost = false;
         Won = false;
         GiveUpgrade = false;
-        WaterBaloonUnlocked = true;
+        WaterBaloonUnlocked = false;
     }
 
     public bool IsWaterAboveCertainLevel(float percent) => _plantStates.All(x => x.Water > x.WaterCapacity * percent);  
@@ -65,5 +65,11 @@ public sealed class GameState
     {
         if (spellName == "Water Balloon")
             WaterBalloonCooldown = cooldown;
+    }
+
+    public void UnlockSpell(string spellName)
+    {
+        if (spellName == "Water Balloon")
+            WaterBaloonUnlocked = true;
     }
 }
