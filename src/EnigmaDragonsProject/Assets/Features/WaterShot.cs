@@ -28,7 +28,7 @@ public class WaterShot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_collided)
+        if (_collided || other.gameObject.layer == 10)
             return;
         _collided = true;
         var plantController = other.gameObject.GetComponent<PlantController>();
