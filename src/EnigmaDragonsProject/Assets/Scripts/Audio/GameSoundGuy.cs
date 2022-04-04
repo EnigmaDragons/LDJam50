@@ -3,6 +3,7 @@ using UnityEngine.Audio;
 
 public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, StopSoundRequested, PlayOneShot>
 {
+    [SerializeField] private CurrentGameState gameState;
     [SerializeField] private AudioMixerGroup mixerGroup;
     [SerializeField] private AudioClipVolume watering;
     [SerializeField] private AudioClipVolume fillWater;
@@ -17,7 +18,7 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
     {
         if (msg.SoundName.Equals(GameSounds.FillWater))
             PlayOneShotClip(fillWater, msg.WorldPosition);
-        if ( msg.SoundName.Equals(GameSounds.NewPlant))
+        if (gameState.State.PlantSpawningComplete && msg.SoundName.Equals(GameSounds.NewPlant))
             PlayOneShotClip(newPlant, msg.WorldPosition);
         if (msg.SoundName.Equals(GameSounds.PlantFull))
             PlayOneShotClip(plantFull.Random(), msg.WorldPosition);

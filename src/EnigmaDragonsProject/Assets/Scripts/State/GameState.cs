@@ -21,6 +21,7 @@ public sealed class GameState
     public bool WaterBalloonUnlocked => playerAbilities.WaterBalloon;
     public float WaterBalloonCooldown;
     public PlayerAbilities playerAbilities;
+    public bool PlantSpawningComplete = false;
 
     public GameState()
     {
