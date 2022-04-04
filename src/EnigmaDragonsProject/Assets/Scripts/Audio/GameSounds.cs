@@ -12,4 +12,6 @@ public static class GameSounds
     public static string GameOver => "GameOver";
     public static string ThrowWaterBalloon => "ThrowWaterBalloon";
     public static string WaterGun => "WaterGun";
+    public static string ToolUpgrade => "ToolUpgrade";
+
 }
