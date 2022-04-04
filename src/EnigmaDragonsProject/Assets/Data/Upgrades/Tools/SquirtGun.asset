@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SquirtGun
   m_EditorClassIdentifier: 
   name: Squirt Gun
-  icon: {fileID: 0}
-  description: Gain Squirt Gun Ranged Weapon
+  icon: {fileID: 21300000, guid: 41201e6df9f704a4091f858b492b5491, type: 3}
+  description: Gain a Squirt Gun
   requirements: []
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   upgrade: {fileID: 11400000, guid: 0e72cbdc434061e4f83f5a70c885c51b, type: 2}
