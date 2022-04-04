@@ -14,8 +14,11 @@ public class LoadingController : OnMessage<NavigateToSceneRequested, HideLoadUiR
     private float _startedTransitionAt;
     private AsyncOperation _loadState;
 
-    private void Awake() => loadUi.alpha = 0;
-    
+    private void Awake()
+    {
+        loadUi.alpha = 0;
+    }
+
     protected override void Execute(NavigateToSceneRequested msg)
     {
         _isLoading = true;
@@ -53,5 +56,6 @@ public class LoadingController : OnMessage<NavigateToSceneRequested, HideLoadUiR
         _isLoading = false;
         _startedTransitionAt = Time.timeSinceLevelLoad;
         _loadState.completed -= OnLoadFinished;
+        loadUi.alpha = 0f; // Workaround
     }
 }
