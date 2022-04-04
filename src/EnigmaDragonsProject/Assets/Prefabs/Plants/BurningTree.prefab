@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8020564483182867320}
   - component: {fileID: 3799494031856932843}
   - component: {fileID: 1931047440305576738}
+  - component: {fileID: 7906227880695278723}
   m_Layer: 6
   m_Name: BurningTree
   m_TagString: Untagged
@@ -66,7 +67,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.7
+  m_Radius: 1.16
   m_Height: 2.896289
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
@@ -166,6 +167,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7906227880695278723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087273153556741889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf58eb4c22047a6b7b08c14a4faedb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToImplosion: 30
+  gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
+  plant: {fileID: 8020564483182867320}
+  image: {fileID: 704647005197012428}
 --- !u!1001 &177950586609136354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +302,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c418e776b27e7484799ce0e5a3fe02c5, type: 3}
+--- !u!114 &704647005197012428 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 846498241215692590, guid: c418e776b27e7484799ce0e5a3fe02c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 177950586609136354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2937942865898356152 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3079791880614661978, guid: c418e776b27e7484799ce0e5a3fe02c5,
@@ -380,6 +409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012652921196, guid: 5ecde3e63a2f64f7d8ab8f189a52c8c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64000011912270928, guid: 5ecde3e63a2f64f7d8ab8f189a52c8c0,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

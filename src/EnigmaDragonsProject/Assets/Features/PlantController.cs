@@ -44,7 +44,7 @@ public class PlantController : MonoBehaviour
         if (plantState.Water > 0)
         {
             var waterConsumption = plant.WaterConsumption(water);
-            waterConsumption = isOnFire ? waterConsumption + 2.5f : waterConsumption;
+            waterConsumption = isOnFire ? waterConsumption + 2f : waterConsumption;
             water -= Time.deltaTime * waterConsumption;
             if (water < 0)
             {
@@ -117,6 +117,9 @@ public class PlantController : MonoBehaviour
             
             if (plantState.Water > 0 && wiltingFill != null)
                 wiltingFill.color = new Color(1, 1, 1, 0.5f);
+
+            if (plantState.Water / plantState.WaterCapacity > 0.5 && plantState.IsOnFire)
+                plantState.IsOnFire = false;
         });
         return waterConsumed;
     }
