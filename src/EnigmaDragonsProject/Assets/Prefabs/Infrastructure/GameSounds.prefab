@@ -79,7 +79,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cc89fa71efedbda458f204633c90a1fe, type: 3}
     volume: 0.5
   newPlant:
-    clip: {fileID: 8300000, guid: 47249931a83144b20ae41111977a2a8d, type: 3}
+    clip: {fileID: 8300000, guid: 76747ae7b3fba41f1a42c55d1217a614, type: 3}
     volume: 1
   menuToggle:
     clip: {fileID: 8300000, guid: 3d2af25f302844e92bd5a67baa31ef61, type: 3}
