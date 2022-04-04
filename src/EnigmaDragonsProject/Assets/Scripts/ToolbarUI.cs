@@ -6,6 +6,8 @@ public class ToolbarUI : MonoBehaviour
     [SerializeField] private PlayerTools playerTools;
     [SerializeField] private Image meleeImage;
     [SerializeField] private Image rangedImage;
+    [SerializeField] private GameObject meleePanel;
+    [SerializeField] private GameObject rangedPanel;
     
     [SerializeField] private Slider meleeSlider;
     [SerializeField] private Slider rangedSlider;
@@ -19,6 +21,10 @@ public class ToolbarUI : MonoBehaviour
             meleeSlider.maxValue = meleeTool.MaxWaterAmount;
             meleeSlider.value = meleeTool.WaterAmount;
         }
+        else
+        {
+            meleePanel.SetActive(false);
+        }
 
         var rangedTool = playerTools.GetRangedTool();
         if (rangedTool != null)
@@ -26,6 +32,10 @@ public class ToolbarUI : MonoBehaviour
             rangedImage.sprite = rangedTool.sprite;
             rangedSlider.maxValue = rangedTool.MaxWaterAmount;
             rangedSlider.value = rangedTool.WaterAmount;
+        }
+        else
+        {
+            rangedPanel.SetActive(false);
         }
     }
 }
