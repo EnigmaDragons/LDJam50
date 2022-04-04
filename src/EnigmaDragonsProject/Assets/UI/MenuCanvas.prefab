@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -425,7 +425,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 200
   m_TargetDisplay: 0
 --- !u!114 &5464865444115964109
 MonoBehaviour:
@@ -1527,7 +1527,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5548312614311513092}
+      objectReference: {fileID: 11400000, guid: c3cd3edfa3cf5c94fbbf792f8728cebb,
+        type: 2}
     - target: {fileID: 1612062460753857839, guid: 1130155e1418d414e85cb9a699491a30,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -1536,12 +1537,12 @@ PrefabInstance:
     - target: {fileID: 1612062460753857839, guid: 1130155e1418d414e85cb9a699491a30,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
+      value: ExitGame
       objectReference: {fileID: 0}
     - target: {fileID: 1612062460753857839, guid: 1130155e1418d414e85cb9a699491a30,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseManager, EnigmaDragons.Game
+      value: Navigator, EnigmaDragons.Game
       objectReference: {fileID: 0}
     - target: {fileID: 1612062460753857839, guid: 1130155e1418d414e85cb9a699491a30,
         type: 3}
