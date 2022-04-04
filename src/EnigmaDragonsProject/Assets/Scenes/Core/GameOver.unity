@@ -448,9 +448,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 511815510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b67efa5d23b874a9967772f1cbe27f, type: 3}
+  m_Script: {fileID: 11500000, guid: b70a64aadd044ec8855c8e23db761393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 11400000, guid: 25e9dcc4ed5831f4aa3cacc60614d719, type: 2}
+  musicPlayer: {fileID: 11400000, guid: 95f47694e0b28ce48a808ae15f18f4d8, type: 2}
 --- !u!1 &513816346
 GameObject:
   m_ObjectHideFlags: 0
