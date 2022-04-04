@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e719d8c95e4046f3bea4702affbee9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiSounds: {fileID: 11400000, guid: bfe56e3518f684c4387de97bd5db348d, type: 2}
   gameState: {fileID: 11400000, guid: 3663a0d24261e9a49bdfcf2cb5a7063e, type: 2}
   mixerGroup: {fileID: -5586420925646639766, guid: d6eedae8265dd6146907e7ef03b80fb6,
     type: 2}
@@ -73,7 +74,7 @@ MonoBehaviour:
     volume: 1
   fillWater:
     clip: {fileID: 8300000, guid: 2e2cc66da81174ccbb5dc672a91470c9, type: 3}
-    volume: 1
+    volume: 1.3
   treeFire:
     clip: {fileID: 8300000, guid: 61e0fcc3555294695b05b5c97a7a00aa, type: 3}
     volume: 1

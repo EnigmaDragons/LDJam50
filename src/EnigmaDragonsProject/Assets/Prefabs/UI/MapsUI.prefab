@@ -136,11 +136,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MacromapUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2053217998790315575, guid: b5f1ed7b08d15644ab49263280e329c8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -159,32 +154,32 @@ PrefabInstance:
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 900
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 900
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6552405626813609766, guid: b5f1ed7b08d15644ab49263280e329c8,
         type: 3}
