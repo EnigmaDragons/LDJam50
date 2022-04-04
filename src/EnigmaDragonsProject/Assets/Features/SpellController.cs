@@ -22,7 +22,7 @@ public class SpellController : MonoBehaviour
 
     private void Update()
     {
-        if (!gameState.State.WaterBaloonUnlocked)
+        if (!gameState.State.WaterBalloonUnlocked)
             return;
         if (!_isUnlocked)
             ui.SetActive(true);

@@ -71,7 +71,7 @@ public class PlayerWater : MonoBehaviour
 
     public void FireWaterBalloon()
     {
-        if (gameState.State.WaterBalloonCooldown > 0 || !gameState.State.WaterBaloonUnlocked)
+        if (gameState.State.WaterBalloonCooldown > 0 || !gameState.State.WaterBalloonUnlocked)
             return;
         var prototype = Instantiate(waterBalloonPrototype, transform.position + new Vector3(0, 1, 0) + transform.forward * 3, Quaternion.identity);
         prototype.Init(transform.forward);
