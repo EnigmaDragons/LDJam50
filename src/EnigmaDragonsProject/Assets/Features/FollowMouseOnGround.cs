@@ -3,6 +3,7 @@
 public class FollowMouseOnGround : MonoBehaviour
 {
     [SerializeField] private CurrentGameState gameState;
+    [SerializeField] private GameObject pointFrom; //hacks
     
     private Camera cam;
     
@@ -19,6 +20,7 @@ public class FollowMouseOnGround : MonoBehaviour
             var point = hit.point;
             point.y = transform.position.y;
             transform.position = point;
+            transform.rotation = Quaternion.LookRotation((point - pointFrom.transform.position).normalized);
         }
         else
             Log.Error("no hit against the raycast quad");
