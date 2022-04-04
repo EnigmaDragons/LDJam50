@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 public class WaterShot : MonoBehaviour
 {
     [SerializeField] private float speed = 1;
     [SerializeField] private GameObject onCollision;
-    private Vector3 _direction;
+    [ShowInInspector] private Vector3 _direction;
     private float _waterAmount;
     private float _distanceRemaining;
     private bool _collided;
