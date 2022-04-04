@@ -28,7 +28,7 @@ public class PlayerEquipment : OnMessage<GameStateChanged>
         UnequipLeftHand();
         UnequipRightHand();
         EquipWaterBottle();
-        EquipWaterGun1();
+        //EquipWaterGun1();
     }
     
     public void EquipWaterBalloon()
