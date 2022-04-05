@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
@@ -123,7 +124,7 @@ public class PlantController : MonoBehaviour
         }
     }
 
-    private async void Die()
+    private void Die()
     {
         gameState.UpdateState(x =>
         {
@@ -131,7 +132,12 @@ public class PlantController : MonoBehaviour
             x.PlantWhoDied = plant;
         });
         Message.Publish(new PlaySoundRequested(GameSounds.PlantDie, mainCamera.transform.position));
-        await Task.Delay(2000);
+        StartCoroutine(LoseAfterDelay());
+    }
+
+    private IEnumerator LoseAfterDelay()
+    {
+        yield return new WaitForSeconds(2);
         navigator.NavigateToGameOverScene();
     }
 
