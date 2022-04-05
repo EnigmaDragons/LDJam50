@@ -102,6 +102,9 @@ MonoBehaviour:
   toolUpgrade:
     clip: {fileID: 8300000, guid: e83c49bd89565421b9bf648eb3038e35, type: 3}
     volume: 1
+  plantWilting:
+    clip: {fileID: 8300000, guid: 49eef21472ac2469a9f109078041e435, type: 3}
+    volume: 1
   plantFull:
   - clip: {fileID: 8300000, guid: cfa2db26079d14c609cfd2b59337d4b7, type: 3}
     volume: 1.4

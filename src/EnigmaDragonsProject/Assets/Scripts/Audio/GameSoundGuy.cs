@@ -17,6 +17,7 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
     [SerializeField] private AudioClipVolume throwWaterBalloon;
     [SerializeField] private AudioClipVolume waterGun;
     [SerializeField] private AudioClipVolume toolUpgrade;
+    [SerializeField] private AudioClipVolume plantWilting;
     [SerializeField] private AudioClipVolume[] plantFull;
     
     protected override void Execute(PlaySoundRequested msg)
@@ -41,6 +42,8 @@ public class GameSoundGuy : OnMessage<PlaySoundRequested, LoopSoundRequested, St
             PlayOneShotClip(waterGun, msg.WorldPosition);
         if (msg.SoundName.Equals(GameSounds.ToolUpgrade))
             PlayOneShotClip(toolUpgrade, msg.WorldPosition);
+        if (msg.SoundName.Equals(GameSounds.PlantWilting))
+            PlayOneShotClip(plantWilting, msg.WorldPosition);
     }
 
     private void PlayOneShotClip(AudioClipVolume a, Vector3 position)
