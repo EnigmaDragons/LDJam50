@@ -8,6 +8,7 @@ namespace Water.Upgrades
         [SerializeField] private WateringTool upgrade;
         public override void OnUpgradeBought()
         {
+            upgrade.Reset();
             if(!upgrade.isRanged) gameState.UpdateState(t =>
             {
                 t.MeleeTool = upgrade;

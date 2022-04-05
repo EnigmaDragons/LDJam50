@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Balloon
   sprite: {fileID: 21300000, guid: b2c12894b603f424da99b6a76374ddaa, type: 3}
-  startingAmount: 0
+  startFull: 1
   description: 
   isRanged: 1
   range: 4

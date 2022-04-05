@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Watering Can
   sprite: {fileID: 21300000, guid: dee49ca325e5ac245ad3b052b93154d7, type: 3}
-  startingAmount: 80
+  startFull: 1
   description: 
   isRanged: 0
   range: 0

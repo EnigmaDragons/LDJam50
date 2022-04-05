@@ -7,7 +7,7 @@ public class WateringTool : ScriptableObject, IWaterHolder
 {
     public string name;
     [PreviewField] public Sprite sprite;
-    [SerializeField] private float startingAmount;
+    [SerializeField] private bool startFull;
     [TextArea] public string description;
     public bool isRanged;
     [ShowIf("isRanged")] public float range;
@@ -83,8 +83,16 @@ public class WateringTool : ScriptableObject, IWaterHolder
 
     public void Reset()
     {
-        currentWater = startingAmount;
-        currentCharge = (int)Math.Round(startingAmount);
+        if (startFull)
+        {
+            currentWater = MaxWaterAmount;
+            currentCharge = (int) MaxWaterAmount;
+        }
+        else
+        {
+            currentWater = 0;
+            currentCharge = 0;
+        }
     }
 
     public void Empty()
