@@ -28,7 +28,7 @@ public class WateringTool : ScriptableObject, IWaterHolder
     {
         if (isRanged)
         {
-            currentCharge++;
+            currentCharge += (int)Math.Ceiling(gameState.State.playerStats.fillSpeed);
             if(currentCharge > MaxWaterAmount) currentCharge = (int)MaxWaterAmount;
         }
         else

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Bucket
   sprite: {fileID: 21300000, guid: 1fc7cea3a331d3a4992c00f6dc9cf145, type: 3}
-  startingAmount: 0
+  startingAmount: 160
   description: 
   isRanged: 0
   range: 0
