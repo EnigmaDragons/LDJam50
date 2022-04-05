@@ -81,9 +81,11 @@ public class UpgradeUI : MonoBehaviour
         HideUpgradeDescription();
         DestroyUpgrades();
         
+        var selection = playerUpgrades.GetUpgradeSelection();
+        if (selection.Count == 0) return;
+        
         OpenUpgradeUI();
         
-        var selection = playerUpgrades.GetUpgradeSelection();
         foreach (var upgrade in selection)
         {
             SpawnUpgrade(upgrade);
