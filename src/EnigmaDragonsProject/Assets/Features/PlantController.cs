@@ -21,6 +21,7 @@ public class PlantController : MonoBehaviour
     private const float spreadTime = 10;
     private float timeUntilSpread;
     private bool wasOnFire;
+    private bool isWilting;
 
     [ShowInInspector] [ReadOnly] private int _id;
     public int Id => _id;
@@ -51,6 +52,7 @@ public class PlantController : MonoBehaviour
 
         if (plantState.Water > 0)
         {
+            isWilting = false;
             var waterConsumption = plant.WaterConsumption(water);
             waterConsumption = isOnFire ? waterConsumption + 2f : waterConsumption;
             water -= Time.deltaTime * waterConsumption;
@@ -70,6 +72,11 @@ public class PlantController : MonoBehaviour
         }
         else
         {
+            Debug.Log("Wilting");
+            if (!isWilting)
+            {
+                PlayWiltingOneShot();
+            }
             wiltingSecondsRemaining -= Time.deltaTime;
             if (wiltingFill != null)
             {
@@ -168,5 +175,11 @@ public class PlantController : MonoBehaviour
             gameState.UpdateState(x => x.PlantById(res.GetComponent<PlantController>().Id).IsOnFire = true);
             timeUntilSpread = spreadTime;
         }
+    }
+
+    private void PlayWiltingOneShot()
+    {
+        isWilting = true;
+        Message.Publish(new PlaySoundRequested(GameSounds.PlantWilting, mainCamera.transform.position));
     }
 }
